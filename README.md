@@ -1,5 +1,6 @@
 # Závěrečný projekt
 Autor: Michaela Říčná
+Spolupráce: Lukáš Kanovský
 
 ## Cíle:
 - Vytvořit mobilní aplikaci v unity s rozšířenou realitou
