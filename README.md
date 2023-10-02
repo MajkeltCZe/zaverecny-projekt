@@ -17,7 +17,9 @@ Spolupráce: Lukáš Kanovský
 
 ## Zdroje:
 - https://www.youtube.com/watch?v=WzfDo2Wpxks
-- Lokace GPS: https://www.youtube.com/watch?v=JWccDbm69Cg
+- Lokace GPS: https://www.youtube.com/watch?v=JWccDbm69Cg, https://www.youtube.com/watch?v=lY0ONhO5gUw
+- prohlídka aplikace na mobilu: https://www.youtube.com/watch?v=iCXwaehzRFQ
+- 
 
 
 [Unity]:https://unity.com/
