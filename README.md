@@ -20,6 +20,6 @@ Spolupráce: Lukáš Kanovský
 - Lokace GPS: https://www.youtube.com/watch?v=JWccDbm69Cg, https://www.youtube.com/watch?v=lY0ONhO5gUw
 - prohlídka aplikace na mobilu: https://www.youtube.com/watch?v=iCXwaehzRFQ
 - https://www.youtube.com/watch?v=gpaq5bAjya8
-
+- https://learn.unity.com/pathway/mobile-ar-development
 
 [Unity]:https://unity.com/
