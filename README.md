@@ -2,13 +2,16 @@
 Autor: Michaela Říčná
 Spolupráce: Lukáš Kanovský
 
+##
+O projektu: Záměrem je vytvořit mobilní aplikace něco na způsob Treasure Hunt, ve které hráč dostane určité obrázky / předměty, které má poté najít ve škole. Když předmět nalezne zobrazí se mu 3d model s popisem / animace / jiná interakce.   
+
+
+
+
 ## Cíle:
 - Vytvořit mobilní aplikaci v unity s rozšířenou realitou
-- Navrhnout příjemné uživatelské rozhraní pro výběr učebny
-- Udělat učebny, místnosti ze školy:
-    - Učebny odborných předmětů
-    - Neodborných předmětů (Menší priorita)
-- Vymodelovat objekty, se kterými se pracuje v hodinách:
+- Navrhnout příjemné uživatelské rozhraní 
+- Vymodelovat objekty:
     - Udělat objekty interaktivní
 - Sepsat popisy předmětů a objektů
 
