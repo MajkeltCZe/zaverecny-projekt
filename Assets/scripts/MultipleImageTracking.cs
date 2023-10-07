@@ -8,6 +8,11 @@ public class TrackedImageInfoMultipleManager : MonoBehaviour
 {
 
 
+
+
+
+
+
     [SerializeField]
     private GameObject[] arObjectsToPlace;
 
@@ -18,12 +23,22 @@ public class TrackedImageInfoMultipleManager : MonoBehaviour
 
     private Dictionary<string, GameObject> arObjects = new Dictionary<string, GameObject>();
 
+    public Button button;
+
+
+
+void Start() {
+HideButton();
+
+}
+
+
+
     void Awake()
     {
-    
+            
         m_TrackedImageManager = GetComponent<ARTrackedImageManager>();
         
-        // setup all game objects in dictionary
         foreach(GameObject arObject in arObjectsToPlace)
         {
             GameObject newARObject = Instantiate(arObject, Vector3.zero, Quaternion.identity);
@@ -49,6 +64,7 @@ public class TrackedImageInfoMultipleManager : MonoBehaviour
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
             UpdateARImage(trackedImage);
+            
         }
 
         foreach (ARTrackedImage trackedImage in eventArgs.updated)
@@ -65,21 +81,29 @@ public class TrackedImageInfoMultipleManager : MonoBehaviour
     private void UpdateARImage(ARTrackedImage trackedImage)
     {
         // Display the name of the tracked image in the canvas
-
+            
         // Assign and Place Game Object
         AssignGameObject(trackedImage.referenceImage.name, trackedImage.transform.position);
+        ShowButton();
+        
+        
+        
         
 
     }
 
     void AssignGameObject(string name, Vector3 newPosition)
-    {
+    {   
+            
+
+        
         if(arObjectsToPlace != null)
         {
             GameObject goARObject = arObjects[name];
             goARObject.SetActive(true);
             goARObject.transform.position = newPosition;
             goARObject.transform.localScale = scaleFactor;
+            
             foreach(GameObject go in arObjects.Values)
             {
                 Debug.Log($"Go in arObjects.Values: {go.name}");
@@ -90,4 +114,16 @@ public class TrackedImageInfoMultipleManager : MonoBehaviour
             } 
         }
     }
+
+
+public void HideButton() {
+    button.gameObject.SetActive(false);
+}
+
+public void ShowButton() {
+    button.gameObject.SetActive(true);
+}
+
+
+
 }
