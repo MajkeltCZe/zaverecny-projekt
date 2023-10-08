@@ -12,18 +12,16 @@ public class TrackedImageInfoMultipleManager : MonoBehaviour
 
 
 
-
-    [SerializeField]
-    private GameObject[] arObjectsToPlace;
-
-    [SerializeField]
-    private Vector3 scaleFactor = new Vector3(0.1f,0.1f,0.1f);
+    public static int idx;
+   
+    public GameObject[] arObjectsToPlace;
 
     private ARTrackedImageManager m_TrackedImageManager;
 
     private Dictionary<string, GameObject> arObjects = new Dictionary<string, GameObject>();
-
+    
     public Button button;
+    
 
 
 
@@ -63,12 +61,16 @@ HideButton();
     {
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
+
             UpdateARImage(trackedImage);
             
         }
 
         foreach (ARTrackedImage trackedImage in eventArgs.updated)
         {
+            
+          trackedImage.name = name;
+             idx = arObjects[trackedImage.name];
             UpdateARImage(trackedImage);
         }
 
@@ -85,28 +87,19 @@ HideButton();
         // Assign and Place Game Object
         AssignGameObject(trackedImage.referenceImage.name, trackedImage.transform.position);
         ShowButton();
-        
-        
-        
-        
 
     }
 
     void AssignGameObject(string name, Vector3 newPosition)
     {   
-            
-
-        
         if(arObjectsToPlace != null)
         {
             GameObject goARObject = arObjects[name];
             goARObject.SetActive(true);
             goARObject.transform.position = newPosition;
-            goARObject.transform.localScale = scaleFactor;
             
             foreach(GameObject go in arObjects.Values)
             {
-                Debug.Log($"Go in arObjects.Values: {go.name}");
                 if(go.name != name)
                 {
                     go.SetActive(false);
