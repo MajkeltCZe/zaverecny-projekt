@@ -12,9 +12,10 @@ public class TrackedImageInfoMultipleManager : MonoBehaviour
 
 
 
-    public static int idx;
+    public static string NameRef;
    
     public GameObject[] arObjectsToPlace;
+    public string[]     textToShow;
 
     private ARTrackedImageManager m_TrackedImageManager;
 
@@ -61,7 +62,7 @@ HideButton();
     {
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
-
+                
             UpdateARImage(trackedImage);
             
         }
@@ -70,7 +71,8 @@ HideButton();
         {
             
           trackedImage.name = name;
-             idx = arObjects[trackedImage.name];
+        
+            
             UpdateARImage(trackedImage);
         }
 
@@ -83,7 +85,7 @@ HideButton();
     private void UpdateARImage(ARTrackedImage trackedImage)
     {
         // Display the name of the tracked image in the canvas
-            
+            NameRef = trackedImage.referenceImage.name;
         // Assign and Place Game Object
         AssignGameObject(trackedImage.referenceImage.name, trackedImage.transform.position);
         ShowButton();

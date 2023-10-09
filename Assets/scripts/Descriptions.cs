@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Descriptions : MonoBehaviour
 {   
-     private static int nameText;
+     private static string NameRef;
     public Text text;
     public Button btn;
     public Image bg;
@@ -14,8 +14,8 @@ public class Descriptions : MonoBehaviour
      
 
    public string[] TextToShow;
-   public string[] NameTextToShow;
-
+   public string[] TextToShowName;
+   
     private Dictionary<string, string> TextsToShow = new Dictionary<string, string>();
 
 
@@ -24,10 +24,10 @@ public void Start() {
 bg.enabled = false;
 change = false;
 
-  foreach(string txt, string txt2  in TextToShow, NameTextToShow)
-        {
-            
-            TextsToShow.Add(txt,txt2);
+
+        for (int i = 0; i < TextToShow.Length;i++) {
+        
+            TextsToShow.Add(TextToShowName[i], TextToShow[i]);
         }
 
 
@@ -39,8 +39,8 @@ change = false;
 
 public void NewText() {
     if(change == false) {
-    nameText = TrackedImageInfoMultipleManager.NameText;
-    text.text =  TextToShow[nameText];
+   NameRef = TrackedImageInfoMultipleManager.NameRef;
+    text.text =  TextsToShow[NameRef];
      bg.enabled = true;
      change = true;
       

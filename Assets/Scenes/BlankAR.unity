@@ -546,6 +546,8 @@ MonoBehaviour:
     jako nikdy d\u0159\xEDv. Vydejte se spolu s n\xEDm na nep\u0159ekonateln\xE9
     putov\xE1n\xED po ostrovech, poho\u0159\xEDch, pou\u0161t\xEDch i m\u011Bstech"
   - sssssssssssssssssssssssssssss
+  TextToShowName:
+  - ram
 --- !u!1 &1044569751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,7 +1085,8 @@ MonoBehaviour:
   m_SerializedLibrary: {fileID: 11400000, guid: 6160de2f78ab45e44bd0cbf3affc4f8b,
     type: 2}
   m_MaxNumberOfMovingImages: 4
-  m_TrackedImagePrefab: {fileID: 0}
+  m_TrackedImagePrefab: {fileID: 9095026212086533173, guid: b212ce36d2ad94f48836c54ab887dfb2,
+    type: 3}
 --- !u!114 &1659859603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1098,6 +1101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arObjectsToPlace:
   - {fileID: 9095026212086533173, guid: b212ce36d2ad94f48836c54ab887dfb2, type: 3}
+  textToShow: []
   button: {fileID: 1044569753}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
