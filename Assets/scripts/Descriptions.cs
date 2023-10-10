@@ -9,6 +9,7 @@ public class Descriptions : MonoBehaviour
     public Text text;
     public Button btn;
     public Image bg;
+    public Slider slider;
     
     bool change;
      
@@ -23,7 +24,8 @@ public class Descriptions : MonoBehaviour
 public void Start() {
 bg.enabled = false;
 change = false;
-
+slider.gameObject.SetActive(false);
+NameRef = "ram";
 
         for (int i = 0; i < TextToShow.Length;i++) {
         
@@ -40,10 +42,11 @@ change = false;
 public void NewText() {
     if(change == false) {
    NameRef = TrackedImageInfoMultipleManager.NameRef;
-    text.text =  TextsToShow[NameRef];
+ //  text.text =  TextsToShow[NameRef];
      bg.enabled = true;
-     change = true;
-      
+      change = true;
+      slider.gameObject.SetActive(true);
+
 
        }
 
@@ -51,6 +54,8 @@ public void NewText() {
     text.text = "";
      bg.enabled = false;
         change = false;
+       slider.gameObject.SetActive(false);
+       btn.gameObject.SetActive(false);
     }   
      
      }
