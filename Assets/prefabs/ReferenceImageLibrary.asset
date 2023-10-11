@@ -23,27 +23,17 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 4833623416942438959
       m_GuidHigh: 8916044814670223689
-    m_Size: {x: 0, y: 0}
+    m_Size: {x: 5, y: 4.97416}
     m_SpecifySize: 0
     m_Name: ram
     m_Texture: {fileID: 2800000, guid: 58dd2a2f7ae3431449d9e10b8527bc7b, type: 3}
   - m_SerializedGuid:
-      m_GuidLow: 5409851724536630469
-      m_GuidHigh: 8516162047911982720
+      m_GuidLow: 4831656717707581413
+      m_GuidHigh: 16082306611663117490
     m_SerializedTextureGuid:
-      m_GuidLow: 2383627192035621923
-      m_GuidHigh: 6308271553242651864
+      m_GuidLow: 7720557187508758455
+      m_GuidHigh: 10133580443319769433
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: pvy
-    m_Texture: {fileID: 2800000, guid: 5a3ebc23584d2114d8dcba158e7b8b57, type: 3}
-  - m_SerializedGuid:
-      m_GuidLow: 5662172747460166064
-      m_GuidHigh: 13155761065582857088
-    m_SerializedTextureGuid:
-      m_GuidLow: 1906324249605147230
-      m_GuidHigh: 6837523962236252538
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: test2
-    m_Texture: {fileID: 2800000, guid: 0c6d8a5e9fce1a747a315020d1c3e35e, type: 3}
+    m_Name: test
+    m_Texture: {fileID: 0}

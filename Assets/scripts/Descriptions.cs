@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Descriptions : MonoBehaviour
 {   
-     private static string NameRef;
+     // private static string NameRef;
     public Text text;
     public Button btn;
     public Image bg;
@@ -25,7 +25,7 @@ public void Start() {
 bg.enabled = false;
 change = false;
 slider.gameObject.SetActive(false);
-NameRef = "ram";
+//NameRef = "ram";
 
         for (int i = 0; i < TextToShow.Length;i++) {
         
@@ -41,7 +41,7 @@ NameRef = "ram";
 
 public void NewText() {
     if(change == false) {
-   NameRef = TrackedImageInfoMultipleManager.NameRef;
+ //  NameRef = TrackedImageInfoMultipleManager.NameRef;
  //  text.text =  TextsToShow[NameRef];
      bg.enabled = true;
       change = true;

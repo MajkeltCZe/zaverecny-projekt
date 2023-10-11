@@ -1,21 +1,16 @@
-﻿using System.Collections.Generic;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(ARTrackedImageManager))]
-public class TrackedImageInfoMultipleManager : MonoBehaviour
+
+public class MultipleImageTracking : MonoBehaviour
 {
-
-
-
-
-
-
-    public static string NameRef;
+    public Text NameRef;
    
     public GameObject[] arObjectsToPlace;
-    public string[]     textToShow;
 
     private ARTrackedImageManager m_TrackedImageManager;
 
@@ -26,16 +21,11 @@ public class TrackedImageInfoMultipleManager : MonoBehaviour
 
 
 
-void Start() {
-HideButton();
-
-}
-
 
 
     void Awake()
     {
-            
+           HideButton(); 
         m_TrackedImageManager = GetComponent<ARTrackedImageManager>();
         
         foreach(GameObject arObject in arObjectsToPlace)
@@ -44,6 +34,13 @@ HideButton();
             newARObject.name = arObject.name;
             arObjects.Add(arObject.name, newARObject);
         }
+
+
+
+         foreach(GameObject i in arObjects.Values)
+            {
+                    i.SetActive(false);
+            } 
     }
 
     void OnEnable()
@@ -85,33 +82,34 @@ HideButton();
     private void UpdateARImage(ARTrackedImage trackedImage)
     {
         // Display the name of the tracked image in the canvas
-            NameRef = trackedImage.referenceImage.name;
+            NameRef.text = trackedImage.referenceImage.name;
         // Assign and Place Game Object
         AssignGameObject(trackedImage.referenceImage.name, trackedImage.transform.position);
-        ShowButton();
+        }
+      //  ShowButton();
 
-    }
+    
 
     void AssignGameObject(string name, Vector3 newPosition)
     {   
         if(arObjectsToPlace != null)
         {
-            GameObject goARObject = arObjects[name];
-            goARObject.SetActive(true);
-            goARObject.transform.position = newPosition;
+        
+            arObjects[name].SetActive(true);
+            arObjects[name].transform.position = newPosition;
             
-            foreach(GameObject go in arObjects.Values)
+            foreach(GameObject i in arObjects.Values)
             {
-                if(go.name != name)
+                if(i.name != name)
                 {
-                    go.SetActive(false);
+                    i.SetActive(false);
                 }
             } 
         }
     }
 
 
-public void HideButton() {
+ public void HideButton() {
     button.gameObject.SetActive(false);
 }
 
@@ -119,6 +117,4 @@ public void ShowButton() {
     button.gameObject.SetActive(true);
 }
 
-
-
-}
+ }
