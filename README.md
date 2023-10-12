@@ -25,4 +25,10 @@ O projektu: Záměrem je vytvořit mobilní aplikace něco na způsob Treasure H
 - https://www.youtube.com/watch?v=gpaq5bAjya8
 - https://learn.unity.com/pathway/mobile-ar-development
 
+
+
+12.10 - tvorba počítačových komponentů 
+
+
+
 [Unity]:https://unity.com/
