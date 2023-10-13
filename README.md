@@ -27,7 +27,7 @@ O projektu: Záměrem je vytvořit mobilní aplikace něco na způsob Treasure H
 
 
 
-12.10 - tvorba počítačových komponentů 
+12.10 - tvorba počítačových komponentů    
 
 
 
