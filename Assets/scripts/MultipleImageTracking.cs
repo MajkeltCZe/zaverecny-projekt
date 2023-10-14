@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.UI;
+using UnityEngine.XR.ARSubsystems;
 
 [RequireComponent(typeof(ARTrackedImageManager))]
 
@@ -17,11 +18,6 @@ public class MultipleImageTracking : MonoBehaviour
     private Dictionary<string, GameObject> arObjects = new Dictionary<string, GameObject>();
     
     public Button button;
-    
-
-
-
-
 
     void Awake()
     {
@@ -43,60 +39,71 @@ public class MultipleImageTracking : MonoBehaviour
             } 
     }
 
-    void OnEnable()
-    {
-        m_TrackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
-    }
 
-    void OnDisable()
-    {
-        m_TrackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
-    }
+   
+void OnEnable() => m_TrackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
+
+void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
 
    
 
     void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
+
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
-                
-            UpdateARImage(trackedImage);
-            
+                 
+                  UpdateARImage(trackedImage);
+                    NameRef.text = "přídáno";
         }
 
         foreach (ARTrackedImage trackedImage in eventArgs.updated)
         {
-            
+
           trackedImage.name = name;
-        
+       
+         //   if(trackedImage.trackingState != TrackingState.Tracking) {
+
+
+               //  DeleteObject();
+         //   }
             
+           
             UpdateARImage(trackedImage);
+             
         }
+
+ 
 
         foreach (ARTrackedImage trackedImage in eventArgs.removed)
         {
-            arObjects[trackedImage.name].SetActive(false);
+           DeleteObject(trackedImage.referenceImage.name);
         }
     }
 
     private void UpdateARImage(ARTrackedImage trackedImage)
     {
         // Display the name of the tracked image in the canvas
-            NameRef.text = trackedImage.referenceImage.name;
+          //  NameRef.text = trackedImage.referenceImage.name;
+            Vector3 position = trackedImage.transform.position;
         // Assign and Place Game Object
-        AssignGameObject(trackedImage.referenceImage.name, trackedImage.transform.position);
+        AssignGameObject(trackedImage.referenceImage.name,position);
+        
         }
       //  ShowButton();
 
     
 
+
+
+
     void AssignGameObject(string name, Vector3 newPosition)
     {   
         if(arObjectsToPlace != null)
         {
-        
-            arObjects[name].SetActive(true);
-            arObjects[name].transform.position = newPosition;
+            GameObject prefab = arObjects[name];
+           prefab.transform.position = newPosition;
+           prefab.SetActive(true);
             
             foreach(GameObject i in arObjects.Values)
             {
@@ -107,6 +114,19 @@ public class MultipleImageTracking : MonoBehaviour
             } 
         }
     }
+
+void DeleteObject(string name) {
+   NameRef.text = "Not Found";
+        arObjects[name].SetActive(false);
+        //    foreach(GameObject i in arObjects.Values)
+          //  {
+                //    i.SetActive(false);
+                
+           // } 
+//HideButton();
+}
+
+
 
 
  public void HideButton() {

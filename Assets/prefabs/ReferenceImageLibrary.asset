@@ -18,22 +18,32 @@ MonoBehaviour:
     m_Storage: []
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 5003565477262827245
-      m_GuidHigh: 5487789538779199121
+      m_GuidLow: 5621796587702675132
+      m_GuidHigh: 2652901744949900689
+    m_SerializedTextureGuid:
+      m_GuidLow: 12426802578093338981
+      m_GuidHigh: 13205690367172650696
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: grafika
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4915648985751259175
+      m_GuidHigh: 7150358290763550356
     m_SerializedTextureGuid:
       m_GuidLow: 4833623416942438959
       m_GuidHigh: 8916044814670223689
-    m_Size: {x: 5, y: 4.97416}
-    m_SpecifySize: 0
-    m_Name: ram
-    m_Texture: {fileID: 2800000, guid: 58dd2a2f7ae3431449d9e10b8527bc7b, type: 3}
-  - m_SerializedGuid:
-      m_GuidLow: 4831656717707581413
-      m_GuidHigh: 16082306611663117490
-    m_SerializedTextureGuid:
-      m_GuidLow: 7720557187508758455
-      m_GuidHigh: 10133580443319769433
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: test
+    m_Name: ram
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4787419675171728112
+      m_GuidHigh: 5401670374911566498
+    m_SerializedTextureGuid:
+      m_GuidLow: 11674521177627538517
+      m_GuidHigh: 6992115493553515529
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: video
     m_Texture: {fileID: 0}
