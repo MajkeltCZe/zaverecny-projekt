@@ -15,29 +15,21 @@ public class MultipleImageTracking : MonoBehaviour
 
     private ARTrackedImageManager m_TrackedImageManager;
 
+
     private Dictionary<string, GameObject> arObjects = new Dictionary<string, GameObject>();
-    
+                                    System.Timers.Timer timer = new System.Timers.Timer(interval: 5000);
+
     public Button button;
+    bool AddedState = false;
 
     void Awake()
     {
-           HideButton(); 
+       
         m_TrackedImageManager = GetComponent<ARTrackedImageManager>();
-        
-        foreach(GameObject arObject in arObjectsToPlace)
-        {
-            GameObject newARObject = Instantiate(arObject, Vector3.zero, Quaternion.identity);
-            newARObject.name = arObject.name;
-            arObjects.Add(arObject.name, newARObject);
-        }
-
-
-
-         foreach(GameObject i in arObjects.Values)
-            {
-                    i.SetActive(false);
-            } 
+      
     }
+
+
 
 
    
@@ -49,92 +41,55 @@ void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImage
 
     void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
-
+     
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
-                 
-                  UpdateARImage(trackedImage);
-                    NameRef.text = "přídáno";
+                
+                             NameRef.text = "added: " + trackedImage.referenceImage.name;
+                                timer.Enabled = true;
+
+
+                   
         }
 
         foreach (ARTrackedImage trackedImage in eventArgs.updated)
         {
-
           trackedImage.name = name;
-       
-         //   if(trackedImage.trackingState != TrackingState.Tracking) {
+        
+
+      if(trackedImage.trackingState != TrackingState.Tracking && AddedState == false) {
+                 NameRef.text = "Image not Found ";
 
 
-               //  DeleteObject();
-         //   }
-            
-           
-            UpdateARImage(trackedImage);
-             
-        }
-
- 
-
-        foreach (ARTrackedImage trackedImage in eventArgs.removed)
-        {
-           DeleteObject(trackedImage.referenceImage.name);
         }
     }
 
-    private void UpdateARImage(ARTrackedImage trackedImage)
+  
+    }
+
+
+ private static void OnTimerElapsed(Object source, System.Timers.ElapsedEventArgs e)
     {
-        // Display the name of the tracked image in the canvas
-          //  NameRef.text = trackedImage.referenceImage.name;
-            Vector3 position = trackedImage.transform.position;
-        // Assign and Place Game Object
-        AssignGameObject(trackedImage.referenceImage.name,position);
-        
-        }
-      //  ShowButton();
+
+    }
+
+
+}
+
+
+
+
+   
+   
+   
+    
+
+   
+
+
 
     
 
 
 
 
-    void AssignGameObject(string name, Vector3 newPosition)
-    {   
-        if(arObjectsToPlace != null)
-        {
-            GameObject prefab = arObjects[name];
-           prefab.transform.position = newPosition;
-           prefab.SetActive(true);
-            
-            foreach(GameObject i in arObjects.Values)
-            {
-                if(i.name != name)
-                {
-                    i.SetActive(false);
-                }
-            } 
-        }
-    }
-
-void DeleteObject(string name) {
-   NameRef.text = "Not Found";
-        arObjects[name].SetActive(false);
-        //    foreach(GameObject i in arObjects.Values)
-          //  {
-                //    i.SetActive(false);
-                
-           // } 
-//HideButton();
-}
-
-
-
-
- public void HideButton() {
-    button.gameObject.SetActive(false);
-}
-
-public void ShowButton() {
-    button.gameObject.SetActive(true);
-}
-
- }
