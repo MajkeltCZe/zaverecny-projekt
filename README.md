@@ -30,5 +30,17 @@ O projektu: Záměrem je vytvořit mobilní aplikace něco na způsob Treasure H
 12.10 - tvorba počítačových komponentů    
 
 
+https://forum.unity.com/threads/arfoundation-and-2d-image-target-tracking.538062/page-3#post-4556173
+
+https://stackoverflow.com/questions/64246226/artrackedimage-switches-only-at-the-first-time
+
+
+
+
+https://forum.unity.com/threads/position-ar-content-on-x-y-position-on-tracked-image.931437/
+https://discussions.unity.com/t/simple-timer/56201/2
+https://gamedevbeginner.com/how-to-make-countdown-timer-in-unity-minutes-seconds/
+
+https://www.youtube.com/watch?v=7GiDoWviQEM
 
 [Unity]:https://unity.com/
