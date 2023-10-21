@@ -16,16 +16,30 @@ public class MultipleImageTracking : MonoBehaviour
     private ARTrackedImageManager m_TrackedImageManager;
 
     private Dictionary<string, GameObject> arObjects = new Dictionary<string, GameObject>();
-    
     public Button button;
+    bool state = true;
 
     void Awake()
     {
         m_TrackedImageManager = GetComponent<ARTrackedImageManager>();
         
+
+         foreach(GameObject arObject in arObjectsToPlace)
+        {
+            GameObject newARObject = Instantiate(arObject, Vector3.zero, Quaternion.identity);
+            newARObject.name = arObject.name;
+            newARObject.SetActive(false);
+            arObjects.Add(arObject.name, newARObject);
+        } 
+
       
         
     }
+
+
+
+
+
 
 
 
@@ -34,50 +48,54 @@ void OnEnable() => m_TrackedImageManager.trackedImagesChanged += OnTrackedImages
 
 void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
 
-   
+  
 
     void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
      
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
-                GameObject newARObject  =    Instantiate(trackedImage.referenceImage.name, trackedImage.transform.position, Quaternion.identity);
+           
                              NameRef.text = "added: " + trackedImage.referenceImage.name;
-                   
-        }
+               state = true;
+                
+
+
+
+
+        }           
 
         foreach (ARTrackedImage trackedImage in eventArgs.updated)
         {
         
 
-   // if(trackedImage.trackingState != TrackingState.Tracking) {
-         
-//DeletePrefab(trackedImage.referenceImage.name);
-    //                return;
+  // if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
 
-  //      } 
+    //  DeletePrefab(trackedImage);
+    //        return;
 
+  //  } 
+//else {
             NameRef.text = "Update: " + trackedImage.referenceImage.name;
-        //    UpdateARImage(trackedImage);
-
-        newARObject.SetActive(true);
+           UpdateARImage(trackedImage);
+               state = false;
+ 
+ //}
 
 
         }
 
         foreach (ARTrackedImage trackedImage in eventArgs.removed)
         {
-            trackedImage.name = name;
-         //  DeletePrefab(name);
+          DeletePrefab(trackedImage);
         }
     }
    
    
    private void UpdateARImage(ARTrackedImage trackedImage)
     {
-            Vector3 position = trackedImage.transform.position;
         // Assign and Place Game Object
-        AssignGameObject(trackedImage.referenceImage.name,position);
+        AssignGameObject(trackedImage.referenceImage.name,trackedImage.transform.position);
      
         }
 
@@ -104,19 +122,13 @@ void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImage
         }
     }
 
-void DeletePrefab(string name) {
-               GameObject prefab = arObjects[name];
+void DeletePrefab(ARTrackedImage trackedImage) {
+               arObjects[trackedImage.referenceImage.name].SetActive(false);
+                               NameRef.text = "Deleted: " + trackedImage.referenceImage.name;
 
-                     prefab.SetActive(false);
-          
            } 
     
     }
-
-
-
-
-
 
    
    

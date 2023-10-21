@@ -45,5 +45,5 @@ MonoBehaviour:
       m_GuidHigh: 430352493358147288
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: king
+    m_Name: neco
     m_Texture: {fileID: 2800000, guid: 7a6c6b4523bb5c54d8e6d00650ebf805, type: 3}
