@@ -11,16 +11,21 @@ public class MultipleImageTracking : MonoBehaviour
 {
     public Text NameRef;
    
-    public GameObject[] arObjectsToPlace;
+ public GameObject[] arObjectsToPlace;
+
+    public GameObject[] buttons;
 
     private ARTrackedImageManager m_TrackedImageManager;
 
     private Dictionary<string, GameObject> arObjects = new Dictionary<string, GameObject>();
-    public Button button;
+    
     bool state = true;
+ public  static  Vector3 positions;
+ private static int value;
 
     void Awake()
     {
+       
         m_TrackedImageManager = GetComponent<ARTrackedImageManager>();
         
 
@@ -32,14 +37,19 @@ public class MultipleImageTracking : MonoBehaviour
             arObjects.Add(arObject.name, newARObject);
         } 
 
-      
+
+
+ 
+
+
+   }
         
-    }
+    
+void Update() {
 
+ value = OnClickPrefab.value;
 
-
-
-
+}
 
 
 
@@ -52,22 +62,22 @@ void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImage
 
     void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
-     
+
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
-           
-                             NameRef.text = "added: " + trackedImage.referenceImage.name;
+           name =  trackedImage.referenceImage.name;
+                           //  NameRef.text = "added: " + trackedImage.referenceImage.name;
+        UpdateARImage(name,trackedImage);
                state = true;
                 
-
-
 
 
         }           
 
         foreach (ARTrackedImage trackedImage in eventArgs.updated)
         {
-        
+                
+
 
   // if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
 
@@ -76,8 +86,21 @@ void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImage
 
   //  } 
 //else {
-            NameRef.text = "Update: " + trackedImage.referenceImage.name;
-           UpdateARImage(trackedImage);
+ 
+          if(trackedImage.referenceImage.name == "grafika") {
+                     positions =   trackedImage.transform.position;
+                         
+
+           }
+       
+
+                   //    name =  trackedImage.referenceImage.name;
+
+
+
+
+          //  UpdateARImage(name,trackedImage);
+
                state = false;
  
  //}
@@ -92,19 +115,19 @@ void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImage
     }
    
    
-   private void UpdateARImage(ARTrackedImage trackedImage)
+ 
+ private void UpdateARImage(string name,ARTrackedImage trackedImage)
     {
         // Assign and Place Game Object
-        AssignGameObject(trackedImage.referenceImage.name,trackedImage.transform.position);
-     
+        AssignGameObject(name,trackedImage.transform.position);
+        
         }
-
     
 
 
 
 
-    void AssignGameObject(string name, Vector3 newPosition)
+   void AssignGameObject(string name, Vector3 newPosition)
     {   
         if(arObjectsToPlace != null)
         {
@@ -131,7 +154,7 @@ void DeletePrefab(ARTrackedImage trackedImage) {
     }
 
    
-   
+
    
     
 

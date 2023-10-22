@@ -7,25 +7,24 @@ public class OnClickPrefab : MonoBehaviour
 {
 
 
+[HideInInspector] 
+public static int value;
 
- int value;
 
-public Text text;
 
 void Start() {
 value = 0;
 
 }
 
-
 public void ClickButtonNext() {
 value++;
+
 
 if(value == 7) {
 value =0;
 
 }
-text.text = value.ToString();
 }
 
 
@@ -36,8 +35,8 @@ if(value == -1) {
 value = 6;
 
 }
-text.text = value.ToString();
 }
+
 
 
 
