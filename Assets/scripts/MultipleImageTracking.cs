@@ -13,19 +13,18 @@ public class MultipleImageTracking : MonoBehaviour
    
  public GameObject[] arObjectsToPlace;
 
-    public GameObject[] buttons;
+    public Button[] buttons;
 
     private ARTrackedImageManager m_TrackedImageManager;
 
     private Dictionary<string, GameObject> arObjects = new Dictionary<string, GameObject>();
     
     bool state = true;
- public  static  Vector3 positions;
- private static int value;
+ private static int value = 0;
 
     void Awake()
     {
-       
+          
         m_TrackedImageManager = GetComponent<ARTrackedImageManager>();
         
 
@@ -38,7 +37,9 @@ public class MultipleImageTracking : MonoBehaviour
         } 
 
 
-
+ foreach(Button btn in buttons) {
+             btn.gameObject.SetActive(false);
+         }
  
 
 
@@ -47,11 +48,11 @@ public class MultipleImageTracking : MonoBehaviour
     
 void Update() {
 
- value = OnClickPrefab.value;
-
+ 
+ 
 }
 
-
+ 
 
    
 void OnEnable() => m_TrackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
@@ -66,7 +67,7 @@ void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImage
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
            name =  trackedImage.referenceImage.name;
-                           //  NameRef.text = "added: " + trackedImage.referenceImage.name;
+                           NameRef.text = "added: " + trackedImage.referenceImage.name;
         UpdateARImage(name,trackedImage);
                state = true;
                 
@@ -88,9 +89,12 @@ void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImage
 //else {
  
           if(trackedImage.referenceImage.name == "grafika") {
-                     positions =   trackedImage.transform.position;
-                         
-
+       if(value == 0)  UpdateARImage("0",trackedImage);
+          foreach(Button btn in buttons) {
+             btn.gameObject.SetActive(true);
+             btn.onClick.AddListener(() => ButtonClickedAction(trackedImage.transform.position));;
+         }
+       
            }
        
 
@@ -123,7 +127,11 @@ void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImage
         
         }
     
-
+ void ButtonClickedAction(Vector3 position) {
+    value = OnClickPrefab.value;
+   
+AssignGameObject(value.ToString(),position);
+} 
 
 
 
@@ -155,7 +163,7 @@ void DeletePrefab(ARTrackedImage trackedImage) {
 
    
 
-   
+ 
     
 
    

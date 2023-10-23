@@ -798,8 +798,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff3178f58b924d409d64c7d65c8380c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  text: {fileID: 0}
 --- !u!1 &1044569751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,10 +1435,14 @@ MonoBehaviour:
   - {fileID: 8494504064019107136, guid: ef14c706c1e5acb4093939fdd6777496, type: 3}
   - {fileID: 5873907293559063974, guid: 30743959f142ca349ad863756055c328, type: 3}
   - {fileID: 8386791950532265631, guid: c207228e1d664444bb232604cd1eaf79, type: 3}
+  - {fileID: 1099634093910645630, guid: 6067ddd898f12af47bf4291bac9baf26, type: 3}
+  - {fileID: 6972291396942120833, guid: 705f1f7b6b9277a41a96cfda922d749c, type: 3}
+  - {fileID: 2201239298619541837, guid: 14600e4e611816843897e7447fb7056e, type: 3}
+  - {fileID: 5734223250302648089, guid: 9468f3be70c52c94d9989ada9ea1e8c5, type: 3}
   - {fileID: 5146492419192011317, guid: 40af38100ee2f9d4786d6d8aa739a0f3, type: 3}
   buttons:
-  - {fileID: 1841032132}
-  - {fileID: 768503289}
+  - {fileID: 1841032135}
+  - {fileID: 768503291}
 --- !u!1 &1841032132
 GameObject:
   m_ObjectHideFlags: 0
