@@ -134,7 +134,7 @@ PrefabInstance:
     - target: {fileID: 6972291396942120833, guid: 705f1f7b6b9277a41a96cfda922d749c,
         type: 3}
       propertyPath: m_Name
-      value: 3
+      value: cat
       objectReference: {fileID: 0}
     - target: {fileID: 6972291396942120833, guid: 705f1f7b6b9277a41a96cfda922d749c,
         type: 3}
@@ -809,7 +809,7 @@ GameObject:
   - component: {fileID: 936992498}
   - component: {fileID: 936992497}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -879,9 +879,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1008574140}
-        m_TargetAssemblyTypeName: HideMenu, Assembly-CSharp
-        m_MethodName: MenuHiddne
+      - m_Target: {fileID: 1008574141}
+        m_TargetAssemblyTypeName: PcComponents_show, Assembly-CSharp
+        m_MethodName: HideMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -949,7 +949,7 @@ GameObject:
   - component: {fileID: 1008574134}
   - component: {fileID: 1008574139}
   - component: {fileID: 1008574138}
-  - component: {fileID: 1008574140}
+  - component: {fileID: 1008574141}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1063,6 +1063,7 @@ MonoBehaviour:
   btn: {fileID: 1044569753}
   bg: {fileID: 0}
   slider: {fileID: 0}
+  change: 0
   TextToShow:
   - "Pokra\u010Dov\xE1n\xED legend\xE1rn\xED dokument\xE1rn\xED s\xE9rie Davida Attenborougha
     nab\xEDz\xED exkluzivn\xED z\xE1b\u011Bry \u017Eivota na na\u0161\xED planet\u011B
@@ -1086,7 +1087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff3178f58b924d409d64c7d65c8380c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1008574140
+--- !u!114 &1008574141
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1095,10 +1096,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1008574133}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9297592acfb76ea4d8675dd3e3e2d61f, type: 3}
+  m_Script: {fileID: 11500000, guid: c26de6e93f037f746bdf63139f07a4c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objects: []
+  MenuObjects:
+  - {fileID: 880927936}
+  - {fileID: 1274579170}
+  - {fileID: 1641739432}
+  - {fileID: 936992495}
+  TextToShow:
+  - "dlouh\xFD text o n\u011B\u010Dem"
+  - "del\u0161\xED text o n\u011B\u010Dem"
+  text: {fileID: 1274579171}
+  parent: {fileID: 1641739432}
 --- !u!1 &1044569751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,9 +1193,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1008574138}
-        m_TargetAssemblyTypeName: Descriptions, Assembly-CSharp
-        m_MethodName: NewText
+      - m_Target: {fileID: 1008574141}
+        m_TargetAssemblyTypeName: PcComponents_show, Assembly-CSharp
+        m_MethodName: ShowObjects
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1246,7 +1256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1044569751}
-  state: 0
+  state: 1
 --- !u!1 &1274579170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,7 +1642,12 @@ PrefabInstance:
     - target: {fileID: 1099634093910645630, guid: 6067ddd898f12af47bf4291bac9baf26,
         type: 3}
       propertyPath: m_Name
-      value: 2
+      value: test1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099634093910645630, guid: 6067ddd898f12af47bf4291bac9baf26,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4522548948667639958, guid: 6067ddd898f12af47bf4291bac9baf26,
         type: 3}
@@ -1783,6 +1798,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1641739433}
+  - component: {fileID: 1641739434}
   m_Layer: 5
   m_Name: 3dObject
   m_TagString: Untagged
@@ -1811,6 +1827,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1641739434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641739432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2193956c171bfb45b8e811659c1e00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1641739432}
+  state: 0
 --- !u!1 &1659859597
 GameObject:
   m_ObjectHideFlags: 0

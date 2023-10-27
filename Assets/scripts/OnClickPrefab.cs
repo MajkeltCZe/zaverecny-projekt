@@ -30,7 +30,6 @@ value =0;
 
 public void ClickButtonPrevious() {
 value--;
-//MultipleImageTracking.AssignGameObject(value.ToString(),MultipleImageTracking.positions);
 
 if(value == -1) {
 value = 6;
