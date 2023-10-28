@@ -758,7 +758,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 233.6, y: 22.1}
+  m_AnchoredPosition: {x: 233.6, y: -15.299997}
   m_SizeDelta: {x: 150, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880927938
@@ -832,7 +832,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 358.8, y: 191.8}
+  m_AnchoredPosition: {x: 358.8, y: 160.9}
   m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &936992497
@@ -1059,22 +1059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2051ea1b00a2ed44bb9ad55039809d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 1274579171}
-  btn: {fileID: 1044569753}
-  bg: {fileID: 0}
-  slider: {fileID: 0}
-  change: 0
-  TextToShow:
-  - "Pokra\u010Dov\xE1n\xED legend\xE1rn\xED dokument\xE1rn\xED s\xE9rie Davida Attenborougha
-    nab\xEDz\xED exkluzivn\xED z\xE1b\u011Bry \u017Eivota na na\u0161\xED planet\u011B
-    jako nikdy d\u0159\xEDv. Vydejte se spolu s n\xEDm na nep\u0159ekonateln\xE9
-    putov\xE1n\xED po ostrovech, poho\u0159\xEDch, pou\u0161t\xEDch i m\u011Bstech"
-  - "n\u011Bjak\xFD del\u0161\xED text"
-  - "je\u0161t\u011B del\u0161\xED\xED\xED\xED texttttt"
-  TextToShowName:
-  - ram
-  - pvy
-  - test2
 --- !u!114 &1008574139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1333,7 +1317,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 230, y: 44}
+  m_AnchoredPosition: {x: 230, y: 6.6}
   m_SizeDelta: {x: 150, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1288311153
@@ -1953,7 +1937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NameRef: {fileID: 1288311155}
   arObjectsToPlace:
-  - {fileID: 712959217492374642, guid: b212ce36d2ad94f48836c54ab887dfb2, type: 3}
+  - {fileID: 143936784296246120, guid: 0e11f548ed7945b4a9d656863db219da, type: 3}
   - {fileID: 8494504064019107136, guid: ef14c706c1e5acb4093939fdd6777496, type: 3}
   - {fileID: 5873907293559063974, guid: 30743959f142ca349ad863756055c328, type: 3}
   - {fileID: 8386791950532265631, guid: c207228e1d664444bb232604cd1eaf79, type: 3}

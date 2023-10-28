@@ -51,11 +51,5 @@ foreach(GameObject i in MenuObjects) {
 i.gameObject.SetActive(false);
 
 }
-
-
-
-
-
-
 }
 } 
