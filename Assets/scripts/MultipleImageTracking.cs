@@ -7,20 +7,35 @@ using UnityEngine.XR.ARSubsystems;
 
 [RequireComponent(typeof(ARTrackedImageManager))]
 
+
 public class MultipleImageTracking : MonoBehaviour
 {
+
+[SerializeField] 
+   ARRaycastManager RaycastManager; 
+   ARPlaneManager m_PlaneManager;
+
+   List<ARRaycastHit> hits = new List<ARRaycastHit>();
+
     public Text NameRef;
    
+    [SerializeField] 
+  
+
+
  public GameObject[] arObjectsToPlace;
 
     public Button[] buttons;
 
     private ARTrackedImageManager m_TrackedImageManager;
+ 
+
 
     private Dictionary<string, GameObject> arObjects = new Dictionary<string, GameObject>();
     
     bool state = true;
  private static int value = 0;
+ private Vector3 position;
 
     void Awake()
     {
@@ -46,11 +61,23 @@ public class MultipleImageTracking : MonoBehaviour
    }
         
     
-void Update() {
+ void Update()   {
+ //if(state) return;
 
- 
- 
-}
+if (RaycastManager.Raycast(Input.GetTouch(0).position, hits)) { 
+
+
+    if(Input.GetTouch(0).phase == TouchPhase.Began) { 
+     if(hits[0].pose.position== position) NameRef.text = "Dlouhýý text";
+        
+        } 
+    
+         }
+
+        } 
+    
+          
+
 
  
 
@@ -67,9 +94,11 @@ void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImage
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
            name =  trackedImage.referenceImage.name;
-                           NameRef.text = "added: " + trackedImage.referenceImage.name;
+                      //     NameRef.text = "added: " + trackedImage.referenceImage.name;
         UpdateARImage(name,trackedImage);
-               state = true;
+                position = trackedImage.transform.position;
+               state = false;
+              
                 
 
 
@@ -105,8 +134,7 @@ void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImage
 
           //  UpdateARImage(name,trackedImage);
 
-               state = false;
- 
+            position = trackedImage.transform.position;
  //}
 
 
@@ -155,7 +183,7 @@ AssignGameObject(value.ToString(),position);
 
 void DeletePrefab(ARTrackedImage trackedImage) {
                arObjects[trackedImage.referenceImage.name].SetActive(false);
-                               NameRef.text = "Deleted: " + trackedImage.referenceImage.name;
+                            //   NameRef.text = "Deleted: " + trackedImage.referenceImage.name;
 
            } 
     

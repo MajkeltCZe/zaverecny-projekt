@@ -19,7 +19,7 @@ public class showingObject : MonoBehaviour
     GameObject spawnablePrefab;
     
 
-   
+    public Text stav;
 
  private void Start() {
   
@@ -32,14 +32,16 @@ public class showingObject : MonoBehaviour
 
 
     if(Input.GetTouch(0).phase == TouchPhase.Began) { 
-        Instantiate(spawnablePrefab,hits[0].pose.position, Quaternion.identity); 
-      
+      if(hits[0].pose.position == MultipleImageTracking.position) {
+      stav.text = "Dlouhýý text";
+        }
         } 
     
          }   
 }
 
    }
+
 
 
 
