@@ -1103,7 +1103,6 @@ MonoBehaviour:
   - "o t\xE9 kosti\u010Dce jsem u\u017E sly\u0161ela"
   text: {fileID: 1274579171}
   parent: {fileID: 1641739432}
-  nameID: 
 --- !u!1 &1044569751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,6 +1116,7 @@ GameObject:
   - component: {fileID: 1044569754}
   - component: {fileID: 1044569753}
   - component: {fileID: 1044569758}
+  - component: {fileID: 1044569759}
   m_Layer: 5
   m_Name: interakce
   m_TagString: Untagged
@@ -1188,6 +1188,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1044569759}
+        m_TargetAssemblyTypeName: GameObjectName, Assembly-CSharp
+        m_MethodName: AssignName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1008574141}
         m_TargetAssemblyTypeName: PcComponents_show, Assembly-CSharp
         m_MethodName: ShowObjects
@@ -1252,6 +1264,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1044569751}
   state: 1
+--- !u!114 &1044569759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044569751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 633e7a7a26695a449aca525b57fc5713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 1288311155}
+  g: {fileID: 3736226154212295270}
 --- !u!1 &1274579170
 GameObject:
   m_ObjectHideFlags: 0
@@ -2428,6 +2454,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7141489147017919583, guid: 0ba607b2c9f911b42b8bd362a5e9324b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7665290119030808829}
     - targetCorrespondingSourceObject: {fileID: 2266786850651549485, guid: 0ba607b2c9f911b42b8bd362a5e9324b,
         type: 3}
       insertIndex: -1
@@ -2449,6 +2479,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3676390697449979382}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7665290119030808829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3526348626977845705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2193956c171bfb45b8e811659c1e00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3526348626977845705}
+  state: 0
 --- !u!114 &8645282294449395005
 MonoBehaviour:
   m_ObjectHideFlags: 0

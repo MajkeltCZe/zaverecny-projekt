@@ -19,7 +19,7 @@ public Text text;
 [SerializeField] 
 private GameObject parent;
 
-public string nameID;
+public static string nameID;
  
 
 
