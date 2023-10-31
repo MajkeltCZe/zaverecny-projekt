@@ -15,11 +15,15 @@ private string[] TextToShow;
 [SerializeField] 
 public Text text;
 
-private string name = "cat";
+
 [SerializeField] 
 private GameObject parent;
-   
+
+public string nameID;
  
+
+
+
 void Start() {
 HideMenu();
 
@@ -28,14 +32,13 @@ HideMenu();
 
 
 public void ShowObjects() {
-
 foreach(GameObject i in MenuObjects) {
 i.gameObject.SetActive(true);
 
 }
 
 for(int i = 0; i < parent.transform.childCount;i++) {
-    if(parent.transform.GetChild(i).name == name) {
+    if(parent.transform.GetChild(i).name == nameID) {
            parent.gameObject.SetActive(true);
            text.text = TextToShow[i];
          parent.transform.GetChild(i).gameObject.SetActive(true);
@@ -52,4 +55,6 @@ i.gameObject.SetActive(false);
 
 }
 }
+
+
 } 
