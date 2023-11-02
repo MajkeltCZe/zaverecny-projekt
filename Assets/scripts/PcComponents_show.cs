@@ -14,8 +14,6 @@ private string[] TextToShow;
 
 [SerializeField] 
 public Text text;
-
-
 [SerializeField] 
 private GameObject parent;
 
@@ -36,6 +34,7 @@ foreach(GameObject i in MenuObjects) {
 i.gameObject.SetActive(true);
 
 }
+
 
 for(int i = 0; i < parent.transform.childCount;i++) {
     if(parent.transform.GetChild(i).name == nameID) {
