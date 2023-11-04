@@ -10,7 +10,7 @@ using UnityEngine.XR.ARSubsystems;
 
 public class MultipleImageTracking : MonoBehaviour
 {
-
+    //public GameObject pcPlaced;
 
     public Text NameRef;
 
@@ -72,7 +72,7 @@ void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImage
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
            name =  trackedImage.referenceImage.name;
-                      //     NameRef.text = "added: " + trackedImage.referenceImage.name;
+                  //      NameRef.text = "added: " + trackedImage.referenceImage.name;
         UpdateARImage(name,trackedImage);
                state = false;
               
@@ -83,7 +83,7 @@ void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImage
 
         foreach (ARTrackedImage trackedImage in eventArgs.updated)
         {
-                
+              //  NameRef.text = "updated: " + trackedImage.referenceImage.name;
 
 
   // if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
@@ -102,14 +102,22 @@ void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImage
          }
        
            }
+
+
+   if(trackedImage.referenceImage.name == "pc") {
+            UpdateARImage(trackedImage.referenceImage.name,trackedImage);
+
+
+           }
+
        
 
                    //    name =  trackedImage.referenceImage.name;
 
+             //    UpdateARImage(name,trackedImage);
 
 
 
-          //  UpdateARImage(name,trackedImage);
 
  //}
 

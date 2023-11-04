@@ -5,22 +5,27 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.UI;
 
 
-public class setStateFalse : MonoBehaviour
+public class setState : MonoBehaviour
 {
 public GameObject prefab;
-public bool state;
+public bool stateStart;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        prefab.SetActive(state);
+        prefab.SetActive(stateStart);
 
     }
 
 
-
+public void HideObject() {
+    prefab.SetActive(false);
+}
+public void ShowObject() {
+    prefab.SetActive(true);
+}
 
 
 }

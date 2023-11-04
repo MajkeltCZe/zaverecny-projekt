@@ -5,13 +5,8 @@ using UnityEngine.UI;
 
 public class GameObjectName : MonoBehaviour
 {
-
-public Text txt;
-public GameObject g;
-
-   
+    
 public void AssignName() {
-PcComponents_show.nameID = g.name.ToString();
-txt.text = PcComponents_show.nameID;
+PcComponents_show.nameID = name.ToString();
 }
 }
