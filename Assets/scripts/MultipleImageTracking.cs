@@ -72,7 +72,7 @@ void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImage
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
            name =  trackedImage.referenceImage.name;
-                  //      NameRef.text = "added: " + trackedImage.referenceImage.name;
+                        NameRef.text = "Byl přidán obrázek: " + trackedImage.referenceImage.name;
         UpdateARImage(name,trackedImage);
                state = false;
               
@@ -103,18 +103,9 @@ void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImage
        
            }
 
-
-   if(trackedImage.referenceImage.name == "pc") {
-            UpdateARImage(trackedImage.referenceImage.name,trackedImage);
-
-
-           }
-
-       
-
                    //    name =  trackedImage.referenceImage.name;
 
-             //    UpdateARImage(name,trackedImage);
+                UpdateARImage(name,trackedImage);
 
 
 
