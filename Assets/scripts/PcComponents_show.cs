@@ -35,8 +35,9 @@ i.gameObject.SetActive(true);
 }
 check.text = nameID;
 for(int i = 0; i < parent.transform.childCount;i++) {
+             parent.gameObject.SetActive(true);
+
     if(parent.transform.GetChild(i).name == nameID) {
-           parent.gameObject.SetActive(true);
            text.text = TextToShow[i];
          parent.transform.GetChild(i).gameObject.SetActive(true);
     }
