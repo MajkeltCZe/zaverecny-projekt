@@ -7,7 +7,7 @@ public class PcComponents_show : MonoBehaviour
 {
 
 [SerializeField]
-GameObject[] MenuObjects;
+private GameObject MenuObjects;
 
 [SerializeField] 
 private string[] TextToShow;
@@ -29,10 +29,8 @@ HideMenu();
 }
 
 public void ShowObjects() {
-foreach(GameObject i in MenuObjects) {
-i.gameObject.SetActive(true);
+MenuObjects.SetActive(true);
 
-}
 check.text = nameID;
 for(int i = 0; i < parent.transform.childCount;i++) {
              parent.gameObject.SetActive(true);
@@ -47,9 +45,6 @@ for(int i = 0; i < parent.transform.childCount;i++) {
 
 
 public void HideMenu() {
-foreach(GameObject i in MenuObjects) {
-i.gameObject.SetActive(false);
-
-}
+MenuObjects.SetActive(false);
 }
 } 
