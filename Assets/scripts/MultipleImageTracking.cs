@@ -17,11 +17,13 @@ public class MultipleImageTracking : MonoBehaviour
     public GameObject[] arObjectsToPlace;
 
     public Button[] buttons;
+   
 
     private ARTrackedImageManager m_TrackedImageManager;
     private Dictionary<string, GameObject> arObjects = new Dictionary<string, GameObject>();
-    bool state;
+    bool state = true;
     private static int value = 0;
+    int score =0;
     void Awake()
     {
 
@@ -49,27 +51,28 @@ public class MultipleImageTracking : MonoBehaviour
 
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
+
+                            score++;        
+
+                        NameRef.text =score.ToString();
+                            
             name = trackedImage.referenceImage.name;
-            NameRef.text = "Byl přidán obrázek: " + trackedImage.referenceImage.name;
+            state = false;
             UpdateARImage(name, trackedImage);
-            Timer.Register(5f, () => ChangeState());
+          //  Timer.Register(2f, () => ChangeState());
         }
-
-        foreach (ARTrackedImage trackedImage in eventArgs.updated)
+ foreach (ARTrackedImage trackedImage in eventArgs.updated)
         {
-            NameRef.text = "updated: " + trackedImage.referenceImage.name;
+            NameRef.text = "updated "  + trackedImage.referenceImage.name;
 
-
-            if (trackedImage.trackingState != TrackingState.Tracking && state == false)
-            {
-
-                DeletePrefab(trackedImage);
-                state = true;
-                return;
-
-            }
-            else {
-
+if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
+    NameRef.text = "deleted:" + trackedImage.referenceImage.name;
+      DeletePrefab();
+          state = true;
+          return;
+            
+  }
+  else {
                 if (trackedImage.referenceImage.name == "grafika")  {
                     if (value == 0) UpdateARImage("0", trackedImage);
                     foreach (Button btn in buttons){
@@ -81,9 +84,11 @@ public class MultipleImageTracking : MonoBehaviour
                 else {
                 name = trackedImage.referenceImage.name;
                 UpdateARImage(name, trackedImage);
+                buttons[2].gameObject.SetActive(true);
                 }
-            }
+          state = false;
 
+        }
         }
       //  foreach (ARTrackedImage trackedImage in eventArgs.removed) DeletePrefab(trackedImage);    
     }
@@ -119,18 +124,18 @@ public class MultipleImageTracking : MonoBehaviour
         }
     }
 
-    void DeletePrefab(ARTrackedImage trackedImage)
-    {
-        arObjects[trackedImage.referenceImage.name].SetActive(false);
-        NameRef.text = "Deleted: " + trackedImage.referenceImage.name;
-
-        if (trackedImage.referenceImage.name == "grafika") {
+    void DeletePrefab()  {
+         foreach (GameObject i in arObjects.Values)
+            {
+                    i.SetActive(false);
+                //    arObjects.Values["video"]
+            }
             foreach (Button btn in buttons)   {
                         btn.gameObject.SetActive(false);
                     }
         }
     
-    }
+    
 
     void ChangeState()
     {
