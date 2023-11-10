@@ -43,4 +43,7 @@ https://gamedevbeginner.com/how-to-make-countdown-timer-in-unity-minutes-seconds
 
 https://www.youtube.com/watch?v=7GiDoWviQEM
 
+
+https://forum.unity.com/threads/video-player-on-windows-freezes.1173638/
+
 [Unity]:https://unity.com/
