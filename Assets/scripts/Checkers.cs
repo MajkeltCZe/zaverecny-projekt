@@ -1,38 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Checkers : MonoBehaviour
 {
  
-
+public Text test;
     public GameObject board;
     private Transform piece;
-    string nameOf;
-
-public Vector3 GetPosition() {
-return transform.position;
-}
-
-public void GetName() {
- nameOf = name.ToString();
-
-}
+   public static string nameOf;
+public static Vector3 position;
 
 
 
 
+public void Board() {
 
 
-
-void Board() {
-
-
-        piece = board.transform.Find(nameOf);
+        piece = board.transform.Find("red");
 
         if (piece != null)     {
 
-    piece.transform.position = GetPosition();
+test.text= nameOf + " neco: " + position.ToString();
+piece.transform.position = position;
 
         }
 

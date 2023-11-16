@@ -54,16 +54,16 @@ public class MultipleImageTracking : MonoBehaviour
 
                             score++;        
 
-                        NameRef.text =score.ToString();
+                        NameRef.text =trackedImage.referenceImage.name;
                             
             name = trackedImage.referenceImage.name;
-            state = false;
+          //  state = false;
             UpdateARImage(name, trackedImage);
           //  Timer.Register(2f, () => ChangeState());
         }
  foreach (ARTrackedImage trackedImage in eventArgs.updated)
         {
-            NameRef.text = "updated "  + trackedImage.referenceImage.name;
+        //    NameRef.text = "updated "  + trackedImage.referenceImage.name;
 
 if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
     NameRef.text = "deleted:" + trackedImage.referenceImage.name;
@@ -84,9 +84,8 @@ if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
                 else {
                 name = trackedImage.referenceImage.name;
                 UpdateARImage(name, trackedImage);
-                buttons[2].gameObject.SetActive(true);
                 }
-          state = false;
+         // state = false;
 
         }
         }
