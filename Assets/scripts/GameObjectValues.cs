@@ -17,7 +17,7 @@ Checkers.nameOf = name.ToString();
 }
 
 public void AssignPiecePlace() {
-Checkers.position = transform.position;
+Checkers.positionName = name.ToString();
 }
 
 }

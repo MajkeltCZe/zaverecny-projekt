@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - spawnable
+  - boardPlaceable
+  - redPiece
+  - blackPiece
   layers:
   - Default
   - TransparentFX
