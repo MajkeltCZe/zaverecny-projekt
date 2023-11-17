@@ -13,7 +13,8 @@ public Text test;
 public static string positionName;
 string nowPosPlace;
 int value;
-string turn = "red";
+string turn;
+
 private List<Transform> blackSquares = new List<Transform>();
 private List<Transform> redPieces = new List<Transform>();
 private List<Transform> blackPieces = new List<Transform>();
@@ -21,42 +22,32 @@ private List<Transform> blackPieces = new List<Transform>();
 
 private string[] rules = {"1", "1", "1", "1", "1", "1", "1","1","1","1"};
 
-
-
-
-
 void Awake() {
-for(int i = 0; i < board.transform.childCount;i++) {
-        if(board.transform.GetChild(i).name.Contains("blackBoard")) {  
-           blackSquares.Add(board.transform.GetChild(i));
-    }
-  if(board.transform.GetChild(i).name.Contains("redPiece")) {  
-           redPieces.Add(board.transform.GetChild(i));
-    }
-    if(board.transform.GetChild(i).name.Contains("blackPiece")) {  
-           blackPieces.Add(board.transform.GetChild(i));
-    }
+turn = "red";
+Lists();
+}
+
+void Lists() {
+        for(int i = 0; i < board.transform.childCount;i++) {
+        if(board.transform.GetChild(i).name.Contains("blackBoard"))  blackSquares.Add(board.transform.GetChild(i));
+  if(board.transform.GetChild(i).name.Contains("redPiece")) redPieces.Add(board.transform.GetChild(i));
+    if(board.transform.GetChild(i).name.Contains("blackPiece")) blackPieces.Add(board.transform.GetChild(i));
         }
 }
+
 public void getPosition() {
-            
 for(int i = 0; i <blackSquares.Count;i++) {
-        if(blackSquares[i].transform.position == piece.transform.position) {  
-           nowPosPlace = blackSquares[i].name;
-        test.text =nameOf + " " + nowPosPlace;
-    }
+        if(blackSquares[i].transform.position == piece.transform.position) nowPosPlace = blackSquares[i].name;
         }
 }
 bool CheckSameCollision(List<Transform> list) {       
 for(int i = 0; i <list.Count;i++) {
         if(list[i].transform.position == board.transform.Find(positionName).transform.position) {
-        test.text = "Nelze Pohnout";
                 return false;
         }
         }
 return true;
 }
-
 bool CheckCollision(List<Transform> list, string checkPosition) {
 for(int i = 0;i < list.Count;i++) {
           if(list[i].transform.position == board.transform.Find(checkPosition).transform.position) {  
@@ -64,20 +55,17 @@ for(int i = 0;i < list.Count;i++) {
                    list[i].gameObject.SetActive(false);  
                    list[i].transform.position = new Vector3(0, -10, 5);
                    list.Remove(list[i]);   
-                        test.text = "Hit";
                         return true;
 }
 }
 }
 return false;
 }
-
  int toInt(char c) {
    return c - '0';
 }
 bool MoveRules(string piece) {
 if(piece.Contains("redPiece")) {
-        
          if(toInt(nowPosPlace[0]) % 2 == 0 || (toInt(nowPosPlace[0]) == 0)) {
                   if(rules[3] == positionName) {
                if(CheckCollision(blackPieces,rules[1])) return true;
@@ -85,23 +73,19 @@ if(piece.Contains("redPiece")) {
                  if(rules[4] == positionName) {
                if(CheckCollision(blackPieces,rules[0])) return true;
              }    
-
                 if( rules[0]== positionName || rules[1] == positionName)  return true;
         }
         else {
-                if( rules[0]== positionName || rules[2] == positionName) return true;
-        
         if(rules[3] == positionName) {
                if(CheckCollision(blackPieces,rules[0])) return true;
              }
          if(rules[4] == positionName) {
                 if(CheckCollision(blackPieces,rules[2])) return true;
-             } 
-        
+             }
+                if( rules[0]== positionName || rules[2] == positionName) return true;
         }
 return false;
 }
-
 if(piece.Contains("blackPiece")) {
         if(toInt(nowPosPlace[0]) % 2 == 0) {
                     if(rules[9] == positionName) {
@@ -110,7 +94,6 @@ if(piece.Contains("blackPiece")) {
                  if(rules[8] == positionName) {
                if(CheckCollision(redPieces,rules[6])) return true;
              }
-
                 if( rules[5]== positionName || rules[6] == positionName)  return true;
         }
         else {
@@ -120,14 +103,12 @@ if(piece.Contains("blackPiece")) {
         if(rules[8] == positionName) {
                if(CheckCollision(redPieces,rules[5])) return true;
              }
-
                 if(rules[5] == positionName || rules[7] == positionName) return true;
         }
 return false;
 }
 return false;
 }
-
 void setRules() {
 //redPieces
 rules[0] = (toInt(nowPosPlace[0]) + 1).ToString() + "blackBoard" + (nowPosPlace[nowPosPlace.Length - 1]);
@@ -146,29 +127,34 @@ rules[8] = (toInt(nowPosPlace[0]) - 2).ToString() + "blackBoard" + (toInt(nowPos
 rules[9] = (toInt(nowPosPlace[0]) - 2).ToString() + "blackBoard" + (toInt(nowPosPlace[nowPosPlace.Length - 1]) + 1).ToString();       
 }
 
+
+public void Restart() {
+Destroy(board);
+Instantiate(board);
+Lists();
+ turn = "red";
+
+}
+
 public void Board() {
         piece = board.transform.Find(nameOf);
-        if (piece != null)     {
-
-                 getPosition();   
-
+        if (piece != null)  {
 setRules();
 if(MoveRules(nameOf)) {
-
-        if(nameOf.Contains("redPiece")) {
+        if(nameOf.Contains("redPiece") && turn == "red") {
          if (CheckSameCollision(redPieces)) {
          piece.transform.position = board.transform.Find(positionName).transform.position;
+        turn = "black";
+         
          }
       }
-         if(nameOf.Contains("blackPiece")) {
+         if(nameOf.Contains("blackPiece") && turn == "black") {
    if (CheckSameCollision(blackPieces)) {
          piece.transform.position = board.transform.Find(positionName).transform.position;
+      turn = "red";
       }
          }
  }
-
-
-
 }
 }
    }

@@ -8051,9 +8051,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1008574143}
-        m_TargetAssemblyTypeName: TimerTest, Assembly-CSharp
-        m_MethodName: Testing
+      - m_Target: {fileID: 1056081217}
+        m_TargetAssemblyTypeName: Checkers, Assembly-CSharp
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8114,7 +8114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1044569751}
-  stateStart: 0
+  stateStart: 1
 --- !u!114 &1044569759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12088,7 +12088,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Interakce
+  m_Text: restart
 --- !u!222 &1555657419
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15234,7 +15234,7 @@ PrefabInstance:
     - target: {fileID: 3094760823266939764, guid: c54bb3488180f3442bdd22ff3290a5de,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0428
+      value: 0.044604357
       objectReference: {fileID: 0}
     - target: {fileID: 3094760823266939764, guid: c54bb3488180f3442bdd22ff3290a5de,
         type: 3}
@@ -15244,7 +15244,7 @@ PrefabInstance:
     - target: {fileID: 3094760823266939764, guid: c54bb3488180f3442bdd22ff3290a5de,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.295
+      value: 0.28785563
       objectReference: {fileID: 0}
     - target: {fileID: 3094760823266939764, guid: c54bb3488180f3442bdd22ff3290a5de,
         type: 3}
