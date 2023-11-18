@@ -57,3 +57,13 @@ MonoBehaviour:
     m_SpecifySize: 0
     m_Name: checkers
     m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5182078029041657362
+      m_GuidHigh: 18287658058935486881
+    m_SerializedTextureGuid:
+      m_GuidLow: 3023236623334260710
+      m_GuidHigh: 11779158663139131993
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: draw
+    m_Texture: {fileID: 0}

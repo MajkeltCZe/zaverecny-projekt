@@ -6,8 +6,7 @@ TagManager:
   tags:
   - spawnable
   - boardPlaceable
-  - redPiece
-  - blackPiece
+  - drawingCanvas
   layers:
   - Default
   - TransparentFX
