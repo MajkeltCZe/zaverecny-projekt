@@ -54,7 +54,7 @@ public class MultipleImageTracking : MonoBehaviour
 
                             score++;        
 
-                        NameRef.text =trackedImage.referenceImage.name;
+                        NameRef.text = "added: " + trackedImage.referenceImage.name;
                             
             name = trackedImage.referenceImage.name;
           //  state = false;
@@ -63,7 +63,7 @@ public class MultipleImageTracking : MonoBehaviour
         }
  foreach (ARTrackedImage trackedImage in eventArgs.updated)
         {
-        //    NameRef.text = "updated "  + trackedImage.referenceImage.name;
+           NameRef.text = "updated "  + trackedImage.referenceImage.name;
 
 if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
     NameRef.text = "deleted:" + trackedImage.referenceImage.name;

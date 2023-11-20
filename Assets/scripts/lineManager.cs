@@ -7,7 +7,7 @@ public class ARDraw : MonoBehaviour
 {
     Camera arCamera;
 
-    Vector3 anchor = new Vector3(0,0,0.3f);
+    Vector3 anchor = new Vector3(0,0,0.1f);
 
     bool anchorUpdate = false; //should anchor update or not
 
@@ -20,8 +20,6 @@ public Text stav;
 
     public Transform linePool; //parent object
     
-    public bool use; //code is in use or not
-
     public bool startLine; //already started line or not
 
 	bool moving = false;
@@ -33,16 +31,6 @@ public Text stav;
 
     void Update()
     {
-        if (use)
-        {
-            if (startLine)
-            {   
-               UpdateAnchor();
-                DrawLinewContinue();
-            }
-        }
-    	
-
 		if(Input.touchCount == 1)
 		{	
 			// touch on screen
@@ -107,18 +95,19 @@ public Text stav;
     //to start drawing line
     public void StartDrawLine()
     {
-        use = true;
-
-        if (!startLine)
-        {
-            MakeLineRenderer();
-        }
+            if (startLine)
+            {   
+               UpdateAnchor();
+                DrawLinewContinue();
+            }
+        
+      else MakeLineRenderer();
+       
     }
 
     //to End the line which user started drawing
     public void StopDrawLine()
     {
-        use = false;
         startLine = false;
         lineRenderer = null;
         

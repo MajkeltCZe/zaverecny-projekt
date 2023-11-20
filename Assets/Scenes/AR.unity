@@ -14253,7 +14253,6 @@ MonoBehaviour:
   stav: {fileID: 1288311155}
   lineList: []
   linePool: {fileID: 778948416}
-  use: 0
   startLine: 0
   go: {fileID: 1912594229}
 --- !u!4 &1797947257
@@ -15384,6 +15383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1961080194}
+  - component: {fileID: 1961080195}
   m_Layer: 5
   m_Name: DrawingCanvas
   m_TagString: Untagged
@@ -15415,6 +15415,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1961080195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961080193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2193956c171bfb45b8e811659c1e00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1961080193}
+  stateStart: 1
 --- !u!1 &1973330304
 GameObject:
   m_ObjectHideFlags: 0
@@ -17276,7 +17290,12 @@ PrefabInstance:
     - target: {fileID: 1729224356275458724, guid: caba1e2c19d77a2489a3ce915830444d,
         type: 3}
       propertyPath: m_FocusExited.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729224356275458724, guid: caba1e2c19d77a2489a3ce915830444d,
+        type: 3}
+      propertyPath: m_FocusEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1729224356275458724, guid: caba1e2c19d77a2489a3ce915830444d,
         type: 3}
