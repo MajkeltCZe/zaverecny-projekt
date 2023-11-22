@@ -21,7 +21,7 @@ public void ClickButtonNext() {
 value++;
 
 
-if(value == 7) {
+if(value == 4) {
 value =0;
 
 }
@@ -32,7 +32,7 @@ public void ClickButtonPrevious() {
 value--;
 
 if(value == -1) {
-value = 6;
+value = 3;
 
 }
 }

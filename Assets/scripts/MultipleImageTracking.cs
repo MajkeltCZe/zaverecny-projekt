@@ -16,7 +16,7 @@ public class MultipleImageTracking : MonoBehaviour
 
     public GameObject[] arObjectsToPlace;
 
-    public Button[] buttons;
+    public GameObject[] menus;
    
 
     private ARTrackedImageManager m_TrackedImageManager;
@@ -24,6 +24,7 @@ public class MultipleImageTracking : MonoBehaviour
     bool state = true;
     private static int value = 0;
     int score =0;
+    Vector3 objectPosition;
     void Awake()
     {
 
@@ -37,10 +38,17 @@ public class MultipleImageTracking : MonoBehaviour
             arObjects.Add(arObject.name, newARObject);
         }
 
-        foreach (Button btn in buttons)  {
-            btn.gameObject.SetActive(false);
+        foreach(GameObject go in menus) {
+            go.SetActive(false);
         }
+        
     }
+
+
+
+
+
+
 
 
     void OnEnable() => m_TrackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
@@ -59,7 +67,8 @@ public class MultipleImageTracking : MonoBehaviour
             name = trackedImage.referenceImage.name;
           //  state = false;
             UpdateARImage(name, trackedImage);
-          //  Timer.Register(2f, () => ChangeState());
+            ShowInteractableUI(name);
+
         }
  foreach (ARTrackedImage trackedImage in eventArgs.updated)
         {
@@ -73,18 +82,19 @@ if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
             
   }
   else {
-                if (trackedImage.referenceImage.name == "grafika")  {
+                if (trackedImage.referenceImage.name == "mechatronika")  {
                     if (value == 0) UpdateARImage("0", trackedImage);
-                    foreach (Button btn in buttons){
-                        btn.gameObject.SetActive(true);
-                        btn.onClick.AddListener(() => ButtonClickedAction(trackedImage.transform.position)); ;
-                    }
-
-                }
+                    objectPosition =  trackedImage.transform.position;
+                   
+                 }
+                
+                
                 else {
                 name = trackedImage.referenceImage.name;
                 UpdateARImage(name, trackedImage);
                 }
+
+                ShowInteractableUI(name);
          // state = false;
 
         }
@@ -98,10 +108,10 @@ if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
         AssignGameObject(name, trackedImage.transform.position);
     }
 
-    void ButtonClickedAction(Vector3 position)
+    public void ButtonClickedAction()
     {
         value = OnClickPrefab.value;
-        AssignGameObject(value.ToString(), position);
+        AssignGameObject(value.ToString(),objectPosition);
     }
 
 
@@ -124,20 +134,38 @@ if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
     }
 
     void DeletePrefab()  {
+        NameRef.text = "object was deleted";
+        HideInteractableUI();
          foreach (GameObject i in arObjects.Values)
             {
                     i.SetActive(false);
                 //    arObjects.Values["video"]
             }
-            foreach (Button btn in buttons)   {
-                        btn.gameObject.SetActive(false);
-                    }
+            
         }
     
-    
 
-    void ChangeState()
-    {
+    void ShowInteractableUI(string name) {
+        foreach(GameObject i in menus) {
+            if(i.name == name) {
+                i.SetActive(true);
+            }
+            else i.SetActive(false);
+        }
+
+    }
+    
+        void HideInteractableUI() {
+        foreach(GameObject i in menus) {
+           i.SetActive(false);
+        }
+
+    }
+
+
+
+
+    void ChangeState(){
         state = false;
     }
 

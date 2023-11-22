@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 1404009764725759108}
   - component: {fileID: 1862226249891174420}
   - component: {fileID: 1729224356275458724}
-  - component: {fileID: 4798104233352610142}
+  - component: {fileID: 5625624344189959091}
+  - component: {fileID: 8575758517282308961}
   m_Layer: 0
   m_Name: drawingCavas
   m_TagString: drawingCanvas
@@ -30,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 821691800609511961}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.119}
-  m_LocalScale: {x: 0.038219776, y: 0.088116616, z: 0.06241342}
+  m_LocalPosition: {x: 0, y: 0, z: 0.2879}
+  m_LocalScale: {x: 0.014713051, y: 0.033921298, z: 0.024026617}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -158,19 +159,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ARDraw, Assembly-CSharp
-        m_MethodName: StartDrawLine
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -182,19 +171,7 @@ MonoBehaviour:
       m_Calls: []
   m_FocusEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ARDraw, Assembly-CSharp
-        m_MethodName: StartDrawLine
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_FocusExited:
     m_PersistentCalls:
       m_Calls: []
@@ -238,7 +215,7 @@ MonoBehaviour:
   m_ExcludeUITouches: 1
   m_ARSessionOrigin: {fileID: 0}
   m_SelectionVisualization: {fileID: 0}
---- !u!114 &4798104233352610142
+--- !u!114 &5625624344189959091
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -247,7 +224,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 821691800609511961}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13fc94c99d712e04898b18e4efefd21a, type: 3}
+  m_Script: {fileID: 11500000, guid: c2193956c171bfb45b8e811659c1e00b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: {fileID: 0}
+  prefab: {fileID: 821691800609511961}
+  stateStart: 0
+--- !u!114 &8575758517282308961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821691800609511961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7738210f26d058a438edb45cf89c7a3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linePrefab: {fileID: 4300680012272940183, guid: ddda5b347b1bd414ba4b392ff4ddfafc,
+    type: 3}
+  stav: {fileID: 0}
+  lineList: []
+  linePool: {fileID: 2007260654208788790, guid: 9d4bc7aba3b102d43bc54ef1f1cef9a9,
+    type: 3}
+  startLine: 0
+  go: {fileID: 821691800609511961}

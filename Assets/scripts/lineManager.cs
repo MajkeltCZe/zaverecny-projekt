@@ -21,6 +21,7 @@ public Text stav;
     public Transform linePool; //parent object
     
     public bool startLine; //already started line or not
+    public bool use; //code is in use or not
 
 	bool moving = false;
 	public	GameObject go;
@@ -31,6 +32,17 @@ public Text stav;
 
     void Update()
     {
+
+ if (use)
+        {
+            if (startLine)
+            {   
+                UpdateAnchor();
+                DrawLinewContinue();
+            }
+        }
+
+
 		if(Input.touchCount == 1)
 		{	
 			// touch on screen
@@ -95,19 +107,17 @@ public Text stav;
     //to start drawing line
     public void StartDrawLine()
     {
-            if (startLine)
-            {   
-               UpdateAnchor();
-                DrawLinewContinue();
-            }
+                    use = true;
+
         
-      else MakeLineRenderer();
+    if(!startLine) MakeLineRenderer();
        
     }
 
     //to End the line which user started drawing
     public void StopDrawLine()
     {
+         use = false;
         startLine = false;
         lineRenderer = null;
         
