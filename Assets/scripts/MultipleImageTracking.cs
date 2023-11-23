@@ -18,13 +18,11 @@ public class MultipleImageTracking : MonoBehaviour
 
     public GameObject[] menus;
    
-
     private ARTrackedImageManager m_TrackedImageManager;
     private Dictionary<string, GameObject> arObjects = new Dictionary<string, GameObject>();
     bool state = true;
     private static int value = 0;
     int score =0;
-    Vector3 objectPosition;
     void Awake()
     {
 
@@ -41,15 +39,9 @@ public class MultipleImageTracking : MonoBehaviour
         foreach(GameObject go in menus) {
             go.SetActive(false);
         }
+      
         
     }
-
-
-
-
-
-
-
 
     void OnEnable() => m_TrackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
     void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
@@ -62,17 +54,18 @@ public class MultipleImageTracking : MonoBehaviour
 
                             score++;        
 
-                        NameRef.text = "added: " + trackedImage.referenceImage.name;
+                        NameRef.text = "Byl přidán obrázek: " + trackedImage.referenceImage.name;
                             
             name = trackedImage.referenceImage.name;
           //  state = false;
-            UpdateARImage(name, trackedImage);
-            ShowInteractableUI(name);
+          
+                            UpdateARImage(name, trackedImage);
+          ShowInteractableUI(name);
 
         }
  foreach (ARTrackedImage trackedImage in eventArgs.updated)
         {
-           NameRef.text = "updated "  + trackedImage.referenceImage.name;
+           NameRef.text = "Vyčkej na zobrazení předmětu "  + trackedImage.referenceImage.name;
 
 if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
     NameRef.text = "deleted:" + trackedImage.referenceImage.name;
@@ -83,19 +76,31 @@ if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
   }
   else {
                 if (trackedImage.referenceImage.name == "mechatronika")  {
-                    if (value == 0) UpdateARImage("0", trackedImage);
-                    objectPosition =  trackedImage.transform.position;
+                    value = OnClickPrefab.value;
+                    UpdateARImage(value.ToString(), trackedImage);
+                    ARDraw.turn = false;
+
+                    
                    
+                 }
+                else if(trackedImage.referenceImage.name == "drawingCanvas") {
+                 NameRef.text = "Můžeš kreslit na mobil!";
+                   ARDraw.turn = true;
+                   DeletePrefab();
+                    
+                 
                  }
                 
                 
                 else {
                 name = trackedImage.referenceImage.name;
                 UpdateARImage(name, trackedImage);
+                                ARDraw.turn = false;
+
                 }
 
                 ShowInteractableUI(name);
-         // state = false;
+        //  state = false;
 
         }
         }
@@ -108,11 +113,6 @@ if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
         AssignGameObject(name, trackedImage.transform.position);
     }
 
-    public void ButtonClickedAction()
-    {
-        value = OnClickPrefab.value;
-        AssignGameObject(value.ToString(),objectPosition);
-    }
 
 
     void AssignGameObject(string name, Vector3 newPosition)
@@ -134,7 +134,7 @@ if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
     }
 
     void DeletePrefab()  {
-        NameRef.text = "object was deleted";
+        //NameRef.text = "object was deleted";
         HideInteractableUI();
          foreach (GameObject i in arObjects.Values)
             {

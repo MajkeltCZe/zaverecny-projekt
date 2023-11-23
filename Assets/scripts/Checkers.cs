@@ -23,8 +23,8 @@ private List<Transform> blackPieces = new List<Transform>();
 private string[] rules = {"1", "1", "1", "1", "1", "1", "1","1","1","1"};
 
 void Awake() {
+turn = "red";
 Lists();
-//turn = "red";
 }
 
 void Lists() {
@@ -52,8 +52,8 @@ bool CheckCollision(List<Transform> list, string checkPosition) {
 for(int i = 0;i < list.Count;i++) {
           if(list[i].transform.position == board.transform.Find(checkPosition).transform.position) {  
                 if(list[i].transform.position != board.transform.Find(positionName).transform.position) {
-                   test.text = "HIT";
                    list[i].gameObject.SetActive(false);  
+                   list[i].transform.position = new Vector3(0, -10, 5);
                    list.Remove(list[i]);   
                         return true;
 }
@@ -66,14 +66,14 @@ return false;
 }
 bool MoveRules(string piece) {
 if(piece.Contains("redPiece")) {
-         if(toInt(nowPosPlace[0]) % 2 == 0 || (nowPosPlace[0]) == '0') {
+         if(toInt(nowPosPlace[0]) % 2 == 0 || (toInt(nowPosPlace[0]) == 0)) {
                   if(rules[3] == positionName) {
                if(CheckCollision(blackPieces,rules[1])) return true;
              }  
-                 if(rules[4] == positionName) {
+               else  if(rules[4] == positionName) {
                if(CheckCollision(blackPieces,rules[0])) return true;
              }    
-                if( rules[0]== positionName || rules[1] == positionName)  return true;
+              else  if( rules[0]== positionName || rules[1] == positionName)  return true;
         }
         else {
         if(rules[3] == positionName) {
@@ -109,6 +109,18 @@ return false;
 }
 return false;
 }
+
+
+public void Restart() {
+         for(int i = 0; i < board.transform.childCount;i++) {
+        board.transform.GetChild(i).gameObject.SetActive(false);
+        board.transform.GetChild(i).gameObject.SetActive(true);
+         Lists();
+         turn = "red";
+         
+         }
+}
+
 void setRules() {
 //redPieces
 rules[0] = (toInt(nowPosPlace[0]) + 1).ToString() + "blackBoard" + (nowPosPlace[nowPosPlace.Length - 1]);
@@ -128,20 +140,12 @@ rules[9] = (toInt(nowPosPlace[0]) - 2).ToString() + "blackBoard" + (toInt(nowPos
 }
 
 
-public void Restart() {
-         for(int i = 0; i < board.transform.childCount;i++) {
-        board.transform.GetChild(i).gameObject.SetActive(false);
-        board.transform.GetChild(i).gameObject.SetActive(true);
-         }
 
-Lists();
-turn = "red";
-
-}
 
 public void Board() {
         piece = board.transform.Find(nameOf);
         if (piece != null)  {
+
 setRules();
 if(MoveRules(nameOf)) {
         if(nameOf.Contains("redPiece") && turn == "red") {
@@ -151,7 +155,7 @@ if(MoveRules(nameOf)) {
          
          }
       }
-         if(nameOf.Contains("blackPiece")&& turn == "black") {
+         if(nameOf.Contains("blackPiece") && turn == "black") {
    if (CheckSameCollision(blackPieces)) {
          piece.transform.position = board.transform.Find(positionName).transform.position;
       turn = "red";

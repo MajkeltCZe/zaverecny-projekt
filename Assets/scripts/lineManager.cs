@@ -14,6 +14,7 @@ public class ARDraw : MonoBehaviour
     public GameObject linePrefab; //prefab which genrate the line for user
 
     LineRenderer lineRenderer; //LineRenderer which connects and generate line
+public static bool turn = false;
 
 public Text stav;
     public List<LineRenderer> lineList = new List<LineRenderer>(); //List of lines drawn
@@ -32,7 +33,8 @@ public Text stav;
 
     void Update()
     {
-
+        if(!turn) ClearScreen();
+if(turn) {
  if (use)
         {
             if (startLine)
@@ -51,21 +53,23 @@ public Text stav;
 				Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
 				RaycastHit hit = new RaycastHit();
 				moving = Physics.Raycast (ray, out hit);
-				if(moving)
-				{
-					go = hit.transform.gameObject;
-                    stav.text = "HIT";
-                    StartDrawLine();
-				}
+			//	if(moving)
+			//	{
+					//go = hit.transform.gameObject;
+                    //stav.text = "HIT";
+                   // StartDrawLine();
+			//	}
+        StartDrawLine();
 			}
 			// release touch/dragging
 			if((Input.GetTouch(0).phase == TouchPhase.Ended || Input.GetTouch(0).phase == TouchPhase.Canceled) && go != null)
 			{
 				moving = false;
-				stav.text = "NENÍ HIT";
+				//stav.text = "NENÍ HIT";
                 StopDrawLine();
 			}
 }
+    }
     }
 
     void UpdateAnchor()
