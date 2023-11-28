@@ -1,9 +1,9 @@
 \babel@toc {czech}{}\relax 
 \contentsline {chapter}{Úvod}{3}{chapter*.4}%
-\contentsline {chapter}{\numberline {1}Typografický systém LaTeX}{5}{chapter.1}%
+\contentsline {chapter}{\numberline {1}Rozšířená realita}{5}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Úvod}{5}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Co je \LaTeX {}}{5}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Výhody používání \LaTeX {}}{5}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.1}Co je to rozšířená realita}{5}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Využití rozšířené reality}{5}{subsection.1.1.2}%
 \contentsline {section}{\numberline {1.2}Základní struktura dokumentu}{6}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Preambule dokumentu}{6}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Hlavní tělo dokumentu}{6}{subsection.1.2.2}%
@@ -31,7 +31,7 @@
 \contentsline {section}{\numberline {1.6}Bibliografie a citace}{10}{section.1.6}%
 \contentsline {subsection}{\numberline {1.6.1}Vytváření bibliografie}{11}{subsection.1.6.1}%
 \contentsline {subsection}{\numberline {1.6.2}Citování zdrojů}{11}{subsection.1.6.2}%
-\contentsline {chapter}{\numberline {2}Tipy k psaní}{13}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Unity}{13}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Základy}{13}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Tabulky}{13}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Obrázky}{14}{subsection.2.1.2}%
