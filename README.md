@@ -35,7 +35,7 @@ https://forum.unity.com/threads/arfoundation-and-2d-image-target-tracking.538062
 https://stackoverflow.com/questions/64246226/artrackedimage-switches-only-at-the-first-time
 
 
-
+https://docs.unity3d.com/ScriptReference/Renderer-isVisible.html
 
 https://forum.unity.com/threads/position-ar-content-on-x-y-position-on-tracked-image.931437/
 https://discussions.unity.com/t/simple-timer/56201/2
