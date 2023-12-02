@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class rotation : MonoBehaviour
+public class Rotation : MonoBehaviour
 {
 
 public Vector3 speed;

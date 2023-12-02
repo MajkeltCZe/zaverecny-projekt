@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1862226249891174420}
   - component: {fileID: 1729224356275458724}
   - component: {fileID: 5625624344189959091}
-  - component: {fileID: 8575758517282308961}
   m_Layer: 0
   m_Name: drawingCavas
   m_TagString: drawingCanvas
@@ -229,23 +228,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 821691800609511961}
   stateStart: 0
---- !u!114 &8575758517282308961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821691800609511961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7738210f26d058a438edb45cf89c7a3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  linePrefab: {fileID: 4300680012272940183, guid: ddda5b347b1bd414ba4b392ff4ddfafc,
-    type: 3}
-  stav: {fileID: 0}
-  lineList: []
-  linePool: {fileID: 2007260654208788790, guid: 9d4bc7aba3b102d43bc54ef1f1cef9a9,
-    type: 3}
-  startLine: 0
-  go: {fileID: 821691800609511961}

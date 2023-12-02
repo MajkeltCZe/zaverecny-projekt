@@ -6,107 +6,79 @@ using UnityEngine.UI;
 using UnityEngine.XR.ARSubsystems;
 
 [RequireComponent(typeof(ARTrackedImageManager))]
-
-
 public class MultipleImageTracking : MonoBehaviour
 {
-    //public GameObject pcPlaced;
+    public Text text;
+    public GameObject[] arObjects;
+    public GameObject[] menuObjects;
+    public static bool state;
+        private static int value = 0;
 
-    public Text NameRef;
 
-    public GameObject[] arObjectsToPlace;
+private ARTrackedImageManager m_TrackedImageManager;
+private Dictionary<string, GameObject> prefabs = new Dictionary<string, GameObject>();
 
-    public GameObject[] menus;
-   
-    private ARTrackedImageManager m_TrackedImageManager;
-    private Dictionary<string, GameObject> arObjects = new Dictionary<string, GameObject>();
-    bool state = true;
-    private static int value = 0;
-    int score =0;
-    void Awake()
+  void Awake()
     {
-
         m_TrackedImageManager = GetComponent<ARTrackedImageManager>();
-
-        foreach (GameObject arObject in arObjectsToPlace)
-        {
-            GameObject newARObject = Instantiate(arObject, Vector3.zero, Quaternion.identity);
-            newARObject.name = arObject.name;
-            newARObject.SetActive(false);
-            arObjects.Add(arObject.name, newARObject);
-        }
-
-        foreach(GameObject go in menus) {
-            go.SetActive(false);
-        }
-      
-        
+        setPrefabs();
+        HideMenu();
+    
     }
 
-    void OnEnable() => m_TrackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
+
+void OnEnable() => m_TrackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
     void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
 
-    void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
-    {
 
-        foreach (ARTrackedImage trackedImage in eventArgs.added)
-        {
+void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
+    foreach (var trackedImage in eventArgs.added) {
+        text.text = "Added: " + trackedImage.referenceImage.name;
+             UpdateARImage(trackedImage.referenceImage.name,trackedImage);
 
-                            score++;        
-
-                        NameRef.text = "Byl přidán obrázek: " + trackedImage.referenceImage.name;
-                            
-            name = trackedImage.referenceImage.name;
-          //  state = false;
-          
-                            UpdateARImage(name, trackedImage);
-          ShowInteractableUI(name);
-
-        }
- foreach (ARTrackedImage trackedImage in eventArgs.updated)
-        {
-           NameRef.text = "Vyčkej na zobrazení předmětu "  + trackedImage.referenceImage.name;
-
-if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
-    NameRef.text = "deleted:" + trackedImage.referenceImage.name;
-      DeletePrefab();
-          state = true;
-          return;
-            
-  }
-  else {
-                if (trackedImage.referenceImage.name == "mechatronika")  {
+    }
+        foreach (var trackedImage in eventArgs.updated) {
+       if(trackedImage.trackingState != TrackingState.Tracking) {
+         text.text = "Image is not visible well: ";
+       if(state) {
+        HideMenu();
+       }
+       }
+       
+       else {
+        text.text = "Updated: " + trackedImage.referenceImage.name;
+        ShowInteractible(trackedImage.referenceImage.name);
+       
+         if (trackedImage.referenceImage.name == "mechatronika")  {
                     value = OnClickPrefab.value;
                     UpdateARImage(value.ToString(), trackedImage);
-                    ARDraw.turn = false;
 
-                    
-                   
-                 }
-                else if(trackedImage.referenceImage.name == "drawingCanvas") {
-                 NameRef.text = "Můžeš kreslit na mobil!";
-                   ARDraw.turn = true;
-                   DeletePrefab();
-                    
-                 
-                 }
-                
-                
-                else {
-                name = trackedImage.referenceImage.name;
-                UpdateARImage(name, trackedImage);
-                                ARDraw.turn = false;
-
-                }
-
-                ShowInteractableUI(name);
-        //  state = false;
-
-        }
-        }
-      //  foreach (ARTrackedImage trackedImage in eventArgs.removed) DeletePrefab(trackedImage);    
+       
+       }
+        else {
+        UpdateARImage(trackedImage.referenceImage.name,trackedImage);
+       }
+    
     }
 
+}
+}
+
+void HideMenu() {
+    foreach(GameObject go in menuObjects) go.SetActive(false);
+}
+
+void ShowInteractible( string name) {
+foreach(GameObject go in menuObjects) {
+    if(go.name == name) {
+        go.SetActive(true);
+    }
+    else {
+        go.SetActive(false);
+    }
+}
+
+}
 
     private void UpdateARImage(string name, ARTrackedImage trackedImage)
     {
@@ -117,12 +89,12 @@ if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
 
     void AssignGameObject(string name, Vector3 newPosition)
     {
-        if (arObjectsToPlace != null)
+        if (prefabs != null)
         {
-            GameObject prefab = arObjects[name];
+            GameObject prefab = prefabs[name];
             prefab.transform.position = newPosition;
             prefab.SetActive(true);
-            foreach (GameObject i in arObjects.Values)
+            foreach (GameObject i in prefabs.Values)
             {
                 if (i.name != name)
                 {
@@ -133,41 +105,15 @@ if(trackedImage.trackingState != TrackingState.Tracking && state == false) {
         }
     }
 
-    void DeletePrefab()  {
-        //NameRef.text = "object was deleted";
-        HideInteractableUI();
-         foreach (GameObject i in arObjects.Values)
-            {
-                    i.SetActive(false);
-                //    arObjects.Values["video"]
-            }
-            
-        }
-    
 
-    void ShowInteractableUI(string name) {
-        foreach(GameObject i in menus) {
-            if(i.name == name) {
-                i.SetActive(true);
-            }
-            else i.SetActive(false);
-        }
-
-    }
-    
-        void HideInteractableUI() {
-        foreach(GameObject i in menus) {
-           i.SetActive(false);
-        }
-
-    }
-
-
-
-
-    void ChangeState(){
-        state = false;
-    }
+void setPrefabs() {
+      foreach (GameObject arObject in arObjects) {
+        GameObject newARObject = Instantiate(arObject, Vector3.zero, Quaternion.identity);
+            newARObject.name = arObject.name;
+            newARObject.SetActive(false);
+            prefabs.Add(arObject.name, newARObject);
+      }
+      }
 
 }
 

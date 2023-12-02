@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class restartPiecePosition : MonoBehaviour
+public class RestartPiecePosition : MonoBehaviour
 {
 
     Vector3 startPos;

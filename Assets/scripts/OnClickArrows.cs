@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class OnClickPrefab : MonoBehaviour
 {
 
+public int count;
 
 [HideInInspector] 
 public static int value;
@@ -21,7 +22,7 @@ public void ClickButtonNext() {
 value++;
 
 
-if(value == 4) {
+if(value == count) {
 value =0;
 
 }
@@ -32,7 +33,7 @@ public void ClickButtonPrevious() {
 value--;
 
 if(value == -1) {
-value = 3;
+value = count - 1;
 
 }
 }

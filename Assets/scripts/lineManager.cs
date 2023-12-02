@@ -14,7 +14,7 @@ public class ARDraw : MonoBehaviour
     public GameObject linePrefab; //prefab which genrate the line for user
 
     LineRenderer lineRenderer; //LineRenderer which connects and generate line
-public static bool turn = false;
+ bool turn = false;
 
 public Text stav;
     public List<LineRenderer> lineList = new List<LineRenderer>(); //List of lines drawn
@@ -30,6 +30,10 @@ public Text stav;
     {
         arCamera = GameObject.Find("AR Camera").GetComponent<Camera>();
     }
+
+
+ void OnEnable() => turn = true;
+    void OnDisable() => turn = false;
 
     void Update()
     {

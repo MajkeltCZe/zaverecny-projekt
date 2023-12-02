@@ -5,7 +5,7 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.UI;
 
 
-public class setState : MonoBehaviour
+public class SetState : MonoBehaviour
 {
 public GameObject prefab;
 public bool stateStart;
