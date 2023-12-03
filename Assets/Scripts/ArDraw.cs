@@ -1,3 +1,4 @@
+using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,73 +15,62 @@ public class ARDraw : MonoBehaviour
     public GameObject linePrefab; //prefab which genrate the line for user
 
     LineRenderer lineRenderer; //LineRenderer which connects and generate line
- bool turn = false;
-
-public Text stav;
     public List<LineRenderer> lineList = new List<LineRenderer>(); //List of lines drawn
 
     public Transform linePool; //parent object
     
-    public bool startLine; //already started line or not
-    public bool use; //code is in use or not
+     bool startLine; //already started line or not
+     bool use; //code is in use or not
 
-	bool moving = false;
-	public	GameObject go;
+
+
+
+
+public Text stav;
+
     void Start()
     {
         arCamera = GameObject.Find("AR Camera").GetComponent<Camera>();
     }
 
-
- void OnEnable() => turn = true;
-    void OnDisable() => turn = false;
-
     void Update()
     {
-        if(!turn) ClearScreen();
-if(turn) {
- if (use)
+        if (use)
         {
             if (startLine)
             {   
-                UpdateAnchor();
+               UpdateAnchor();
                 DrawLinewContinue();
             }
         }
 
 
-		if(Input.touchCount == 1)
-		{	
+	{	
 			// touch on screen
-			if(Input.GetTouch(0).phase == TouchPhase.Began)
+			if(Input.GetTouch(0).phase == TouchPhase.Began && !IsUIOver())
 			{
-				Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-				RaycastHit hit = new RaycastHit();
-				moving = Physics.Raycast (ray, out hit);
-			//	if(moving)
-			//	{
-					//go = hit.transform.gameObject;
-                    //stav.text = "HIT";
-                   // StartDrawLine();
-			//	}
+ 
         StartDrawLine();
-			}
+                }
+			
 			// release touch/dragging
-			if((Input.GetTouch(0).phase == TouchPhase.Ended || Input.GetTouch(0).phase == TouchPhase.Canceled) && go != null)
+			if((Input.GetTouch(0).phase == TouchPhase.Ended || Input.GetTouch(0).phase == TouchPhase.Canceled))
 			{
-				moving = false;
-				//stav.text = "NENÍ HIT";
                 StopDrawLine();
 			}
 }
     }
-    }
+
+private bool IsUIOver() {
+   return EventSystem.current.IsPointerOverGameObject();
+}
+
 
     void UpdateAnchor()
     {   
         if(anchorUpdate)
         {
-            Vector3 temp = Input.mousePosition;
+            Vector3 temp = Input.GetTouch(0).position;
             temp.z = 0.3f; //offset
             anchor = arCamera.ScreenToWorldPoint(temp);
         }
@@ -106,7 +96,7 @@ if(turn) {
     }
     
     
-    public void DrawLinewContinue()
+     void DrawLinewContinue()
     {
         lineRenderer.positionCount = lineRenderer.positionCount + 1;
         lineRenderer.SetPosition(lineRenderer.positionCount - 1, anchor);
@@ -123,7 +113,7 @@ if(turn) {
     }
 
     //to End the line which user started drawing
-    public void StopDrawLine()
+  public   void StopDrawLine()
     {
          use = false;
         startLine = false;
@@ -132,13 +122,7 @@ if(turn) {
         anchorUpdate = false;
     }
 
-    //To Undo Last Drawn Line
-    public void Undo()
-    {
-        LineRenderer undo = lineList[lineList.Count-1];
-        Destroy(undo.gameObject);
-        lineList.RemoveAt(lineList.Count - 1);
-    }
+
 
     //To clear all the lines
     public void ClearScreen()
@@ -152,4 +136,17 @@ if(turn) {
 
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 

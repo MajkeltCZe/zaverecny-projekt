@@ -6,13 +6,14 @@ using UnityEngine.UI;
 using UnityEngine.XR.ARSubsystems;
 
 [RequireComponent(typeof(ARTrackedImageManager))]
-public class MultipleImageTracking : MonoBehaviour
+public class MultipleImagesTracking : MonoBehaviour
 {
     public Text text;
     public GameObject[] arObjects;
     public GameObject[] menuObjects;
     public static bool state;
         private static int value = 0;
+        int timeOut;
 
 
 private ARTrackedImageManager m_TrackedImageManager;
@@ -40,8 +41,17 @@ void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
         foreach (var trackedImage in eventArgs.updated) {
        if(trackedImage.trackingState != TrackingState.Tracking) {
          text.text = "Image is not visible well: ";
-       if(state) {
-        HideMenu();
+
+        timeOut = 0;
+     //   timeOut++;
+        if(timeOut == 500 && (trackedImage.referenceImage.name == "drawingCanvas" || trackedImage.referenceImage.name == "mechatronika")) {
+                    HideInteractible(trackedImage.referenceImage.name);
+                    timeOut = 0;
+
+        }
+        
+       else if(state) {
+        HideInteractible(trackedImage.referenceImage.name);
        }
        }
        
@@ -67,6 +77,17 @@ void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
 void HideMenu() {
     foreach(GameObject go in menuObjects) go.SetActive(false);
 }
+
+
+void HideInteractible(string name) {
+foreach(GameObject go in menuObjects) {
+     if(go.name == name) {
+        go.SetActive(false);
+    }
+}
+
+}
+
 
 void ShowInteractible( string name) {
 foreach(GameObject go in menuObjects) {

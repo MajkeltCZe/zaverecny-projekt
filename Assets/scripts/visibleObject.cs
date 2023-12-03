@@ -4,6 +4,7 @@ using UnityEngine;
 public class VisibleObject : MonoBehaviour
 {
 
+
   int i =0;
     public GameObject go;
   bool hide = false;  
@@ -13,15 +14,18 @@ Renderer m_Renderer;
 
     void Update()
     {
+       MultipleImagesTracking.state = hide;
+
         if (m_Renderer.isVisible)   {
             i++;
-           if(i==10) {
+           if(i==20) {
             hide = true;
             }
 
             
         }
         else {
+
             if(hide) {
             go.SetActive(false);
            i = 0;
