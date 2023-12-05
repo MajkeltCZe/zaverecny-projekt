@@ -6,18 +6,15 @@ using UnityEngine.UI;
 public class PcComponents_show : MonoBehaviour
 {
 
-[SerializeField]
-private GameObject MenuObjects;
+public GameObject MenuObjects;
 
-[SerializeField] 
-private string[] TextToShow;
-[SerializeField] 
-private Text check;
+public string[] TextToShow;
+public Text check;
 
 [SerializeField] 
 public Text text;
-[SerializeField] 
-private GameObject parent;
+public GameObject parent;
+public GameObject showImages;
 
 public static string nameID;
  
@@ -30,6 +27,8 @@ HideMenu();
 
 public void ShowObjects() {
 MenuObjects.SetActive(true);
+showImages.SetActive(false);
+
 
 check.text = nameID;
 for(int i = 0; i < parent.transform.childCount;i++) {
@@ -46,5 +45,6 @@ for(int i = 0; i < parent.transform.childCount;i++) {
 
 public void HideMenu() {
 MenuObjects.SetActive(false);
+showImages.SetActive(true);
 }
 } 

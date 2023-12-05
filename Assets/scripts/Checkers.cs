@@ -20,7 +20,7 @@ private List<Transform> redPieces = new List<Transform>();
 private List<Transform> blackPieces = new List<Transform>();
 
 
-private string[] rules = {"1", "1", "1", "1", "1", "1", "1","1","1","1"};
+private string[] rules = {"", "", "", "", "", "", "","","",""};
 
 void Awake() {
 turn = "red";
@@ -112,13 +112,9 @@ return false;
 
 
 public void Restart() {
-         for(int i = 0; i < board.transform.childCount;i++) {
-        board.transform.GetChild(i).gameObject.SetActive(false);
-        board.transform.GetChild(i).gameObject.SetActive(true);
-         Lists();
-         turn = "red";
-         
-         }
+        Lists();
+        turn = "red";
+        for(int i = 0; i < board.transform.childCount;i++) board.transform.GetChild(i).gameObject.SetActive(true);
 }
 
 void setRules() {

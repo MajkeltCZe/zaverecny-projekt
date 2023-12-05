@@ -12,7 +12,7 @@ void Awake() {
 
 }
 
-void OnEnable() {
+public void RestartPosition() {
      transform.position = startPos;
 }
     
