@@ -34,13 +34,13 @@ void OnEnable() => m_TrackedImageManager.trackedImagesChanged += OnTrackedImages
 
 void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
     foreach (var trackedImage in eventArgs.added) {
-        text.text = "Added: " + trackedImage.referenceImage.name;
+        text.text = "Byl přidán obrázek, vyčkej na zobrazení předmětu";
              UpdateARImage(trackedImage.referenceImage.name,trackedImage);
 
     }
         foreach (var trackedImage in eventArgs.updated) {
        if(trackedImage.trackingState != TrackingState.Tracking) {
-         text.text = "Image is not visible well: ";
+         text.text = "Ztratil si viditelnost obrázku: ";
 
         timeOut = 0;
      //   timeOut++;
@@ -56,7 +56,7 @@ void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
        }
        
        else {
-        text.text = "Updated: " + trackedImage.referenceImage.name;
+        text.text = trackedImage.referenceImage.name;
         ShowInteractible(trackedImage.referenceImage.name);
        
          if (trackedImage.referenceImage.name == "mechatronika")  {

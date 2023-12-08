@@ -9,7 +9,6 @@ public class PcComponents_show : MonoBehaviour
 public GameObject MenuObjects;
 
 public string[] TextToShow;
-public Text check;
 
 [SerializeField] 
 public Text text;
@@ -19,18 +18,14 @@ public GameObject showImages;
 public static string nameID;
  
 
-
-
 void Start() {
 HideMenu();
 }
 
 public void ShowObjects() {
 MenuObjects.SetActive(true);
-showImages.SetActive(false);
+showImages.gameObject.SetActive(false);
 
-
-check.text = nameID;
 for(int i = 0; i < parent.transform.childCount;i++) {
              parent.gameObject.SetActive(true);
 
@@ -42,9 +37,8 @@ for(int i = 0; i < parent.transform.childCount;i++) {
 }
  }
 
-
 public void HideMenu() {
 MenuObjects.SetActive(false);
-showImages.SetActive(true);
+showImages.gameObject.SetActive(true);
 }
 } 
