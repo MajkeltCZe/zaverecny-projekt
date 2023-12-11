@@ -9,9 +9,11 @@ using UnityEngine.XR.ARSubsystems;
 public class MultipleImagesTracking : MonoBehaviour
 {
     public Text text;
+    public Text scoreText;
     public GameObject[] arObjects;
     public GameObject[] menuObjects;
     public static bool state;
+    int score = 0;
         private static int value = 0;
         int timeOut;
 
@@ -36,11 +38,14 @@ void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
     foreach (var trackedImage in eventArgs.added) {
         text.text = "Byl přidán obrázek, vyčkej na zobrazení předmětu";
              UpdateARImage(trackedImage.referenceImage.name,trackedImage);
+             score++;
+               scoreText.text = score + "/" + 5;
 
     }
         foreach (var trackedImage in eventArgs.updated) {
        if(trackedImage.trackingState != TrackingState.Tracking) {
-         text.text = "Ztratil si viditelnost obrázku: ";
+         text.text = "Ztratil si dobrou viditelnost obrázku: ";
+         
 
         timeOut = 0;
      //   timeOut++;
@@ -52,6 +57,7 @@ void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
         
        else if(state) {
         HideInteractible(trackedImage.referenceImage.name);
+        text.text = "";
        }
        }
        

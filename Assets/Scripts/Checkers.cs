@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Checkers : MonoBehaviour
 {
-public Text test;
+public Text turnText;
     public GameObject board;
     private Transform piece;
    public static string nameOf;
@@ -25,6 +25,7 @@ private string[] rules = {"", "", "", "", "", "", "","","",""};
 void Awake() {
 turn = "red";
 Lists();
+turnText.supportRichText = true;
 }
 
 void Lists() {
@@ -158,6 +159,8 @@ if(MoveRules(nameOf)) {
       }
          }
  }
+ string turnValue = turn == "red" ? "<color=red>červená</color>" : "<color=black>černá</color>";
+ turnText.text = "Na tahu je: " + turnValue;
 }
 }
    }
