@@ -12,6 +12,7 @@ public class MultipleImagesTracking : MonoBehaviour
     public Text scoreText;
     public GameObject[] arObjects;
     public GameObject[] menuObjects;
+    public GameObject imageMenu;
     public static bool state;
     int score = 0;
         private static int value = 0;
@@ -57,7 +58,12 @@ void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
         
        else if(state) {
         HideInteractible(trackedImage.referenceImage.name);
+            imageMenu.SetActive(true);
+
         text.text = "";
+        if(score == 5) {
+            text.text = "Našel si všechny obrázky!";
+        }
        }
        }
        
@@ -68,13 +74,11 @@ void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
          if (trackedImage.referenceImage.name == "mechatronika")  {
                     value = OnClickPrefab.value;
                     UpdateARImage(value.ToString(), trackedImage);
-
-       
        }
         else {
         UpdateARImage(trackedImage.referenceImage.name,trackedImage);
        }
-    
+    imageMenu.SetActive(false);
     }
 
 }
@@ -123,10 +127,7 @@ foreach(GameObject go in menuObjects) {
             prefab.SetActive(true);
             foreach (GameObject i in prefabs.Values)
             {
-                if (i.name != name)
-                {
-                    i.SetActive(false);
-                }
+                if (i.name != name) i.SetActive(false);
             }
 
         }

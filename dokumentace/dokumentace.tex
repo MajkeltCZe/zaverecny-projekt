@@ -21,7 +21,7 @@ openright
 \newcommand\jmenoAutora{Michaela Říčná}  %% vyplň své jméno
 \newcommand\skolniRok{2023/24} %% vyplň rok
 \newcommand\datumOdevzdani{1. 1. 2024} %% vyplň rok
-\newcommand\nazevPrace{Rozšířená realita} %% vyplň název své práce
+\newcommand\nazevPrace{Mobilní aplikace s využitím rozšířené reality} %% vyplň název své práce
 
 \title{\nazevPrace} %% -- Název tvé práce
 \author{\jmenoAutora} %% -- tvé jméno
@@ -276,7 +276,7 @@ openright
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	\noindent{\large{\bfseries{Poděkování}\\}}
-	\noindent Prostor k poděkování (například vedoucímu práce).
+	\noindent 
 	
 	\vspace*{0.7\textheight} %% Vertikální mezeru je možné upravit
 
@@ -367,16 +367,17 @@ První kapitola této práce obsahuje základní informace o~{\LaTeX}u; stručn�
 
 \chapter{Rozšířená realita}
 
-\section{Úvod}
-\label{sec:uvod}
+\section{Co je to rozšířená realita}
+\label{sec:co_je_to_AR}
+Rozšířená realita (zkratka AR = augmented reality). Princip fungování rozšířené reality je v podstatě velmi jednoduchý – do obrazu reálného světa, který snímáme mobilním telefonem, tabletem či dalším zařízením, vkládáme navíc virtuální prvky – např. 3D model, video, textový či grafický popis, animace apod.
 
-V této kapitole se seznámíme s \LaTeX{}, což je vysoko kvalitní typografický systém, speciálně navržený pro produkci technické a vědecké dokumentace. \LaTeX{} je široce používán akademiky, vědci, inženýry a dalšími profesionály, kteří potřebují efektivně vytvářet vysoce kvalitní dokumenty, jako jsou články, reporty, knihy a dokonce i prezentace.
 
-\subsection{Co je to rozšířená realita}
-\LaTeX{} je založen na programu \TeX{}, který byl původně vytvořen Donaldem E. Knuthem v pozdních 70. letech. Na rozdíl od běžných textových procesorů, které jsou "What You See Is What You Get" (WYSIWYG), \LaTeX{} funguje na principu "What You See Is What You Mean" (WYSIWYM). To znamená, že se uživatelé soustředí na strukturu a obsah svého textu, zatímco vzhled dokumentu je řízen předdefinovanými šablonami.
 
-\subsection{Využití rozšířené reality}
-Hlavní výhodou používání \LaTeX{} je jeho schopnost vytvářet profesionálně vypadající dokumenty s konzistentním formátováním. Dále nabízí:
+
+\section{Využití rozšířené reality}
+\label{sec:vyuziti_AR}
+
+
 
 \begin{itemize}
 	\item Vynikající kvalitu sazby, zvláště pro matematické vzorce.
@@ -384,14 +385,6 @@ Hlavní výhodou používání \LaTeX{} je jeho schopnost vytvářet profesioná
 	\item Možnost snadno pracovat s komplexními dokumenty jako jsou disertace nebo knihy.
 	\item Rozsáhlé možnosti přizpůsobení a širokou škálu balíčků rozšiřujících jeho funkčnost.
 \end{itemize}
-
-V následujících sekcích se podrobněji podíváme na základní prvky \LaTeX{} a naučíme se, jak je používat k vytváření kvalitních dokumentů.
-
-
-\section{Základní struktura dokumentu}
-\label{sec:zakladni_struktura}
-
-V této kapitole se podrobněji podíváme na základní strukturu dokumentu v \LaTeX{}u. Po porozumění této struktuře budete schopni vytvářet vlastní dokumenty s přizpůsobeným formátováním a strukturou.
 
 \subsection{Preambule dokumentu}
 Preambule je první částí každého \LaTeX{}ového dokumentu. Zde definujeme typ dokumentu, který chceme vytvořit, a nastavíme různé parametry, které ovlivňují celkový vzhled dokumentu. Preambule také často obsahuje příkazy pro načítání různých balíčků, které rozšiřují základní funkčnost \LaTeX{}u.
@@ -416,15 +409,15 @@ Pro organizaci obsahu se často používají sekce a podsekce. Tyto struktury po
 \subsection{Odstavce a rozestupy}
 V \LaTeX{}u je nový odstavec vytvořen jednoduše vložením jedné nebo více prázdných řádek. Rozestupy mezi odstavci, stejně jako zarovnání textu, můžeme upravit podle potřeby.
 
-\section{Práce s textem}
-\label{sec:prace_s_textem}
+\section{Typy rozšířené reality}
+\label{sec:typy_AR}
 
 Tato část se zaměřuje na základní techniky práce s textem v \LaTeX{}u, včetně formátování textu, vytváření seznamů a využití křížových odkazů a poznámek pod čarou.
 
-\subsection{Formátování textu}
+\subsection{na bázi značek}
 Formátování textu je klíčovým prvkem pro zvýraznění důležitých informací a zlepšení čitelnosti dokumentu.
 
-\subsubsection{Zvýraznění textu}
+\subsubsection{bez značek}
 V \LaTeX{}u existuje několik způsobů, jak zvýraznit text. Můžeme použít tučné písmo, kurzívu nebo podtržení.
 
 \begin{verbatim}
@@ -448,18 +441,17 @@ Seznamy jsou užitečné pro strukturování informací a jejich uspořádání 
 	\end{description}
 \end{verbatim}
 
-\subsection{Křížové odkazy a poznámky pod čarou}
+\subsection{na bázi projekce}
 Křížové odkazy a poznámky pod čarou jsou důležité pro odkazování na jiné části dokumentu a poskytování dodatečných informací.
 
-\subsubsection{Křížové odkazy}
-Pomocí křížových odkazů můžeme odkazovat na jiné sekce, obrázky nebo tabulky v dokumentu.
+
 
 \begin{verbatim}
 	\label{sec:nazev_sekce}
 	Odkaz na sekci \ref{sec:nazev_sekce}.
 \end{verbatim}
 
-\subsubsection{Poznámky pod čarou}
+\subsection{na bázi lokace}
 Poznámky pod čarou poskytují dodatečné informace bez přerušení toku hlavního textu.
 
 \begin{verbatim}
@@ -595,7 +587,7 @@ Správné citování zdrojů je klíčové pro akademickou integritu a umožňuj
 
 	
 
-	\chapter{Unity}
+	\chapter{Využité technologie}
 	\pagestyle{fancy}
 	Jak už jsem psal výše \LaTeX je dosti komplexní systém, který umožňuje psát velmi rozsáhlé text. Jeho autor Donald Knuth ho stvořil, aby mohl vydat jeho učebnici \emph{The Art of Computer Programming} a dodnes se je využíván pro sazbu skript, učebnic, článků či závěrečných prací. V této kapitole najdeš ukázky různých funkcí a balíčků \LaTeX u od těch nejzákladnějších až po složitější. Neznamená to nutně, že všechny musíš použít, ale když potřebuješ pomoct, tak je dobré mít oporu. 
 	
@@ -746,7 +738,7 @@ Správné citování zdrojů je klíčové pro akademickou integritu a umožňuj
 	
 	
 	
-	\chapter{Když dokončuji práci}
+	\chapter{Způsoby řešení a použité postupy}
 	
 	Každou práci je dobré zkontrolovat, aby v ní nebyly pravopisné chyby, nebyla těžkopádně napsaná -- byla čtivá -- a neobsahovala žádný typografický nedostatek. Proto, když práci sepíšeš, nech ji chvilku odležet, třeba týden. Pak si ji po sobě znovu přečti. Hned uvidíš, kolik věcí bys napsal jinak případně kde tě bije do očí jaká chyba. Dej práci přečíst také svému školiteli a případně češtináři. Zajistíš tak, že bude obsahovat méně chyb.
 	
@@ -777,9 +769,20 @@ Správné citování zdrojů je klíčové pro akademickou integritu a umožňuj
 	
 	\titleformat{\chapter}[block]{\scshape\bfseries\LARGE}{Příloha \thechapter}{10pt}{\vspace{0pt}}[\vspace{-22pt}] %% nastavení nadpisu u příloh
 	
+
 	
-	\chapter{%Příloha A 
-		Spot diagramy a další }
+	\chapter{Seznam použitých informačních zdrojů}
+	
+		\begin{thebibliography}{99}
+		\bibitem{sablonaSOC} DOKULIL Jakub. \textit{Šablona pro psaní SOČ v programu \LaTeX} [Online]. Brno, 2020 [cit. 2020-08-24]. Dostupné z: \url{https://github.com/Kubiczek36/SOC_sablona}
+		\bibitem{LaTeXprirucka}OETIKER, Tobias, Hubert PARTL, Irene HYNA, Elisabeth SCHEGL, Michal KOČER a Pavel SÝKORA. \textit{Ne příliš stručný úvod do systému LaTeX2e} [online]. 1998 [cit. 2020-08-24]. Dostupné z: \url{https://www.jaroska.cz/elearning/informatika/typografie/lshort2e-cz.pdf}
+		\bibitem{wikibooksLaTeX}\textit{Wikibooks: LaTeX} [online]. San Francisco (CA): Wikimedia Foundation, 2001- [cit. 2020-08-24]. Dostupné z: \url{https://en.wikibooks.org/wiki/LaTeX}
+		\bibitem{stackExchange} \textit{TeX - LaTeX Stack Exchange} [online]. Stack Exchange, 2020 [cit. 2020-09-01]. Dostupné z: \url{https://tex.stackexchange.com}
+		\bibitem{sspuLogo} \textit{Střední škola průmyslová a umělecká Opava} [online]. [cit. 2023-11-11]. Dostupné z: \url{https://www.sspu-opava.cz}
+		\bibitem{citacePRO}\textit{Citace PRO} [online]. Citace.com, 2020 [cit. 2020-08-31]. Dostupné z: \url{https://www.citacepro.com}
+		\bibitem{Born2019} BORN, Max a Emil WOLF. \textit{Principles of optics: electromagnetic theory of propagation, interference and diffraction of light}. 7th (expanded) edition. Reprinted wirth corrections 2002. 15th printing 2019. Cambridge: Cambridge University Press, 2019. ISBN 978-0-521-64222-4.
+	\end{thebibliography}
+	
 	
 	
 \end{document}

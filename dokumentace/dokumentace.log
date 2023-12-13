@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  28 NOV 2023 20:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  13 DEC 2023 20:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -637,7 +637,29 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \l__lipsum_b_int=\count318
 
 (C:\Users\Miša\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
-(dokumentace.aux)
+(dokumentace.aux
+
+LaTeX Warning: Label `sablonaSOC' multiply defined.
+
+
+LaTeX Warning: Label `LaTeXprirucka' multiply defined.
+
+
+LaTeX Warning: Label `wikibooksLaTeX' multiply defined.
+
+
+LaTeX Warning: Label `stackExchange' multiply defined.
+
+
+LaTeX Warning: Label `sspuLogo' multiply defined.
+
+
+LaTeX Warning: Label `citacePRO' multiply defined.
+
+
+LaTeX Warning: Label `Born2019' multiply defined.
+
+)
 \openout1 = `dokumentace.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 222.
@@ -817,14 +839,18 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 a/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./image/logo-skol
 y.png> <./image/programovani-02.jpg>] [2
 
-] [3] [4
+]
+Underfull \hbox (badness 10000) in paragraph at lines 278--280
+
+ []
+
+[3] [4
 
 ] [5] (dokumentace.toc)
 \tf@toc=\write4
 \openout4 = `dokumentace.toc'.
 
-
-[1
+ [1
 
 ] [2
 
@@ -833,19 +859,17 @@ y.png> <./image/programovani-02.jpg>] [2
 ]
 Kapitola 1.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
-82.
+83.
 (C:\Users\Miša\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-[5]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-99.
- (C:\Users\Miša\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+92.
+
+(C:\Users\Miša\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-[6] [7] [8] [9] [10] [11] [12
-
-]
+[5] [6] [7] [8] [9] [10]
 Kapitola 2.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -853,28 +877,63 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 2326) has occurred while \output is active []
 
- [13]
+ [11
+
+]
 File: image/logo-skoly.png Graphic file (type png)
 <use image/logo-skoly.png>
-Package pdftex.def Info: image/logo-skoly.png  used on input line 641.
+Package pdftex.def Info: image/logo-skoly.png  used on input line 633.
 (pdftex.def)             Requested size: 273.14923pt x 105.45715pt.
 
 
-LaTeX Warning: Citation `socSSPU' on page 14 undefined on input line 646.
+LaTeX Warning: Citation `socSSPU' on page 12 undefined on input line 638.
 
-<image/vysledek_10.pdf, id=187, 433.62pt x 289.08pt>
+<image/vysledek_10.pdf, id=178, 433.62pt x 289.08pt>
 File: image/vysledek_10.pdf Graphic file (type pdf)
 <use image/vysledek_10.pdf>
-Package pdftex.def Info: image/vysledek_10.pdf  used on input line 651.
+Package pdftex.def Info: image/vysledek_10.pdf  used on input line 643.
 (pdftex.def)             Requested size: 286.806pt x 191.21242pt.
-<image/vysledek_20.pdf, id=188, 433.62pt x 289.08pt>
+<image/vysledek_20.pdf, id=179, 433.62pt x 289.08pt>
 File: image/vysledek_20.pdf Graphic file (type pdf)
 <use image/vysledek_20.pdf>
-Package pdftex.def Info: image/vysledek_20.pdf  used on input line 655.
+Package pdftex.def Info: image/vysledek_20.pdf  used on input line 647.
 (pdftex.def)             Requested size: 286.806pt x 191.21242pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.13202pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.13202pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
+
+[12]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.13202pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.13202pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
+
+[13 <./image/vysledek_10.pdf> <./image/vysledek_20.pdf
+
+pdfTeX warning: pdflatex.exe (file ./image/vysledek_20.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>]
+(C:\Users\Miša\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 672.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+690.
+
+(C:\Users\Miša\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
+File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.13202pt, for example:
@@ -892,22 +951,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
-[15 <./image/vysledek_10.pdf> <./image/vysledek_20.pdf
-
-pdfTeX warning: pdflatex.exe (file ./image/vysledek_20.pdf): PDF inclusion: mul
-tiple pdfs with page group included in a single page
->]
-(C:\Users\Miša\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 680.
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-698.
-
-(C:\Users\Miša\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
-File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
+[15]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.13202pt, for example:
@@ -917,48 +961,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
 [16]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.13202pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.13202pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
-
-[17]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.13202pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.13202pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
-
-[18]
 Kapitola 3.
-[19
+[17
 
 ]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.13202pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.13202pt}.
+(fancyhdr)                Make it at least 15.42601pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.42601pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
+(fancyhdr)                \addtolength{\topmargin}{-3.42601pt}.
 
-[20
+[18
 
-] [21]
+] [19]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.13202pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.13202pt}.
+(fancyhdr)                Make it at least 15.42601pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.42601pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
+(fancyhdr)                \addtolength{\topmargin}{-3.42601pt}.
 
-[22
+[20
 
 ] (dokumentace.lof)
 \tf@lof=\write5
@@ -968,7 +994,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 \tf@lot=\write6
 \openout6 = `dokumentace.lot'.
 
- [23]
+ [21]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -977,11 +1003,76 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[24]
+[22]
 P\v {r}\'{\i }loha A.
-[25
 
-] (dokumentace.aux)
+Overfull \hbox (6.40663pt too wide) in paragraph at lines 774--774
+|\T1/ptm/b/sc/20.74 P��loha A Se-znam po-u-�i-t�ch in-for-ma�-n�ch
+ []
+
+[23
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.42601pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.42601pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.42601pt}.
+
+[24
+
+]
+pdfTeX warning (ext4): destination with the same identifier (name{cite.sablonaS
+OC}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.777 		\bibitem{sablonaSOC}
+                             DOKULIL Jakub. \textit{Šablona pro psaní SOČ...
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.LaTeXpri
+rucka}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.778 		\bibitem{LaTeXprirucka}
+                               OETIKER, Tobias, Hubert PARTL, Irene HYNA, El...
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.wikibook
+sLaTeX}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.779 		\bibitem{wikibooksLaTeX}
+                                \textit{Wikibooks: LaTeX} [online]. San Fran...
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.stackExc
+hange}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.780 		\bibitem{stackExchange}
+                                \textit{TeX - LaTeX Stack Exchange} [online]...
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.sspuLogo
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.781 		\bibitem{sspuLogo}
+                           \textit{Střední škola průmyslová a uměleck�...
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.citacePR
+O}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.782 		\bibitem{citacePRO}
+                           \textit{Citace PRO} [online]. Citace.com, 2020 [c...
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.Born2019
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.783 		\bibitem{Born2019}
+                           BORN, Max a Emil WOLF. \textit{Principles of opti...
+[25] (dokumentace.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -990,12 +1081,15 @@ L3 programming layer <2023-08-29>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `dokumentace.out' has not changed.
-(rerunfilecheck)             Checksum: 270006C5E5BB5F47F24912A1B7D9CCF8;1849.
+(rerunfilecheck)             Checksum: 606625F9F56BE0BA1C4EAE3D0C926F52;2256.
  ) 
 Here is how much of TeX's memory you used:
  18449 strings out of 475247
- 296168 string characters out of 5757791
+ 296156 string characters out of 5757791
  1950785 words of memory out of 5000000
  39457 multiletter control sequences out of 15000+600000
  640916 words of font info for 127 fonts, out of 8000000 for 9000
@@ -1021,9 +1115,9 @@ tmb8a.pfb><C:/Users/Miša/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
 tmr8a.pfb><C:/Users/Miša/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
 tmr8a.pfb><C:/Users/Miša/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on dokumentace.pdf (30 pages, 515567 bytes).
+Output written on dokumentace.pdf (30 pages, 519730 bytes).
 PDF statistics:
- 552 PDF objects out of 1000 (max. 8388607)
+ 560 PDF objects out of 1000 (max. 8388607)
  122 named destinations out of 1000 (max. 500000)
  145 words of extra memory for PDF output out of 10000 (max. 10000000)
 
