@@ -15,12 +15,13 @@ string nowPosPlace;
 int value;
 string turn;
 
+public Text text;
 private List<Transform> blackSquares = new List<Transform>();
 private List<Transform> redPieces = new List<Transform>();
 private List<Transform> blackPieces = new List<Transform>();
 
 
-private string[] rules = {"", "", "", "", "", "", "","","",""};
+private string[] rules = new string[10];
 
 void Awake() {
 turn = "red";
@@ -53,11 +54,13 @@ bool CheckCollision(List<Transform> list, string checkPosition) {
 for(int i = 0;i < list.Count;i++) {
           if(list[i].transform.position == board.transform.Find(checkPosition).transform.position) {  
                 if(list[i].transform.position != board.transform.Find(positionName).transform.position) {
+                        text.text = "HIT";
                    list[i].gameObject.SetActive(false);  
                    list[i].transform.position = new Vector3(0, -10, 5);
                    list.Remove(list[i]);   
                         return true;
-}
+} 
+
 }
 }
 return false;
@@ -70,18 +73,22 @@ if(piece.Contains("redPiece")) {
          if(toInt(nowPosPlace[0]) % 2 == 0 || (toInt(nowPosPlace[0]) == 0)) {
                   if(rules[3] == positionName) {
                if(CheckCollision(blackPieces,rules[1])) return true;
+               else return false;
              }  
                else  if(rules[4] == positionName) {
                if(CheckCollision(blackPieces,rules[0])) return true;
+               else return false;
              }    
               else  if( rules[0]== positionName || rules[1] == positionName)  return true;
         }
         else {
         if(rules[3] == positionName) {
                if(CheckCollision(blackPieces,rules[0])) return true;
+               else return false;
              }
          if(rules[4] == positionName) {
                 if(CheckCollision(blackPieces,rules[2])) return true;
+                else return false;
              }
                 if( rules[0]== positionName || rules[2] == positionName) return true;
         }
@@ -92,19 +99,19 @@ if(piece.Contains("blackPiece")) {
                     if(rules[9] == positionName) {
                if(CheckCollision(redPieces,rules[5])) return true;
              }  
-                 if(rules[8] == positionName) {
+              else if(rules[8] == positionName) {
                if(CheckCollision(redPieces,rules[6])) return true;
              }
-                if( rules[5]== positionName || rules[6] == positionName)  return true;
+              else if( rules[5]== positionName || rules[6] == positionName)  return true;
         }
         else {
         if(rules[9] == positionName) {
                if(CheckCollision(redPieces,rules[7])) return true;
              }  
-        if(rules[8] == positionName) {
+        else if(rules[8] == positionName) {
                if(CheckCollision(redPieces,rules[5])) return true;
              }
-                if(rules[5] == positionName || rules[7] == positionName) return true;
+            else if(rules[5] == positionName || rules[7] == positionName) return true;
         }
 return false;
 }

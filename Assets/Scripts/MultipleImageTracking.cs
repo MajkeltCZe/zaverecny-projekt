@@ -12,11 +12,10 @@ public class MultipleImagesTracking : MonoBehaviour
     public Text scoreText;
     public GameObject[] arObjects;
     public GameObject[] menuObjects;
-    public GameObject imageMenu;
     public static bool state;
     int score = 0;
         private static int value = 0;
-        int timeOut;
+        
 
 
 private ARTrackedImageManager m_TrackedImageManager;
@@ -45,30 +44,21 @@ void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
     }
         foreach (var trackedImage in eventArgs.updated) {
        if(trackedImage.trackingState != TrackingState.Tracking) {
-         text.text = "Ztratil si dobrou viditelnost obrázku: ";
          
-
-        timeOut = 0;
-     //   timeOut++;
-        if(timeOut == 500 && (trackedImage.referenceImage.name == "drawingCanvas" || trackedImage.referenceImage.name == "mechatronika")) {
-                    HideInteractible(trackedImage.referenceImage.name);
-                    timeOut = 0;
-
-        }
-        
-       else if(state) {
+        if(state) {
         HideInteractible(trackedImage.referenceImage.name);
-            imageMenu.SetActive(true);
 
         text.text = "";
         if(score == 5) {
             text.text = "Našel si všechny obrázky!";
         }
        }
+       else  text.text =  "Ztratil si dobrou viditelnost obrázku: ";
+       
        }
        
        else {
-        text.text = trackedImage.referenceImage.name;
+        text.text = "sleduješ:" + trackedImage.referenceImage.name;
         ShowInteractible(trackedImage.referenceImage.name);
        
          if (trackedImage.referenceImage.name == "mechatronika")  {
@@ -78,7 +68,6 @@ void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
         else {
         UpdateARImage(trackedImage.referenceImage.name,trackedImage);
        }
-    imageMenu.SetActive(false);
     }
 
 }

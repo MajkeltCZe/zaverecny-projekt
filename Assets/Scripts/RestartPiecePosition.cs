@@ -7,13 +7,14 @@ public class RestartPiecePosition : MonoBehaviour
 
     Vector3 startPos;
 
-void Awake() {
- startPos = transform.position;
+ void Start() {
+ startPos = gameObject.transform.position;
 
 }
 
 public void RestartPosition() {
-     transform.position = startPos;
+     gameObject.transform.position = startPos;
+    
 }
     
 }
