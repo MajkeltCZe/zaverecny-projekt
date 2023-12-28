@@ -92,31 +92,32 @@ openright
 \renewcommand{\lstlistlistingname}{Seznam programových kódů}% List of Listings -> List of Algorithms
 
 %% Definice 
-\lstdefinelanguage{JavaScript}{
-	morekeywords=[1]{break, continue, delete, else, for, function, if, in,
-		new, return, this, typeof, var, void, while, with},
-	% Literals, primitive types, and reference types.
-	morekeywords=[2]{false, null, true, boolean, number, undefined,
-		Array, Boolean, Date, Math, Number, String, Object},
-	% Built-ins.
-	morekeywords=[3]{eval, parseInt, parseFloat, escape, unescape},
-	sensitive,
-	morecomment=[s]{/*}{*/},
-	morecomment=[l]//,
-	morecomment=[s]{/**}{*/}, % JavaDoc style comments
-	morestring=[b]',
-	morestring=[b]"
-}[keywords, comments, strings]
+%copied code start
+\definecolor{bluekeywords}{rgb}{0,0,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.64,0.08,0.08}
+\definecolor{xmlcomments}{rgb}{0.5,0.5,0.5}
+\definecolor{types}{rgb}{0.17,0.57,0.68}
 
 
-\lstdefinelanguage[ECMAScript2015]{JavaScript}[]{JavaScript}{
-	morekeywords=[1]{await, async, case, catch, class, const, default, do,
-		enum, export, extends, finally, from, implements, import, instanceof,
-		let, static, super, switch, throw, try},
-	morestring=[b]` % Interpolation strings.
+\lstset{language=[Sharp]C,
+	captionpos=b,
+	%numbers=left, %Nummerierung
+	%numberstyle=\tiny, % kleine Zeilennummern
+	frame=lines, % Oberhalb und unterhalb des Listings ist eine Linie
+	showspaces=false,
+	showtabs=false,
+	breaklines=true,
+	showstringspaces=false,
+	breakatwhitespace=true,
+	escapeinside={(*@}{@*)},
+	commentstyle=\color{greencomments},
+	morekeywords={partial, var, value, get, set},
+	keywordstyle=\color{bluekeywords},
+	stringstyle=\color{redstrings},
+	basicstyle=\ttfamily\small,
 }
-
-\lstalias[]{ES6}[ECMAScript2015]{JavaScript}
+% copied code end
 
 % Nastavení barev
 % Requires package: color.
@@ -127,89 +128,7 @@ openright
 \definecolor{royalblue}{rgb}{0.25, 0.41, 0.88}
 \definecolor{crimson}{rgb}{0.86, 0.8, 0.24}
 
-% Nastavení pro Python
-\lstdefinestyle{Python}{
-	language=Python,
-	backgroundcolor=\color{white},
-	basicstyle=\ttfamily,
-	breakatwhitespace=false,
-	breaklines=false,
-	captionpos=b,
-	columns=fullflexible,
-	commentstyle=\color{mediumgray}\upshape,
-	emph={},
-	emphstyle=\color{crimson},
-	extendedchars=true,  % requires inputenc
-	fontadjust=true,
-	frame=single,
-	identifierstyle=\color{black},
-	keepspaces=true,
-	keywordstyle=\color{mediumblue},
-	keywordstyle={[2]\color{darkviolet}},
-	keywordstyle={[3]\color{royalblue}},
-	literate=%
-	{á}{{\'a}}1 {č}{{\v{c}}}1 {ď}{{\v{d}}}1 {é}{{\'e}}1 {ě}{{\v{e}}}1
-	{í}{{\'i}}1 {ň}{{\v{n}}}1 {ó}{{\'o}}1 {ř}{{\v{r}}}1 {š}{{\v{s}}}1
-	{ť}{{\v{t}}}1 {ú}{{\'u}}1 {ů}{{\r{u}}}1 {ý}{{\'y}}1 {ž}{{\v{z}}}1,		
-	numbers=left,
-	numbersep=5pt,
-	numberstyle=\tiny\color{black},
-	rulecolor=\color{black},
-	showlines=true,
-	showspaces=false,
-	showstringspaces=false,
-	showtabs=false,
-	stringstyle=\color{forestgreen},
-	tabsize=2,
-	title=\lstname,
-	upquote=true  % requires textcomp	
-}
 
-
-\lstdefinestyle{JSES6Base}{
-	backgroundcolor=\color{white},
-	basicstyle=\ttfamily,
-	breakatwhitespace=false,
-	breaklines=false,
-	captionpos=b,
-	columns=fullflexible,
-	commentstyle=\color{mediumgray}\upshape,
-	emph={},
-	emphstyle=\color{crimson},
-	extendedchars=true,  % requires inputenc
-	fontadjust=true,
-	frame=single,
-	identifierstyle=\color{black},
-	keepspaces=true,
-	keywordstyle=\color{mediumblue},
-	keywordstyle={[2]\color{darkviolet}},
-	keywordstyle={[3]\color{royalblue}},
- literate=%
-{á}{{\'a}}1 {č}{{\v{c}}}1 {ď}{{\v{d}}}1 {é}{{\'e}}1 {ě}{{\v{e}}}1
-{í}{{\'i}}1 {ň}{{\v{n}}}1 {ó}{{\'o}}1 {ř}{{\v{r}}}1 {š}{{\v{s}}}1
-{ť}{{\v{t}}}1 {ú}{{\'u}}1 {ů}{{\r{u}}}1 {ý}{{\'y}}1 {ž}{{\v{z}}}1,		
-	numbers=left,
-	numbersep=5pt,
-	numberstyle=\tiny\color{black},
-	rulecolor=\color{black},
-	showlines=true,
-	showspaces=false,
-	showstringspaces=false,
-	showtabs=false,
-	stringstyle=\color{forestgreen},
-	tabsize=2,
-	title=\lstname,
-	upquote=true  % requires textcomp
-}
-
-\lstdefinestyle{JavaScript}{
-	language=JavaScript,
-	style=JSES6Base,
-}
-\lstdefinestyle{ES6}{
-	language=ES6,
-	style=JSES6Base
-}
 
 
 %% Bordel pro práci - můžeš smáznout :) 
@@ -251,7 +170,7 @@ openright
 		
 		\begin{figure}[h]
 			\centering
-			\includegraphics[width=0.8\linewidth]{image/programovani-02.jpg} 
+			\includegraphics[width=0.5\linewidth]{image/logo.png} 
 		\end{figure}
 		
 		\vspace{0.02 \textheight}
@@ -401,7 +320,7 @@ Nevyužívá značky k zobrazení obsahu rozšířené reality.
 \subsubsection{na základě projekce}
 Jedná se o jednoduchou formu rozšířené reality. Interakce probíhá fyzickým dotykem s projekčním povrchem. Mezi nejčastěji projekční povrchy se řadí zdi nebo podlahy.
 
-\subsubsection{na základě polohy}
+\subsubsection{na základě lokace}
 Díky dostupnosti chytrých telefonů využívat GPS jsou informace a virtuální objekty zobrazovány, když zařízení uživatele odpovídá konkrétnímu místu. 
 
 	
@@ -409,7 +328,7 @@ Díky dostupnosti chytrých telefonů využívat GPS jsou informace a virtuáln�
 \chapter{Využité technologie}
 	
 \section{Unity}
-\label{sec:Unity}
+\label{sec:unity}
 Multiplatformní herní engine, který nabízí spoustu balíčků, templatů a nástrojů pro vytváření nejrůznějších aplikací. Celá má aplikace byla za pomoci Unity vytvořena. Scripty byly napsány v C\#.
 
 \subsection{AR Foundation}
@@ -429,7 +348,7 @@ Balíček umožňuje lepší interakci s objekty. Součástí je Interactive Man
 
 
 \section{Modelovací programy}
-\label{sec:Modelovaci_programy}
+\label{sec:modelovaci_programy}
 
 Všechny modely jsem vytvářela sama. Buď za použití Blenderu nebo 3Ds Maxe. 
 
@@ -437,7 +356,32 @@ Všechny modely jsem vytvářela sama. Buď za použití Blenderu nebo 3Ds Maxe.
 
 
 \chapter{Způsoby řešení a použité postupy}	
-	další text
+	
+\section{Testovací aplikace}
+\label{sec:testovaci_aplikace}
+
+\section{Nastavení projektu}
+\label{sec:nastaveni_projektu}
+\section {Sledování obrázku}
+\label{sec:sledovani_obrazku}
+
+
+
+
+
+
+
+\section {3D objekty}
+\label{sec:3d_objekty}
+\section {Canvas}
+\label{sec:canvas}
+\section{Animace}
+\label{sec:animace}
+
+\section {Výsledky řešení}
+\label{sec:vysledky_reseni}
+
+
 	
 
 	
@@ -510,6 +454,52 @@ How to Create AR Draw/Doodling in Unity3D} [online]. [cit. 2023-12-17]. Dostupn�
 
 
 \chapter*{příloha}
+\begin{figure}[h!] \centering
+	\begin{subfigure}[h]{0.63\textwidth}
+		\includegraphics[width=\textwidth]{image/pc.png} 
+	\end{subfigure}
+	\caption[3D objekt počítače]{3D objekt počítače s komponenty zahrnující: RAM, základní desku, procesor, grafickou kartu a napájecí zdroj počítače.}
+	\label{fig:pocitac}
+	\begin{subfigure}[h]{0.63\textwidth}
+		\includegraphics[width=\textwidth]{image/checkers.png}
+	\end{subfigure}
+	\caption[3D objekt dámy]{3D objekt dámy.}
+	\label{fig:dama}
+\end{figure}
 
+\begin{figure}[h!] \centering
+	\begin{subfigure}[h]{0.63\textwidth}
+		\includegraphics[width=\textwidth]{image/house.png} 
+	\end{subfigure}
+	\caption[3D objekt domu]{3D objekt domu z animovaného seriálu.}
+	\label{fig:pocitac}
+	\begin{subfigure}[h]{0.63\textwidth}
+		\includegraphics[width=\textwidth]{image/tlacitka.png}
+	\end{subfigure}
+	\caption[3D objekt tlačítek]{3D objekt tlačítek.}
+	\label{fig:tlacitka}
+	\begin{subfigure}[h]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{image/skrtic.png} 
+	\end{subfigure}
+	\caption[3D objekt pneumatického škrtiče]{3D objekt pneumatické škrtiče.}
+	\label{fig:skrtic}
+\end{figure}
+
+
+
+\begin{figure}[h!] \centering
+	\begin{subfigure}[h]{0.63\textwidth}
+		\includegraphics[width=\textwidth]{image/pist.png}
+	\end{subfigure}
+	\caption[3D objekt pístu]{3D objekt pístu.}
+	\label{fig:pist}
+	\begin{subfigure}[h]{0.63\textwidth}
+		\includegraphics[width=\textwidth]{image/kladka.png} 
+	\end{subfigure}
+	\caption[3D objekt kladky]{3D objekt kladky.}
+	\label{fig:kladka}
+
+	
+\end{figure}
 
 \end{document}

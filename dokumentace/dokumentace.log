@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  18 DEC 2023 20:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  28 DEC 2023 12:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -617,6 +617,9 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
+(C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
 eys2e.sty
@@ -637,27 +640,31 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \l__lipsum_b_int=\count318
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
-(dokumentace.aux)
+(dokumentace.aux
+
+LaTeX Warning: Label `fig:pocitac' multiply defined.
+
+)
 \openout1 = `dokumentace.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -723,7 +730,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 222.
+Package hyperref Info: Link coloring OFF on input line 141.
  (dokumentace.out) (dokumentace.out)
 \@outlinefile=\write3
 \openout3 = `dokumentace.out'.
@@ -745,87 +752,87 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 \c@mv@tabular=\count325
 \c@mv@boldtabular=\count326
 \c@lstlisting=\count327
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 23
-2.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 15
+1.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
-<image/logo-skoly.png, id=48, 356.2911pt x 137.5539pt>
+<image/logo-skoly.png, id=76, 356.2911pt x 137.5539pt>
 File: image/logo-skoly.png Graphic file (type png)
 <use image/logo-skoly.png>
-Package pdftex.def Info: image/logo-skoly.png  used on input line 236.
+Package pdftex.def Info: image/logo-skoly.png  used on input line 155.
 (pdftex.def)             Requested size: 273.14923pt x 105.45715pt.
-<image/programovani-02.jpg, id=50, 1204.5pt x 677.53125pt>
-File: image/programovani-02.jpg Graphic file (type jpg)
-<use image/programovani-02.jpg>
-Package pdftex.def Info: image/programovani-02.jpg  used on input line 254.
-(pdftex.def)             Requested size: 364.19667pt x 204.86337pt.
+<image/logo.png, id=78, 2055.68pt x 2055.68pt>
+File: image/logo.png Graphic file (type png)
+<use image/logo.png>
+Package pdftex.def Info: image/logo.png  used on input line 173.
+(pdftex.def)             Requested size: 227.62206pt x 227.59975pt.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 259.
+ 178.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )<<ot1.cmap>>
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 259.
+ 178.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )<<oml.cmap>>
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 259.
+ 178.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )<<oms.cmap>>
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 259.
+ 178.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )<<omx.cmap>>
-LaTeX Font Info:    Trying to load font information for U+esint on input line 2
-59.
+LaTeX Font Info:    Trying to load font information for U+esint on input line 1
+78.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/esint\uesint.fd
 File: uesint.fd 
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 25
-9.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 17
+8.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
-59.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
+78.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 259.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 178.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 259.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 178.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 259.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 178.
 
 [1
 
 
 {C:/Users/Mi≈°a/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Mi≈°
 a/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./image/logo-skol
-y.png> <./image/programovani-02.jpg>] [2
+y.png> <./image/logo.png>] [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 278--280
+Underfull \hbox (badness 10000) in paragraph at lines 197--199
 
  []
 
 [3] [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 307--309
+Underfull \hbox (badness 10000) in paragraph at lines 226--228
 
  []
 
@@ -841,8 +848,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 307--309
 
 ]
 Kapitola 1.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
-68.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
+87.
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -859,84 +866,84 @@ Kapitola 3.
 ] [11] [12
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 4
-56.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
+99.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-Underfull \hbox (badness 2894) in paragraph at lines 458--459
+Underfull \hbox (badness 2894) in paragraph at lines 401--402
 []\T1/ptm/m/it/12 Create UI ANI-MATI-ONS wi-thout CO-DING! - Unity UI tu-to-ria
 l \T1/ptm/m/n/12 [on-line]. You-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--461
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 []\T1/ptm/m/it/12 Hospod·∞skÈ no-viny: P•t ob-lastÌ, kde m∑-∫ete nej-lÈpe vy-u-
 ∫Ìt roz-≤Ì-∞e-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--461
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 \T1/ptm/m/it/12 nou re-a-litu \T1/ptm/m/n/12 [on-line]. [cit. 2023-12-17]. Do-s
 tupnÈ z: []$\T1/cmtt/m/n/12 https : / / hn . cz /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 465--466
+Underfull \hbox (badness 10000) in paragraph at lines 408--409
 []\T1/ptm/m/it/12 Medium: How to Cre-ate AR Dra-w/-Do-od-ling in Unity3D \T1/pt
 m/m/n/12 [on-line].
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 465--466
+Underfull \hbox (badness 10000) in paragraph at lines 408--409
 \T1/ptm/m/n/12 [cit. 2023-12-17]. Do-stupnÈ z: []$\T1/cmtt/m/n/12 https : / / m
 edium . com / antaeus-[]ar /
  []
 
 
-Underfull \hbox (badness 6110) in paragraph at lines 467--468
+Underfull \hbox (badness 6110) in paragraph at lines 410--411
 []\T1/ptm/m/it/12 Onirix: What Are The Di-f-fe-rent Ty-pes of Aug-men-ted Re-a-
 lity? \T1/ptm/m/n/12 [on-line]. [cit.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 467--468
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
 \T1/ptm/m/n/12 2023-12-17]. Do-stupnÈ z: []$\T1/cmtt/m/n/12 https : / / www . o
 nirix . com / learn-[]about-[]ar /
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 469--470
+Underfull \hbox (badness 2111) in paragraph at lines 412--413
 \T1/ptm/m/it/12 ve-lo-p-ment \T1/ptm/m/n/12 [on-line]. [cit. 2023-12-17]. Do-st
 upnÈ z: []$\T1/cmtt/m/n/12 https : / / hub . packtpub . com /
  []
 
 
-Underfull \hbox (badness 3148) in paragraph at lines 471--472
+Underfull \hbox (badness 3148) in paragraph at lines 414--415
 []\T1/ptm/m/it/12 Quickly pre-view your game on An-droid de-vice | Unity tu-to-
 rial \T1/ptm/m/n/12 [on-line]. You-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 473--474
+Underfull \hbox (badness 10000) in paragraph at lines 416--417
 []\T1/ptm/m/it/12 Quick Out-line: Par-ticle-s/E-f-fects \T1/ptm/m/n/12 [on-line
 ]. [cit. 2023-12-17]. Do-stupnÈ z:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 473--474
+Underfull \hbox (badness 10000) in paragraph at lines 416--417
 []$\T1/cmtt/m/n/12 https : / / assetstore . unity . com / packages / tools / pa
 rticles-[]effects /
  []
 
 [13]
-Underfull \hbox (badness 2818) in paragraph at lines 493--494
+Underfull \hbox (badness 2818) in paragraph at lines 436--437
 []\T1/ptm/m/it/12 ⁄vod do tÈ-matu: Roz-≤Ì-∞en· re-a-lita (AR) ve vzd•-l·-v·nÌ: 
 O2 Chytr· ≤kola \T1/ptm/m/n/12 [on-
  []
 
-(dokumentace.lof)
+(dokumentace.lof [14])
 \tf@lof=\write5
 \openout5 = `dokumentace.lof'.
 
@@ -944,33 +951,82 @@ O2 Chytr· ≤kola \T1/ptm/m/n/12 [on-
 \tf@lot=\write6
 \openout6 = `dokumentace.lot'.
 
- [14] [15] [16
+ [15] [16
 
-] [17] (dokumentace.aux)
+]
+<image/pc.png, id=267, 642.4pt x 424.58624pt>
+File: image/pc.png Graphic file (type png)
+<use image/pc.png>
+Package pdftex.def Info: image/pc.png  used on input line 458.
+(pdftex.def)             Requested size: 286.806pt x 189.56548pt.
+<image/checkers.png, id=268, 642.4pt x 424.58624pt>
+File: image/checkers.png Graphic file (type png)
+<use image/checkers.png>
+Package pdftex.def Info: image/checkers.png  used on input line 463.
+(pdftex.def)             Requested size: 286.806pt x 189.56548pt.
+<image/house.png, id=269, 642.4pt x 424.58624pt>
+File: image/house.png Graphic file (type png)
+<use image/house.png>
+Package pdftex.def Info: image/house.png  used on input line 471.
+(pdftex.def)             Requested size: 286.806pt x 189.56548pt.
+<image/tlacitka.png, id=270, 642.4pt x 424.58624pt>
+File: image/tlacitka.png Graphic file (type png)
+<use image/tlacitka.png>
+Package pdftex.def Info: image/tlacitka.png  used on input line 476.
+(pdftex.def)             Requested size: 286.806pt x 189.56548pt.
+<image/skrtic.png, id=271, 642.4pt x 424.58624pt>
+File: image/skrtic.png Graphic file (type png)
+<use image/skrtic.png>
+Package pdftex.def Info: image/skrtic.png  used on input line 481.
+(pdftex.def)             Requested size: 227.62206pt x 150.44087pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<image/pist.png, id=272, 642.4pt x 424.58624pt>
+File: image/pist.png Graphic file (type png)
+<use image/pist.png>
+Package pdftex.def Info: image/pist.png  used on input line 491.
+(pdftex.def)             Requested size: 286.806pt x 189.56548pt.
+<image/kladka.png, id=273, 682.55pt x 424.58624pt>
+File: image/kladka.png Graphic file (type png)
+<use image/kladka.png>
+Package pdftex.def Info: image/kladka.png  used on input line 496.
+(pdftex.def)             Requested size: 286.806pt x 178.40923pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17 <./image/pc.png> <./image/checkers.png>] [18 <./image/house.png> <./image/t
+lacitka.png> <./image/skrtic.png>] [19 <./image/pist.png> <./image/kladka.png>]
+(dokumentace.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `dokumentace.out' has not changed.
-(rerunfilecheck)             Checksum: 18C8272F986396CEF0780F09F0355AD0;1742.
+(rerunfilecheck)             Checksum: 9551198D9716F5A3C04A2ADD51CFED2C;2624.
  ) 
 Here is how much of TeX's memory you used:
- 17701 strings out of 475247
- 287621 string characters out of 5757791
- 1930785 words of memory out of 5000000
- 38802 multiletter control sequences out of 15000+600000
+ 17817 strings out of 475247
+ 289780 string characters out of 5757791
+ 1931785 words of memory out of 5000000
+ 38903 multiletter control sequences out of 15000+600000
  621203 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,11n,93p,384b,603s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,11n,93p,389b,629s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Mi≈°a\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
 1200.pk><C:/Users/Mi≈°a/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/
 uhvb8a.pfb><C:/Users/Mi≈°a/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
 utmb8a.pfb><C:/Users/Mi≈°a/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
 utmr8a.pfb><C:/Users/Mi≈°a/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on dokumentace.pdf (22 pages, 250156 bytes).
+Output written on dokumentace.pdf (24 pages, 993256 bytes).
 PDF statistics:
- 326 PDF objects out of 1000 (max. 8388607)
- 62 named destinations out of 1000 (max. 500000)
- 119 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 397 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
+ 210 words of extra memory for PDF output out of 10000 (max. 10000000)
 
