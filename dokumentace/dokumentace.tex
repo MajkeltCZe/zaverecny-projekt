@@ -21,7 +21,7 @@ openright
 \newcommand\jmenoAutora{Michaela Říčná}  %% vyplň své jméno
 \newcommand\skolniRok{2023/24} %% vyplň rok
 \newcommand\datumOdevzdani{1. 1. 2024} %% vyplň rok
-\newcommand\nazevPrace{Mobilní aplikace s využitím rozšířené reality} %% vyplň název své práce
+\newcommand\nazevPrace{Mobilní aplikace s rozšířenou realitou} %% vyplň název své práce
 
 \title{\nazevPrace} %% -- Název tvé práce
 \author{\jmenoAutora} %% -- tvé jméno
@@ -91,42 +91,54 @@ openright
 \renewcommand{\lstlistingname}{Kód}% Listing -> Algorithm
 \renewcommand{\lstlistlistingname}{Seznam programových kódů}% List of Listings -> List of Algorithms
 
-%% Definice 
+
 %copied code start
-\definecolor{bluekeywords}{rgb}{0,0,1}
-\definecolor{greencomments}{rgb}{0,0.5,0}
-\definecolor{redstrings}{rgb}{0.64,0.08,0.08}
-\definecolor{xmlcomments}{rgb}{0.5,0.5,0.5}
-\definecolor{types}{rgb}{0.17,0.57,0.68}
-
-
-\lstset{language=[Sharp]C,
-	captionpos=b,
-	%numbers=left, %Nummerierung
-	%numberstyle=\tiny, % kleine Zeilennummern
-	frame=lines, % Oberhalb und unterhalb des Listings ist eine Linie
-	showspaces=false,
-	showtabs=false,
-	breaklines=true,
-	showstringspaces=false,
-	breakatwhitespace=true,
-	escapeinside={(*@}{@*)},
-	commentstyle=\color{greencomments},
-	morekeywords={partial, var, value, get, set},
-	keywordstyle=\color{bluekeywords},
-	stringstyle=\color{redstrings},
-	basicstyle=\ttfamily\small,
-}
-% copied code end
-
-% Nastavení barev
-% Requires package: color.
 \definecolor{mediumgray}{rgb}{0.3, 0.4, 0.4}
 \definecolor{mediumblue}{rgb}{0.0, 0.0, 0.8}
 \definecolor{forestgreen}{rgb}{0.13, 0.55, 0.13}
 \definecolor{darkviolet}{rgb}{0.58, 0.0, 0.83}
 \definecolor{royalblue}{rgb}{0.25, 0.41, 0.88}
 \definecolor{crimson}{rgb}{0.86, 0.8, 0.24}
+
+\lstdefinestyle{csh}{
+	language=C,
+	backgroundcolor=\color{white},
+	basicstyle=\ttfamily,
+	breakatwhitespace=false,
+	breaklines=false,
+	captionpos=b,
+	columns=fullflexible,
+	commentstyle=\color{mediumgray}\upshape,
+	emph={},
+	emphstyle=\color{crimson},
+	extendedchars=true,  % requires inputenc
+	fontadjust=true,
+	frame=single,
+	identifierstyle=\color{black},
+	keepspaces=true,
+	keywordstyle=\color{mediumblue},
+	keywordstyle={[2]\color{darkviolet}},
+	keywordstyle={[3]\color{royalblue}},
+	literate=%
+	{á}{{\'a}}1 {č}{{\v{c}}}1 {ď}{{\v{d}}}1 {é}{{\'e}}1 {ě}{{\v{e}}}1
+	{í}{{\'i}}1 {ň}{{\v{n}}}1 {ó}{{\'o}}1 {ř}{{\v{r}}}1 {š}{{\v{s}}}1
+	{ť}{{\v{t}}}1 {ú}{{\'u}}1 {ů}{{\r{u}}}1 {ý}{{\'y}}1 {ž}{{\v{z}}}1,		
+	numbers=left,
+	numbersep=5pt,
+	numberstyle=\tiny\color{black},
+	rulecolor=\color{black},
+	showlines=true,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	stringstyle=\color{forestgreen},
+	tabsize=2,
+	title=\lstname,
+	upquote=true  % requires textcomp	
+}
+% copied code end
+
+
 
 
 
@@ -194,8 +206,7 @@ openright
 %% Poděkování - nepovinné
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
-	\noindent{\large{\bfseries{Poděkování}\\}}
-	\noindent 
+
 	
 	\vspace*{0.7\textheight} %% Vertikální mezeru je možné upravit
 
@@ -224,15 +235,15 @@ openright
 %% Abstrakt v češtině
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\noindent{\Large{\bfseries{Abstrakt}\\}}
-	\noindent Sem napíšeš svůj abstrakt.\\
+Práce se zabývá tvorbou mobilní aplikace s rozšířenou realitou na základě obrázků. Součástí práce byla tvorba 3D objektů a vytvoření mobilní aplikace. Výsledkem práce je funkční mobilní aplikace, která byla vytvořená za pomoci Unity, ve které je možné interagovat s určitými 3D objekty, které se zobrazují podle obrázků.
 
-	Délka cca 100 – 250 slov
+
 	
 	\vspace{18pt}
 	
 	\noindent{\large{\bfseries{Klíčová slova}}}
 	
-	\noindent Rozšířená realita, snímání obrázků, Unity, 3D objekty, mobilní aplikace
+	\noindent Rozšířená realita, sledování obrázků, Unity, 3D objekty, mobilní aplikace
 	
 	\vspace{18pt}
 
@@ -240,7 +251,7 @@ openright
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 	\noindent{\Large{\bfseries{Abstract}}}
 	
-	\noindent  %% přepiš!!
+This paper deals with creation of an AR mobile application based on images. Part of the paper was modelling 3D objects and creating a mobile application.  The result of this paper is a functional mobile application made in Unity in which the user can interact with specific 3D objects that are displayed according to images. 
 	
 	\vspace{18pt}
 	
@@ -262,6 +273,11 @@ openright
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
 	\chapter*{Úvod}
 	\addcontentsline{toc}{chapter}{Úvod}
+Cílem mé práce bylo vytvořit mobilní aplikaci s rozšířenou realitou.  Původně jsem zamýšlela vytvořit AR aplikaci na základě lokace.  Z tohoto nápadu jsem nakonec ustoupila po zjištění, že GPS v mobilních zařízeních není přesné a balíček pro Unity zabývající se touto problematikou nebyl ke stažení zdarma, proto jsem se rozhodla vytvořit aplikaci na základě obrázků.
+ 
+Hlavní motivací bylo pochopit základy rozšířené reality a Unity. Také jsem si přála pracovat na projektu, pro který bych si mohla vytvořit své vlastní 3D modely, jelikož mě modelování minulý rok zaujalo.  
+
+Tato práce nejprve popisuje problematiku rozšířené reality, využité technologie a blíže vysvětluje fungování celé aplikace. 
 
 
 
@@ -302,8 +318,8 @@ Je důležité, aby marker, byl unikátní a dobře rozpoznatelný pro naskenov�
 
 \paragraph{Výhody}
 \begin{itemize}
-	\item Jednoduché pro začínající uživatele rozšířené reality.
-	\item Snímání obrázků je stabilní. 
+	\item Jednoduché pro začínající uživatele rozšířené reality,
+	\item Snímání obrázků je stabilní,
 	\item Minimální výrobní náklady.
 \end{itemize}
 
@@ -332,7 +348,7 @@ Díky dostupnosti chytrých telefonů využívat GPS jsou informace a virtuáln�
 Multiplatformní herní engine, který nabízí spoustu balíčků, templatů a nástrojů pro vytváření nejrůznějších aplikací. Celá má aplikace byla za pomoci Unity vytvořena. Scripty byly napsány v C\#.
 
 \subsection{AR Foundation}
-Unity nabízí možnost využití templatu. AR Foundation je specifický template určený pro vytváření rozšířené reality. Obsahuje několik balíčků, které ulehčují práci s AR. 
+Unity nabízí možnost využití templatu. Template pro rozšířenou realitu obsahuje AR Foundation, což je framework určený pro vytváření rozšířené reality. Obsahuje několik funkcí, které ulehčují práci s AR. 
 
 
 \subsection{Balíčky}
@@ -350,45 +366,164 @@ Balíček umožňuje lepší interakci s objekty. Součástí je Interactive Man
 \section{Modelovací programy}
 \label{sec:modelovaci_programy}
 
-Všechny modely jsem vytvářela sama. Buď za použití Blenderu nebo 3Ds Maxe. 
+Všechny modely byly vytvářeny v Blenderu nebo 3Ds Maxu, jelikož jsem již s programy měla zkušenosti. 
 
 
 
 
 \chapter{Způsoby řešení a použité postupy}	
 	
-\section{Testovací aplikace}
-\label{sec:testovaci_aplikace}
-
+	
+\section {Tvorba 3D objektů}
+\label{sec:tvorba_3d_projektu}
+Nedílnou součástí celého mého projektu byla tvorba 3D objektů. Všechny objekty jsem vytvářela pomocí referenčních fotek, které mi umožnili tyto objekty vytvořit, co nejvěrohodněji. Mým cílem bylo vytvořit modely bez zbytečně komplikovaných textur pro snazší přechod z modelovacích programů do Unity, protože díky jednobarevným jednoduchým texturám jednotlivých částí objektů, si objekty udržely svou texturu, takže je stačilo do Unity importovat. Všechny objekty byly importovány ve formátu .FBX.  	
+	
 \section{Nastavení projektu}
 \label{sec:nastaveni_projektu}
-\section {Sledování obrázku}
+Template pro rozšířenou realitu, vlastnoručně přichystá základní nastavení celého projektu. K prvnímu spuštění celé aplikace, je ale potřeba nastavit na jakou platformu, chceme celý projekt směřovat, jelikož jsem celou aplikaci testovala na Androidu. Zvolila jsem si proto platformu Android. 
+
+Hlavním aktérem celé aplikace je AR Session Origin, který obsahuje kameru a jsou na něj navázány nejrůznější scripty, které reagují na snímané prostředí. Scripty jsem použila jak implementované, tak i vlastní.
+
+\begin{figure}%
+	\centering
+	\subfloat{\includegraphics[width=7cm]{image/build.jpg}}
+	\qquad
+	\subfloat{\includegraphics[width=7cm]{image/arorigincomponents.jpg}}
+	\caption{Zvolení platformy a scripty připnuté k AR Session Originu.}
+	\label{fig:nastaveni_unity}
+\end{figure}
+
+
+
+
+\section {Sledování obrázků}
 \label{sec:sledovani_obrazku}
+ Sledování obrázku zajišťuje AR tracked image manager, který je součástí AR Foundation. Skládá se z managaru a referenční knihovny (reference library). Součástí referenční knihovny jsou všechny obrázky, které chceme sledovat.
+ 
+AR tracked image manager nás také za pomocí eventu trackedImagesChanged informuje o každém přidaném, aktualizovaném nebo odstraněném obrázku. Nebo by alespoň měl, bohužel ale nikdy neoznámí odstranění obrázku, což způsobuje značné problémy. 
+
+Naštěstí tento manager také sleduje stavy jednotlivých obrázků. Správně by měl zobrazit jeden ze tří stavů (Tracking, Limited, None). I tady je tomu tak, že stav None nikdy nenastane a stav Limited nastane při jakémkoliv menším pohybu mobilního zařízení. 
+
+
+\begin{lstlisting}[style=csh, caption={Ukázka kódu sledování obrázků}]
+	
+	void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
+		//added image
+		foreach (var trackedImage in eventArgs.added) {
+			UpdateARImage(trackedImage.referenceImage.name,trackedImage);
+		}
+		//updated image
+		foreach (var trackedImage in eventArgs.updated) {
+			//checking state of image
+			if(trackedImage.trackingState != TrackingState.Tracking) {
+				//hides menu if object is out of view
+				if(state) {
+					HideInteractible(trackedImage.referenceImage.name);
+					
+				}
+				else {
+					//image is visible
+					ShowInteractible(trackedImage.referenceImage.name);
+					UpdateARImage(trackedImage.referenceImage.name,trackedImage);
+				}
+			}
+		}
+	}
+\end{lstlisting}
 
 
 
 
+\section {Zobrazování 3D objektů}
+\label{sec:zobrazovani_3d_objektu}
+Zobrazování 3D objektů se odvíjí od sledovaného obrázku, pokaždé když se určitý obrázek přidá nebo zaktualizuje, tak se podle něj objeví objekt se stejným jménem. 3D objekty dědí pozici obrázků. 
+
+\section{Odstraňování 3D objektů}
+\label{sec:odstraneni_3d_objektu}
+Mým záměrem bylo odvíjet stavy objektů podle stavů sledovaných obrázků, ale kvůli špatné funkcionalitě, jsem se rozhodla problém, pro odstranění objektů, vyřešit jinak, a to za pomocí Render.isVisible, který vrací, zda je určitý objekt zobrazen na jakékoliv kameře ve scéně, pokud se objekt nenachází na jakékoliv kameře, objekt se odstraní. 
+
+\begin{lstlisting}[style=csh, caption={Ukázka kódu zjišťování viditelnosti objektu.}]
+ void Start() => m_Renderer = GetComponent<Renderer>();
+void Update() {
+	//sending state of object to different script
+	MultipleImagesTracking.state = hide;
+	if (m_Renderer.isVisible) hide = true;
+	else {
+		if (hide) {
+			go.SetActive(false);
+			hide = false;
+		}
+	}
+}
+}
+\end{lstlisting}
 
 
-
-\section {3D objekty}
-\label{sec:3d_objekty}
-\section {Canvas}
+\section{Canvas}
 \label{sec:canvas}
-\section{Animace}
-\label{sec:animace}
+Pro zobrazení grafických prvků se využívá canvas, který obsahuje grafické prvky. Jelikož je Unity graficky založený engine, dá se většina jednoduchých operací naklikat bez použití vlastních scriptů. Pro účely mé aplikace jsem v canvasu vytvořila pro většinu objektů vlastní menu pro dodatečnou interakci s objekty. Zobrazení menu se řídí podle viditelnosti objektu. Canvas jsem také použila na vytvoření úvodního herního menu při prvním spuštění aplikace. 
 
-\section {Výsledky řešení}
-\label{sec:vysledky_reseni}
 
+\chapter{Výsledky řešení}
+
+\section{Funkce aplikace}
+\label{funkce_aplikace}
+Při spuštění aplikace se zobrazí úvodní menu, ve kterém jsou dvě možnosti „Play“ a „Cíl hry“. Při kliknutí na „Cíl hry“ se objeví krátký text, o čem vlastně aplikace je. 
+Při volbě „Play“ se zapne kamera v mobilu. V pravém horním rohu se objeví ikonka počítače, na který se dá kliknout a zobrazit si tak hledané obrázky. Vlevo nahoře se nachází počet nalezených obrázků. 
+Každý nalezený obrázek zobrazuje jiný 3D objekt, některé objekty nabízí i možnost interakce. 
 
 	
-
 	
+	\begin{figure}[h!]
+		\centering 
+		\includegraphics[width=0.8\textwidth]{image/menu.jpg} 
+		\caption{Úvodní menu.} 
+		\label{fig:menu} 
+	\end{figure}
+	
+	
+	
+\subsection{Dům}
+ Na sledovaném obrázku se zobrazí 3D model domu.  
+	
+\subsection{Součástky mechatroniky}	
+Jedná se o čtyři součástky používané v učebně mechatroniky: píst, kladka, pneumatický škrtič a modul s vypínači.
+Jednotlivé součástky se dají procházet šipkami, které se objeví při zobrazení prvního objektu. Píst a kladka mají vlastní animaci, která ukazuje, jak se pohybují. 
 
+\subsection{Počítač}	
+Jeden z obrázků zobrazuje model počítače, kterému jde odstranit kryt, když se kryt odstraní je možné klikat na některé počítačové komponenty, které po kliknutí zobrazí menu se zvětšeným kliknutým komponentem, který se začne otáčet. Vedle něj je krátký popis k čemu daný komponent v počítači slouží.  
+
+
+\begin{figure}[h!]
+	\centering 
+	\includegraphics[width=0.8\textwidth]{image/gpumenu.jpg} 
+	\caption{Menu pro grafickou kartu.} 
+	\label{fig:component_,menu}
+\end{figure}
+
+
+\subsection{Dáma}	
+Umožňuje hrát dámu při nalezení obrázku, mimo hrací plochu dámy se také objevuje tlačítko „Restart“, umožňuje restartovat rozehranou hru, „Pravidla“, které vysvětlují základní princip hraní dámy, a text, který oznamuje, jaký hráč je na řadě. Dáme je jen zjednodušená, což znamená, že neřeší povinné skákání ani měnění kamene na dámu při doskákání na druhou stranu šachovnice. První tah vždy začíná červený kámen.  
+
+\subsection{Kreslení}
+Při zobrazení objektu, se odemkne možnost kreslení, také se zobrazí menu s tlačítkem „Vymazání“, které vymazává celý nakreslený obsah, a výběrem kreslící barvy, který obsahuje zelenou, červenou, modrou a černou. Na tuto část projektu jsem využila tutoriál: How to Create AR Draw/Doodling in Unity3D \cite{ardrawing}.
+	
+	\begin{figure}[h!]
+		\centering 
+		\includegraphics[width=0.8\textwidth]{image/drawing.jpg} 
+		\caption{Výběr barvy a vymazání.} 
+		\label{fig:drawing}
+	\end{figure}
+	
+	
 	
 \chapter*{Závěr}
 \addcontentsline{toc}{chapter}{Závěr}
+Cílem projektu bylo vytvoření mobilní aplikace s rozšířenou realitou.
+Tento cíl se mi povedlo uskutečnit. Také jsem se více seznámila s problematiku rozšířené reality a pracování v Unity. 
+Kdybych práci vypracovávala znovu asi bych použila jiný framework než AR Foundation, kvůli již zmíněným problémům se sledováním obrázků. 
+Jedno z možných vylepšení do budoucna je tvorba více objektů s jinými možnostmi interakce. 
+
 
 
 
@@ -401,42 +536,42 @@ Všechny modely jsem vytvářela sama. Buď za použití Blenderu nebo 3Ds Maxe.
 
 \bibitem{animations} \textit{Create UI ANIMATIONS without CODING! - Unity UI tutorial} [online]. YouTube, 24.3.2021 [cit. 2023-12-18]. Dostupné z: \url{https://www.youtube.com/watch?v=br9YzpiBeIw}	
 
-\bibitem{ARvyuziti}\textit{Hospodářské noviny: Pět oblastí, kde můžete nejlépe využít rozšířenou realitu} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://hn.cz/c1-66644350-pet-oblasti-kde-muzete-nejlepe-vyuzit-rozsirenou-realitu}
+\bibitem{arvyuziti}\textit{Hospodářské noviny: Pět oblastí, kde můžete nejlépe využít rozšířenou realitu} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://hn.cz/c1-66644350-pet-oblasti-kde-muzete-nejlepe-vyuzit-rozsirenou-realitu}
 
 \bibitem{variables} \textit{How to get a variable from another script in Unity (the right way)} [online]. YouTube, 6.7.2022 [cit. 2023-12-18]. Dostupné z: \url{https://www.youtube.com/watch?v=2pCkInvkwZ0}
 
-\bibitem{ARDrawing}\textit{Medium: 
+\bibitem{ardrawing}\textit{Medium: 
 How to Create AR Draw/Doodling in Unity3D} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://medium.com/antaeus-ar/how-to-create-ar-draw-doodling-in-unity3d-ar-foundation-233b0e0f921e}
 
-\bibitem{Onirix}\textit{Onirix: What Are The Different Types of Augmented Reality?} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://www.onirix.com/learn-about-ar/types-of-augmented-reality}
+\bibitem{onirix}\textit{Onirix: What Are The Different Types of Augmented Reality?} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://www.onirix.com/learn-about-ar/types-of-augmented-reality}
 
-\bibitem{ArraysListDictionaries}\textit{Packt Hub: How to use arrays, lists, and dictionaries in Unity for 3D game development} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://hub.packtpub.com/arrays-lists-dictionaries-unity-3d-game-development}
+\bibitem{arraysListDictionaries}\textit{Packt Hub: How to use arrays, lists, and dictionaries in Unity for 3D game development} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://hub.packtpub.com/arrays-lists-dictionaries-unity-3d-game-development}
 
 \bibitem{gamePreviewOnMobile} \textit{Quickly preview your game on Android device | Unity tutorial} [online]. YouTube, 25.6.2021 [cit. 2023-12-18]. Dostupné z: \url{https://www.youtube.com/watch?v=iCXwaehzRFQ}
 
-\bibitem{QuickOutline}\textit{Quick Outline: Particles/Effects} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488}
+\bibitem{quickOutline}\textit{Quick Outline: Particles/Effects} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488}
 
-\bibitem{UIMouseOver} \textit{Quick Tip: Test Mouse over UI | Unity Tutorial} [online]. YouTube, 24.5.2018 [cit. 2023-12-18]. Dostupné z: \url{https://www.youtube.com/watch?v=ptmum1FXiLE}
+\bibitem{uiMouseOver} \textit{Quick Tip: Test Mouse over UI | Unity Tutorial} [online]. YouTube, 24.5.2018 [cit. 2023-12-18]. Dostupné z: \url{https://www.youtube.com/watch?v=ptmum1FXiLE}
 
-\bibitem{UnityRichText}\textit{Rich Text: Unity UI: 1.0.0} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/StyledText.html}
+\bibitem{unityRichText}\textit{Rich Text: Unity UI: 1.0.0} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/StyledText.html}
 
-\bibitem{ARtypes}\textit{Shopify: 5 Types of AR and How They Improve Online Shopping} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://www.shopify.com/blog/types-of-ar}	
+\bibitem{artypes}\textit{Shopify: 5 Types of AR and How They Improve Online Shopping} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://www.shopify.com/blog/types-of-ar}	
 
 \bibitem{menu} \textit{START MENU in Unity} [online]. YouTube, 29.11.2017 [cit. 2023-12-18]. Dostupné z: \url{https://www.youtube.com/watch?v=zc8ac_qUXQY}
 
-\bibitem{UnityAssetStore}\textit{Unity Asset Store: The Best Assets for Game Making} [Online]. [cit. 2023-12-17]. Dostupné z: \url{https://assetstore.unity.com}
+\bibitem{unityAssetStore}\textit{Unity Asset Store: The Best Assets for Game Making} [Online]. [cit. 2023-12-17]. Dostupné z: \url{https://assetstore.unity.com}
 
 \bibitem{imagetracking}\textit{Unity: Ar tracked image manager: AR Foundation: 4.0.12} [online]. [cit. 2-17]. Dostupné z: \url{https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.0/manual/tracked-image-manager.html}
 
-\bibitem{UnityExecution}\textit{Unity: Order of execution for event functions} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://docs.unity3d.com/Manual/ExecutionOrder.html}
+\bibitem{unityExecution}\textit{Unity: Order of execution for event functions} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://docs.unity3d.com/Manual/ExecutionOrder.html}
 
-\bibitem{UnityReference}\textit{Unity: Welcome to the Unity Scripting Reference!} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://docs.unity3d.com/ScriptReference/}
+\bibitem{unityReference}\textit{Unity: Welcome to the Unity Scripting Reference!} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://docs.unity3d.com/ScriptReference/}
 
-\bibitem{InstantiatingGameObjects} \textit{Unity3d with AR Foundation - How To Instantiate A Game Object Per Tracked Image?} [online]. YouTube, 24.9.2019 [cit. 2023-12-18]. Dostupné z: \url{https://www.youtube.com/watch?v=iM0ghkvsRos}
+\bibitem{instantiatingGameObjects} \textit{Unity3d with AR Foundation - How To Instantiate A Game Object Per Tracked Image?} [online]. YouTube, 24.9.2019 [cit. 2023-12-18]. Dostupné z: \url{https://www.youtube.com/watch?v=iM0ghkvsRos}
 
 \bibitem{uvoddoAR}\textit{Úvod do tématu: Rozšířená realita (AR) ve vzdělávání: O2 Chytrá škola} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://vyuka.o2chytraskola.cz/clanek/54/rozsirena-realita-ar-ve-vzdelavani}
 
-\bibitem{XRinteractionToolkit}\textit{XR Interaction Toolkit: XR Interaction Toolkit: 0.9.4-preview} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://docs.unity3d.com/tages/com.unity.xr.interaction.toolkit@0.9/manual/index.html}
+\bibitem{xrinteractionToolkit}\textit{XR Interaction Toolkit: XR Interaction Toolkit: 0.9.4-preview} [online]. [cit. 2023-12-17]. Dostupné z: \url{https://docs.unity3d.com/tages/com.unity.xr.interaction.toolkit@0.9/manual/index.html}
 
 
 
@@ -444,9 +579,6 @@ How to Create AR Draw/Doodling in Unity3D} [online]. [cit. 2023-12-17]. Dostupn�
 
 %% obrázky 
 \listoffigures
-
-%% tabulky
-\listoftables
 
 \appendix %% začínají přílohy
 
@@ -472,16 +604,16 @@ How to Create AR Draw/Doodling in Unity3D} [online]. [cit. 2023-12-17]. Dostupn�
 		\includegraphics[width=\textwidth]{image/house.png} 
 	\end{subfigure}
 	\caption[3D objekt domu]{3D objekt domu z animovaného seriálu.}
-	\label{fig:pocitac}
+	\label{fig:dum}
 	\begin{subfigure}[h]{0.63\textwidth}
-		\includegraphics[width=\textwidth]{image/tlacitka.png}
+		\includegraphics[width=\textwidth]{image/modul.png}
 	\end{subfigure}
-	\caption[3D objekt tlačítek]{3D objekt tlačítek.}
-	\label{fig:tlacitka}
+	\caption[3D objekt modulu s vypínači]{3D objekt modulu s vypínači.}
+	\label{fig:modul}
 	\begin{subfigure}[h]{0.5\textwidth}
 		\includegraphics[width=\textwidth]{image/skrtic.png} 
 	\end{subfigure}
-	\caption[3D objekt pneumatického škrtiče]{3D objekt pneumatické škrtiče.}
+	\caption[3D objekt pneumatického škrtiče]{3D objekt pneumatického škrtiče.}
 	\label{fig:skrtic}
 \end{figure}
 

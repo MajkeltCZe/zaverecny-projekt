@@ -20,12 +20,13 @@ public static string nameID;
 
 void Start() {
 HideMenu();
+
 }
+
 
 public void ShowObjects() {
 MenuObjects.SetActive(true);
 showImages.gameObject.SetActive(false);
-
 for(int i = 0; i < parent.transform.childCount;i++) {
              parent.gameObject.SetActive(true);
 

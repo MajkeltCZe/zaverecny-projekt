@@ -31,36 +31,35 @@ private Dictionary<string, GameObject> prefabs = new Dictionary<string, GameObje
 
 
 void OnEnable() => m_TrackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
-    void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
+void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
 
 
 void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
+    //added image
     foreach (var trackedImage in eventArgs.added) {
-        text.text = "Byl přidán obrázek, vyčkej na zobrazení předmětu";
-             UpdateARImage(trackedImage.referenceImage.name,trackedImage);
-             score++;
-               scoreText.text = score + "/" + 5;
-
+        text.text = "Byl přidán obrázek, vyčkej na zobrazení objektu";
+        UpdateARImage(trackedImage.referenceImage.name,trackedImage);
+        score++;
+        scoreText.text = score + "/" + 5;
     }
-        foreach (var trackedImage in eventArgs.updated) {
+    //updated image
+    foreach (var trackedImage in eventArgs.updated) {
+       //checking state of image
        if(trackedImage.trackingState != TrackingState.Tracking) {
-         
-        if(state) {
-        HideInteractible(trackedImage.referenceImage.name);
-
-        text.text = "";
-        if(score == 5) {
-            text.text = "Našel si všechny obrázky!";
-        }
+        //hides menu if object is out view
+            if(state) {
+                HideInteractible(trackedImage.referenceImage.name);
+                text.text = "";
+            if(score == 5) {
+                text.text = "Našel si všechny obrázky!";
+                }
+            }
+            else  text.text =  "Ztratil si dobrou viditelnost obrázku: ";
        }
-       else  text.text =  "Ztratil si dobrou viditelnost obrázku: ";
-       
-       }
-       
        else {
+        //image is visible
         text.text = "sleduješ:" + trackedImage.referenceImage.name;
         ShowInteractible(trackedImage.referenceImage.name);
-       
          if (trackedImage.referenceImage.name == "mechatronika")  {
                     value = OnClickPrefab.value;
                     UpdateARImage(value.ToString(), trackedImage);
@@ -69,7 +68,6 @@ void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
         UpdateARImage(trackedImage.referenceImage.name,trackedImage);
        }
     }
-
 }
 }
 
