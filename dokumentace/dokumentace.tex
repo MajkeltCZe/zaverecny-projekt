@@ -313,8 +313,9 @@ Rozšířená realita (zkratka AR = augmented reality). Princip fungování roz�
 
 
 \subsection{na základě značek}
-Tento typ rozšířené reality využívá značky nebo také markery, když se určitý marker naskenuje, objeví se u něj digitální objekt. Markery mohou být jak QR kódy nebo obrázky.
-Je důležité, aby marker, byl unikátní a dobře rozpoznatelný pro naskenování. 
+Tento typ rozšířené reality využívá značky nebo také markery. Když se určitý marker naskenuje,
+objeví se u nej digitální objekt. Markery mohou být jak QR kódy nebo obrázky. Je důležité, aby
+marker byl unikátní a dobře rozpoznatelný pro naskenování. 
 
 \paragraph{Výhody}
 \begin{itemize}
@@ -365,7 +366,6 @@ Balíček umožňuje lepší interakci s objekty. Součástí je Interactive Man
 
 \section{Modelovací programy}
 \label{sec:modelovaci_programy}
-
 Všechny modely byly vytvářeny v Blenderu nebo 3Ds Maxu, jelikož jsem již s programy měla zkušenosti. 
 
 
@@ -376,15 +376,15 @@ Všechny modely byly vytvářeny v Blenderu nebo 3Ds Maxu, jelikož jsem již s 
 	
 \section {Tvorba 3D objektů}
 \label{sec:tvorba_3d_projektu}
-Nedílnou součástí celého mého projektu byla tvorba 3D objektů. Všechny objekty jsem vytvářela pomocí referenčních fotek, které mi umožnili tyto objekty vytvořit, co nejvěrohodněji. Mým cílem bylo vytvořit modely bez zbytečně komplikovaných textur pro snazší přechod z modelovacích programů do Unity, protože díky jednobarevným jednoduchým texturám jednotlivých částí objektů, si objekty udržely svou texturu, takže je stačilo do Unity importovat. Všechny objekty byly importovány ve formátu .FBX.  	
+Nedílnou součástí celého mého projektu byla tvorba 3D objektů. Všechny objekty jsem vytvářela pomocí referenčních fotek, které mi umožnili tyto objekty vytvořit co nejvěrohodněji. Mým cílem bylo vytvořit modely bez zbytečně komplikovaných textur pro snazší přechod z modelovacích programů do Unity, protože díky jednobarevným a jednoduchým texturám jednotlivých částí objektů si objekty udržely svou texturu, takže je stačilo do Unity pouze importovat. Všechny objekty byly importovány ve formátu .FBX.  	
 	
 \section{Nastavení projektu}
 \label{sec:nastaveni_projektu}
-Template pro rozšířenou realitu, vlastnoručně přichystá základní nastavení celého projektu. K prvnímu spuštění celé aplikace, je ale potřeba nastavit na jakou platformu, chceme celý projekt směřovat, jelikož jsem celou aplikaci testovala na Androidu. Zvolila jsem si proto platformu Android. 
+Template pro rozšířenou realitu vlastnoručně přichystá základní nastavení celého projektu. K prvnímu spuštění celé aplikace je potřeba nastavit na jakou platformu chceme celý projekt směřovat. Jelikož jsem celou aplikaci testovala na Androidu, zvolila jsem si proto platformu Android. 
 
 Hlavním aktérem celé aplikace je AR Session Origin, který obsahuje kameru a jsou na něj navázány nejrůznější scripty, které reagují na snímané prostředí. Scripty jsem použila jak implementované, tak i vlastní.
 
-\begin{figure}%
+\begin{figure}
 	\centering
 	\subfloat{\includegraphics[width=7cm]{image/build.jpg}}
 	\qquad
@@ -402,7 +402,7 @@ Hlavním aktérem celé aplikace je AR Session Origin, který obsahuje kameru a 
  
 AR tracked image manager nás také za pomocí eventu trackedImagesChanged informuje o každém přidaném, aktualizovaném nebo odstraněném obrázku. Nebo by alespoň měl, bohužel ale nikdy neoznámí odstranění obrázku, což způsobuje značné problémy. 
 
-Naštěstí tento manager také sleduje stavy jednotlivých obrázků. Správně by měl zobrazit jeden ze tří stavů (Tracking, Limited, None). I tady je tomu tak, že stav None nikdy nenastane a stav Limited nastane při jakémkoliv menším pohybu mobilního zařízení. 
+Naštěstí tento manager také sleduje stavy jednotlivých obrázků. Správně by měl zobrazit jeden ze tří stavů (Tracking, Limited, None). I tady je tomu tak, že stav None nikdy nenastane a stav Limited nastane při jakémkoliv menším pohybu telefonu. 
 
 
 \begin{lstlisting}[style=csh, caption={Ukázka kódu sledování obrázků}]
@@ -436,11 +436,11 @@ Naštěstí tento manager také sleduje stavy jednotlivých obrázků. Správně
 
 \section {Zobrazování 3D objektů}
 \label{sec:zobrazovani_3d_objektu}
-Zobrazování 3D objektů se odvíjí od sledovaného obrázku, pokaždé když se určitý obrázek přidá nebo zaktualizuje, tak se podle něj objeví objekt se stejným jménem. 3D objekty dědí pozici obrázků. 
+Zobrazování 3D objektů se odvíjí od sledovaného obrázku. Pokaždé když se určitý obrázek přidá nebo aktualizuje, tak se podle něj objeví objekt se stejným jménem. 3D objekty dědí pozici obrázků. 
 
 \section{Odstraňování 3D objektů}
 \label{sec:odstraneni_3d_objektu}
-Mým záměrem bylo odvíjet stavy objektů podle stavů sledovaných obrázků, ale kvůli špatné funkcionalitě, jsem se rozhodla problém, pro odstranění objektů, vyřešit jinak, a to za pomocí Render.isVisible, který vrací, zda je určitý objekt zobrazen na jakékoliv kameře ve scéně, pokud se objekt nenachází na jakékoliv kameře, objekt se odstraní. 
+Mým záměrem bylo odvíjet stavy objektů podle stavů sledovaných obrázků, ale kvůli špatné funkcionalitě jsem se rozhodla problém pro odstranění objektů vyřešit jinak, a to za pomocí Render.isVisible, který vrací, zda je určitý objekt zobrazen na jakékoliv kameře ve scéně. Pokud se objekt nenachází na jakékoliv kameře, objekt se odstraní. 
 
 \begin{lstlisting}[style=csh, caption={Ukázka kódu zjišťování viditelnosti objektu.}]
  void Start() => m_Renderer = GetComponent<Renderer>();
@@ -461,7 +461,7 @@ void Update() {
 
 \section{Canvas}
 \label{sec:canvas}
-Pro zobrazení grafických prvků se využívá canvas, který obsahuje grafické prvky. Jelikož je Unity graficky založený engine, dá se většina jednoduchých operací naklikat bez použití vlastních scriptů. Pro účely mé aplikace jsem v canvasu vytvořila pro většinu objektů vlastní menu pro dodatečnou interakci s objekty. Zobrazení menu se řídí podle viditelnosti objektu. Canvas jsem také použila na vytvoření úvodního herního menu při prvním spuštění aplikace. 
+Pro zobrazení grafických prvků se využívá canvas, který obsahuje grafické prvky. Jelikož je Unity graficky založený engine, dá se většina jednoduchých operací naklikat bez použití vlastních scriptů. Pro účely mé aplikace jsem v canvas vytvořila vlastní menu pro dodatečnou interakci s objekty. Zobrazení menu se řídí podle viditelnosti objektu. Canvas jsem také použila na vytvoření úvodního herního menu při prvním spuštění aplikace. 
 
 
 \chapter{Výsledky řešení}
@@ -469,8 +469,8 @@ Pro zobrazení grafických prvků se využívá canvas, který obsahuje grafick�
 \section{Funkce aplikace}
 \label{funkce_aplikace}
 Při spuštění aplikace se zobrazí úvodní menu, ve kterém jsou dvě možnosti „Play“ a „Cíl hry“. Při kliknutí na „Cíl hry“ se objeví krátký text, o čem vlastně aplikace je. 
-Při volbě „Play“ se zapne kamera v mobilu. V pravém horním rohu se objeví ikonka počítače, na který se dá kliknout a zobrazit si tak hledané obrázky. Vlevo nahoře se nachází počet nalezených obrázků. 
-Každý nalezený obrázek zobrazuje jiný 3D objekt, některé objekty nabízí i možnost interakce. 
+Při volbě „Play“ se zapne kamera v telefonu. V pravém horním rohu se objeví ikonka počítače, na kterou se dá kliknout a zobrazit si tak hledané obrázky. Vlevo nahoře se nachází počet nalezených obrázků. 
+Každý nalezený obrázek zobrazuje jiný 3D objekt, dokonce některé objekty nabízí i možnost interakce. 
 
 	
 	
@@ -491,7 +491,7 @@ Jedná se o čtyři součástky používané v učebně mechatroniky: píst, kla
 Jednotlivé součástky se dají procházet šipkami, které se objeví při zobrazení prvního objektu. Píst a kladka mají vlastní animaci, která ukazuje, jak se pohybují. 
 
 \subsection{Počítač}	
-Jeden z obrázků zobrazuje model počítače, kterému jde odstranit kryt, když se kryt odstraní je možné klikat na některé počítačové komponenty, které po kliknutí zobrazí menu se zvětšeným kliknutým komponentem, který se začne otáčet. Vedle něj je krátký popis k čemu daný komponent v počítači slouží.  
+Jeden z obrázků zobrazuje model počítače, kterému jde odstranit kryt. Když se kryt odstraní, je možné klikat na některé počítačové komponenty, které po kliknutí zobrazí menu se zvětšeným zvoleným komponentem, který se začne otáčet. Vedle něj je krátký popis o úloze komponentu v počítači.
 
 
 \begin{figure}[h!]
@@ -503,10 +503,10 @@ Jeden z obrázků zobrazuje model počítače, kterému jde odstranit kryt, kdy�
 
 
 \subsection{Dáma}	
-Umožňuje hrát dámu při nalezení obrázku, mimo hrací plochu dámy se také objevuje tlačítko „Restart“, umožňuje restartovat rozehranou hru, „Pravidla“, které vysvětlují základní princip hraní dámy, a text, který oznamuje, jaký hráč je na řadě. Dáme je jen zjednodušená, což znamená, že neřeší povinné skákání ani měnění kamene na dámu při doskákání na druhou stranu šachovnice. První tah vždy začíná červený kámen.  
+Umožňuje hrát dámu při nalezení obrázku kreslené postavy, kromě hrací plochy dámy se také objevuje tlačítko „Restart“ umožňující restartovat rozehranou hru, „Pravidla“, které vysvětlují základní princip hry, a text, který oznamuje, jaký hráč je na řadě. Dáma je jen zjednodušená, což znamená že neřeší povinné skákání ani měnění kamene na dámu při doskákání na druhou stranu šachovnice. První tah vždy začíná červený kámen.  
 
 \subsection{Kreslení}
-Při zobrazení objektu, se odemkne možnost kreslení, také se zobrazí menu s tlačítkem „Vymazání“, které vymazává celý nakreslený obsah, a výběrem kreslící barvy, který obsahuje zelenou, červenou, modrou a černou. Na tuto část projektu jsem využila tutoriál: How to Create AR Draw/Doodling in Unity3D \cite{ardrawing}.
+Při zobrazení objektu se odemkne možnost kreslení, rovněž se zobrazí menu s tlačítkem „Vymazání“, které smaže celý nakreslený obsah, a výběrem kreslící barvy, který obsahuje zelenou, červenou, modrou a černou. Na tuto část projektu jsem využila tutoriál: How to Create AR Draw/Doodling in Unity3D \cite{ardrawing}.
 	
 	\begin{figure}[h!]
 		\centering 
@@ -519,11 +519,7 @@ Při zobrazení objektu, se odemkne možnost kreslení, také se zobrazí menu s
 	
 \chapter*{Závěr}
 \addcontentsline{toc}{chapter}{Závěr}
-Cílem projektu bylo vytvoření mobilní aplikace s rozšířenou realitou.
-Tento cíl se mi povedlo uskutečnit. Také jsem se více seznámila s problematiku rozšířené reality a pracování v Unity. 
-Kdybych práci vypracovávala znovu asi bych použila jiný framework než AR Foundation, kvůli již zmíněným problémům se sledováním obrázků. 
-Jedno z možných vylepšení do budoucna je tvorba více objektů s jinými možnostmi interakce. 
-
+Cílem projektu bylo vytvoření aplikace s rozšířenou realitou. Tento cíl se mi povedlo uskutečnit. Také jsem se více seznámila s problematikou rozšířené reality a pracování v Unity. Kdybych práci vypracovávala znovu, nejspíše bych použila jiný framework než AR foundation, a tak bych snad obešla již zmíněný problém se sledováním obrázků. Jedno z možných vylepšení do budoucna je tvorba více objektů s jinými možnostmi interakce.
 
 
 
