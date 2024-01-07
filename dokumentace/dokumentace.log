@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  30 DEC 2023 13:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  7 JAN 2024 21:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -138,7 +138,15 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count268
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count269
-) (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+) (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count270
+\float@exts=\toks21
+\float@box=\box51
+\@float@everytoks=\toks22
+\@floatcapt=\box52
+)
+(C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2023-07-08 v7.01b Hypertext links for LaTeX
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
@@ -190,15 +198,15 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count270
+\c@section@level=\count271
 )
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count271
+\etb@tempcnta=\count272
 )
 \@linkdim=\dimen160
-\Hy@linkcounter=\count272
-\Hy@pagecounter=\count273
+\Hy@linkcounter=\count273
+\Hy@pagecounter=\count274
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2023-07-08 v7.01b Hyperref: PDFDocEncoding definition (HO)
@@ -208,7 +216,7 @@ Now handling font encoding PD1 ...
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count274
+\Hy@SavedSpaceFactor=\count275
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2023-07-08 v7.01b Hyperref: PDF Unicode definition (HO)
@@ -222,7 +230,7 @@ Package hyperref Info: Plain pages OFF on input line 4182.
 Package hyperref Info: Backreferencing OFF on input line 4187.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4434.
-\c@Hy@tempcnt=\count275
+\c@Hy@tempcnt=\count276
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip16
@@ -239,7 +247,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count276
+\Fld@menulength=\count277
 \Field@Width=\dimen162
 \Fld@charsize=\dimen163
 Package hyperref Info: Hyper figures OFF on input line 6051.
@@ -254,9 +262,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6081.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count277
-\c@Item=\count278
-\c@Hfootnote=\count279
+\Hy@abspage=\count278
+\c@Item=\count279
+\c@Hfootnote=\count280
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
@@ -267,8 +275,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count280
-\c@bookmark@seq@number=\count281
+\Fld@listcount=\count281
+\c@bookmark@seq@number=\count282
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -285,12 +293,12 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2023/10/27 v2.16 Sectioning titles
-\ttl@box=\box51
+\ttl@box=\box53
 \beforetitleunit=\skip51
 \aftertitleunit=\skip52
 \ttl@plus=\dimen164
 \ttl@minus=\dimen165
-\ttl@toksa=\toks21
+\ttl@toksa=\toks23
 \titlewidth=\dimen166
 \titlewidthlast=\dimen167
 \titlewidthfirst=\dimen168
@@ -328,8 +336,8 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cftbeforefigskip=\skip79
 \cftfigindent=\skip80
 \cftfignumwidth=\skip81
-\c@lofdepth=\count282
-\c@lotdepth=\count283
+\c@lofdepth=\count283
+\c@lotdepth=\count284
 \cftbeforelottitleskip=\skip82
 \cftafterlottitleskip=\skip83
 \cftbeforetabskip=\skip84
@@ -361,12 +369,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen176
 \cmidrulekern=\dimen177
 \defaultaddspace=\dimen178
-\@cmidla=\count284
-\@cmidlb=\count285
+\@cmidla=\count285
+\@cmidlb=\count286
 \@aboverulesep=\dimen179
 \@belowrulesep=\dimen180
-\@thisruleclass=\count286
-\@lastruleclass=\count287
+\@thisruleclass=\count287
+\@lastruleclass=\count288
 \@thisrulewidth=\dimen181
 )
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
@@ -377,15 +385,15 @@ Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count288
-\calc@Bcount=\count289
+\calc@Acount=\count289
+\calc@Bcount=\count290
 \calc@Adimen=\dimen182
 \calc@Bdimen=\dimen183
 \calc@Askip=\skip96
 \calc@Bskip=\skip97
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count290
+\calc@Ccount=\count291
 \calc@Cskip=\skip98
 )
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
@@ -418,14 +426,14 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
 File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count291
-\AM@pagebox=\box52
-\AM@global@opts=\toks22
-\AM@pagecnt=\count292
-\AM@toc@title=\toks23
-\AM@lof@heading=\toks24
-\c@AM@survey=\count293
-\AM@templatesizebox=\box53
+\pdfpages@includegraphics@status=\count292
+\AM@pagebox=\box54
+\AM@global@opts=\toks24
+\AM@pagecnt=\count293
+\AM@toc@title=\toks25
+\AM@lof@heading=\toks26
+\c@AM@survey=\count294
+\AM@templatesizebox=\box55
 ) (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/was\upgreek.sty
 Package: upgreek 2003/02/12 v2.0 (WaS)
 Package upgreek Info: Using Euler Roman for upright Greek on input line 31.
@@ -443,7 +451,7 @@ Package: amstext 2021/08/26 v2.01 AMS text
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks25
+\@emptytoks=\toks27
 \ex@=\dimen189
 ))
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
@@ -453,19 +461,19 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count294
+\inf@bad=\count295
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count295
-\leftroot@=\count296
+\uproot@=\count296
+\leftroot@=\count297
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count297
-\DOTSCASE@=\count298
+\classnum@=\count298
+\DOTSCASE@=\count299
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box54
-\strutbox@=\box55
+\Mathstrutbox@=\box56
+\strutbox@=\box57
 LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
@@ -473,31 +481,31 @@ LaTeX Info: Redefining \Bigg on input line 725.
 \big@size=\dimen191
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count299
+\macc@depth=\count300
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count300
+\c@MaxMatrixCols=\count301
 \dotsspace@=\muskip17
-\c@parentequation=\count301
-\dspbrk@lvl=\count302
-\tag@help=\toks26
-\row@=\count303
-\column@=\count304
-\maxfields@=\count305
-\andhelp@=\toks27
+\c@parentequation=\count302
+\dspbrk@lvl=\count303
+\tag@help=\toks28
+\row@=\count304
+\column@=\count305
+\maxfields@=\count306
+\andhelp@=\toks29
 \eqnshift@=\dimen192
 \alignsep@=\dimen193
 \tagshift@=\dimen194
 \tagwidth@=\dimen195
 \totwidth@=\dimen196
 \lineht@=\dimen197
-\@envbody=\toks28
+\@envbody=\toks30
 \multlinegap=\skip100
 \multlinetaggap=\skip101
-\mathdisplay@stack=\toks29
+\mathdisplay@stack=\toks31
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
@@ -565,10 +573,10 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks30
-\XKV@tempa@toks=\toks31
+\XKV@toks=\toks32
+\XKV@tempa@toks=\toks33
 )
-\XKV@depth=\count306
+\XKV@depth=\count307
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
@@ -594,24 +602,24 @@ LaTeX Info: Redefining \textssc on input line 48.
 LaTeX Info: Redefining \textulc on input line 49.
 ))
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count307
-\lst@gtempboxa=\box56
-\lst@token=\toks32
-\lst@length=\count308
+\lst@mode=\count308
+\lst@gtempboxa=\box58
+\lst@token=\toks34
+\lst@length=\count309
 \lst@currlwidth=\dimen198
-\lst@column=\count309
-\lst@pos=\count310
+\lst@column=\count310
+\lst@pos=\count311
 \lst@lostspace=\dimen199
 \lst@width=\dimen256
-\lst@newlines=\count311
-\lst@lineno=\count312
+\lst@newlines=\count312
+\lst@lineno=\count313
 \lst@maxwidth=\dimen257
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count313
-\lst@skipnumbers=\count314
-\lst@framebox=\box57
+\c@lstnumber=\count314
+\lst@skipnumbers=\count315
+\lst@framebox=\box59
 )
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
@@ -626,15 +634,15 @@ Package: expl3 2023-08-29 L3 programming layer (loader)
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count315
-\l__pdf_internal_box=\box58
+\l__color_backend_stack_int=\count316
+\l__pdf_internal_box=\box60
 ))
 Package: l3keys2e 2023-08-29 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count316
-\l__lipsum_a_int=\count317
-\l__lipsum_b_int=\count318
+\g__lipsum_par_int=\count317
+\l__lipsum_a_int=\count318
+\l__lipsum_b_int=\count319
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
 (dokumentace.aux)
@@ -697,17 +705,17 @@ LaTeX Font Info:    ... okay on input line 153.
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count319
+\scratchcounter=\count320
 \scratchdimen=\dimen258
-\scratchbox=\box59
-\nofMPsegments=\count320
-\nofMParguments=\count321
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count322
+\scratchbox=\box61
+\nofMPsegments=\count321
+\nofMParguments=\count322
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count323
 \MPscratchDim=\dimen259
-\MPnumerator=\count323
-\makeMPintoPDFobject=\count324
-\everyMPtoPDFconversion=\toks34
+\MPnumerator=\count324
+\makeMPintoPDFobject=\count325
+\everyMPtoPDFconversion=\toks36
 )
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -720,6 +728,7 @@ fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -742,21 +751,21 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-\c@mv@tabular=\count325
-\c@mv@boldtabular=\count326
-\c@lstlisting=\count327
+\c@mv@tabular=\count326
+\c@mv@boldtabular=\count327
+\c@lstlisting=\count328
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 16
 3.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
-<image/logo-skoly.png, id=80, 356.2911pt x 137.5539pt>
+<image/logo-skoly.png, id=84, 356.2911pt x 137.5539pt>
 File: image/logo-skoly.png Graphic file (type png)
 <use image/logo-skoly.png>
 Package pdftex.def Info: image/logo-skoly.png  used on input line 167.
 (pdftex.def)             Requested size: 273.14923pt x 105.45715pt.
-<image/logo.png, id=82, 2055.68pt x 2055.68pt>
+<image/logo.png, id=86, 2055.68pt x 2055.68pt>
 File: image/logo.png Graphic file (type png)
 <use image/logo.png>
 Package pdftex.def Info: image/logo.png  used on input line 185.
@@ -839,142 +848,195 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 [5] [6]
 Kapitola 2.
-[7
-
-] [8]
-Kapitola 3.
-<image/build.jpg, id=173, 271.0125pt x 168.63pt>
+<image/build.jpg, id=167, 271.0125pt x 168.63pt>
 File: image/build.jpg Graphic file (type jpg)
 <use image/build.jpg>
-Package pdftex.def Info: image/build.jpg  used on input line 389.
+Package pdftex.def Info: image/build.jpg  used on input line 361.
 (pdftex.def)             Requested size: 199.16928pt x 123.93254pt.
-<image/arorigincomponents.jpg, id=174, 271.0125pt x 168.63pt>
+<image/arorigincomponents.jpg, id=168, 271.0125pt x 168.63pt>
 File: image/arorigincomponents.jpg Graphic file (type jpg)
 <use image/arorigincomponents.jpg>
-Package pdftex.def Info: image/arorigincomponents.jpg  used on input line 391.
+Package pdftex.def Info: image/arorigincomponents.jpg  used on input line 363.
 (pdftex.def)             Requested size: 199.16928pt x 123.93254pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9
-
- <./image/build.jpg> <./image/arorigincomponents.jpg>]
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
+[7
+
+ <./image/build.jpg> <./image/arorigincomponents.jpg>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 408.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 4
-08.
+nput line 380.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
+80.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-Overfull \hbox (1.59433pt too wide) in paragraph at lines 410--411
+Overfull \hbox (1.59433pt too wide) in paragraph at lines 381--382
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Underfull \vbox (badness 6348) has occurred while \output is active []
-
- [10]
-[11] [12
+[8] [9] [10
 
 ]
+Kapitola 3.
+<image/modelovani.jpg, id=224, 597.23125pt x 369.38pt>
+File: image/modelovani.jpg Graphic file (type jpg)
+<use image/modelovani.jpg>
+Package pdftex.def Info: image/modelovani.jpg  used on input line 453.
+(pdftex.def)             Requested size: 364.19667pt x 225.25383pt.
+[11 <./image/modelovani.jpg>]
+<image/modelovani2.jpg, id=230, 700.6175pt x 408.52625pt>
+File: image/modelovani2.jpg Graphic file (type jpg)
+<use image/modelovani2.jpg>
+Package pdftex.def Info: image/modelovani2.jpg  used on input line 464.
+(pdftex.def)             Requested size: 227.62206pt x 132.72581pt.
+<image/modelovani3.jpg, id=231, 444.66125pt x 430.60875pt>
+File: image/modelovani3.jpg Graphic file (type jpg)
+<use image/modelovani3.jpg>
+Package pdftex.def Info: image/modelovani3.jpg  used on input line 474.
+(pdftex.def)             Requested size: 199.16928pt x 192.87196pt.
+<image/modelovani5.jpg, id=232, 280.04625pt x 347.2975pt>
+File: image/modelovani5.jpg Graphic file (type jpg)
+<use image/modelovani5.jpg>
+Package pdftex.def Info: image/modelovani5.jpg  used on input line 476.
+(pdftex.def)             Requested size: 199.16928pt x 247.00688pt.
+ [12 <./image/modelovani2.jpg> <./image/modelovani3.jpg> <./image/modelovani5.j
+pg>]
+<image/modelovani6.jpg, id=239, 484.81125pt x 365.365pt>
+File: image/modelovani6.jpg Graphic file (type jpg)
+<use image/modelovani6.jpg>
+Package pdftex.def Info: image/modelovani6.jpg  used on input line 488.
+(pdftex.def)             Requested size: 199.16928pt x 150.10167pt.
+<image/modelovani7.jpg, id=240, 575.14874pt x 390.45876pt>
+File: image/modelovani7.jpg Graphic file (type jpg)
+<use image/modelovani7.jpg>
+Package pdftex.def Info: image/modelovani7.jpg  used on input line 490.
+(pdftex.def)             Requested size: 199.16928pt x 135.20888pt.
+<image/modelovani8.jpg, id=241, 448.67625pt x 331.2375pt>
+File: image/modelovani8.jpg Graphic file (type jpg)
+<use image/modelovani8.jpg>
+Package pdftex.def Info: image/modelovani8.jpg  used on input line 499.
+(pdftex.def)             Requested size: 199.16928pt x 147.03378pt.
+<image/modelovani9.jpg, id=242, 344.28625pt x 199.74625pt>
+File: image/modelovani9.jpg Graphic file (type jpg)
+<use image/modelovani9.jpg>
+Package pdftex.def Info: image/modelovani9.jpg  used on input line 501.
+(pdftex.def)             Requested size: 199.16928pt x 115.5542pt.
+<image/modelovani10.jpg, id=243, 652.4375pt x 196.735pt>
+File: image/modelovani10.jpg Graphic file (type jpg)
+<use image/modelovani10.jpg>
+Package pdftex.def Info: image/modelovani10.jpg  used on input line 511.
+(pdftex.def)             Requested size: 364.19667pt x 109.8226pt.
+ [13
+
+ <./image/modelovani6.jpg> <./image/modelovani7.jpg> <./image/modelovani8.jpg> 
+<./image/modelovani9.jpg> <./image/modelovani10.jpg>]
+<image/material.jpg, id=251, 453.695pt x 148.555pt>
+File: image/material.jpg Graphic file (type jpg)
+<use image/material.jpg>
+Package pdftex.def Info: image/material.jpg  used on input line 525.
+(pdftex.def)             Requested size: 199.16928pt x 65.21478pt.
+<image/material1.jpg, id=252, 443.6575pt x 317.185pt>
+File: image/material1.jpg Graphic file (type jpg)
+<use image/material1.jpg>
+Package pdftex.def Info: image/material1.jpg  used on input line 527.
+(pdftex.def)             Requested size: 199.16928pt x 142.38829pt.
+ [14
+
+ <./image/material.jpg> <./image/material1.jpg>]
 Kapitola 4.
-<image/menu.jpg, id=231, 935.495pt x 596.2275pt>
-File: image/menu.jpg Graphic file (type jpg)
-<use image/menu.jpg>
-Package pdftex.def Info: image/menu.jpg  used on input line 479.
-(pdftex.def)             Requested size: 364.19667pt x 232.1184pt.
-[13 <./image/menu.jpg>]
-<image/gpumenu.jpg, id=239, 938.50626pt x 594.22pt>
+<image/gpumenu.jpg, id=259, 938.50626pt x 594.22pt>
 File: image/gpumenu.jpg Graphic file (type jpg)
 <use image/gpumenu.jpg>
-Package pdftex.def Info: image/gpumenu.jpg  used on input line 499.
+Package pdftex.def Info: image/gpumenu.jpg  used on input line 569.
 (pdftex.def)             Requested size: 364.19667pt x 230.59335pt.
- [14 <./image/gpumenu.jpg>]
-<image/drawing.jpg, id=250, 783.92876pt x 165.61874pt>
-File: image/drawing.jpg Graphic file (type jpg)
-<use image/drawing.jpg>
-Package pdftex.def Info: image/drawing.jpg  used on input line 513.
-(pdftex.def)             Requested size: 364.19667pt x 76.94368pt.
- [15 <./image/drawing.jpg>]
-[16
 
-] [17] [18
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15
 
 ]
-Underfull \hbox (badness 2894) in paragraph at lines 533--534
+<image/drawing.jpg, id=269, 783.92876pt x 165.61874pt>
+File: image/drawing.jpg Graphic file (type jpg)
+<use image/drawing.jpg>
+Package pdftex.def Info: image/drawing.jpg  used on input line 583.
+(pdftex.def)             Requested size: 364.19667pt x 76.94368pt.
+ [16 <./image/gpumenu.jpg> <./image/drawing.jpg>] [17
+
+] [18
+
+]
+Underfull \hbox (badness 2894) in paragraph at lines 603--604
 []\T1/ptm/m/it/12 Create UI ANI-MATI-ONS wi-thout CO-DING! - Unity UI tu-to-ria
 l \T1/ptm/m/n/12 [on-line]. You-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 535--536
+Underfull \hbox (badness 10000) in paragraph at lines 605--606
 []\T1/ptm/m/it/12 Hospod·∞skÈ no-viny: P•t ob-lastÌ, kde m∑-∫ete nej-lÈpe vy-u-
 ∫Ìt roz-≤Ì-∞e-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 535--536
+Underfull \hbox (badness 10000) in paragraph at lines 605--606
 \T1/ptm/m/it/12 nou re-a-litu \T1/ptm/m/n/12 [on-line]. [cit. 2023-12-17]. Do-s
 tupnÈ z: []$\T1/cmtt/m/n/12 https : / / hn . cz /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 540--541
+Underfull \hbox (badness 10000) in paragraph at lines 610--611
 []\T1/ptm/m/it/12 Medium: How to Cre-ate AR Dra-w/-Do-od-ling in Unity3D \T1/pt
 m/m/n/12 [on-line].
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 540--541
+Underfull \hbox (badness 10000) in paragraph at lines 610--611
 \T1/ptm/m/n/12 [cit. 2023-12-17]. Do-stupnÈ z: []$\T1/cmtt/m/n/12 https : / / m
 edium . com / antaeus-[]ar /
  []
 
 
-Underfull \hbox (badness 6110) in paragraph at lines 542--543
+Underfull \hbox (badness 6110) in paragraph at lines 612--613
 []\T1/ptm/m/it/12 Onirix: What Are The Di-f-fe-rent Ty-pes of Aug-men-ted Re-a-
 lity? \T1/ptm/m/n/12 [on-line]. [cit.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
+Underfull \hbox (badness 10000) in paragraph at lines 612--613
 \T1/ptm/m/n/12 2023-12-17]. Do-stupnÈ z: []$\T1/cmtt/m/n/12 https : / / www . o
 nirix . com / learn-[]about-[]ar /
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 544--545
+Underfull \hbox (badness 2111) in paragraph at lines 614--615
 \T1/ptm/m/it/12 ve-lo-p-ment \T1/ptm/m/n/12 [on-line]. [cit. 2023-12-17]. Do-st
 upnÈ z: []$\T1/cmtt/m/n/12 https : / / hub . packtpub . com /
  []
 
 
-Underfull \hbox (badness 3148) in paragraph at lines 546--547
+Underfull \hbox (badness 3148) in paragraph at lines 616--617
 []\T1/ptm/m/it/12 Quickly pre-view your game on An-droid de-vice | Unity tu-to-
 rial \T1/ptm/m/n/12 [on-line]. You-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--549
+Underfull \hbox (badness 10000) in paragraph at lines 618--619
 []\T1/ptm/m/it/12 Quick Out-line: Par-ticle-s/E-f-fects \T1/ptm/m/n/12 [on-line
 ]. [cit. 2023-12-17]. Do-stupnÈ z:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--549
+Underfull \hbox (badness 10000) in paragraph at lines 618--619
 []$\T1/cmtt/m/n/12 https : / / assetstore . unity . com / packages / tools / pa
 rticles-[]effects /
  []
 
 [19]
-Underfull \hbox (badness 2818) in paragraph at lines 568--569
+Underfull \hbox (badness 2818) in paragraph at lines 638--639
 []\T1/ptm/m/it/12 ⁄vod do tÈ-matu: Roz-≤Ì-∞en· re-a-lita (AR) ve vzd•-l·-v·nÌ: 
 O2 Chytr· ≤kola \T1/ptm/m/n/12 [on-
  []
@@ -983,78 +1045,31 @@ O2 Chytr· ≤kola \T1/ptm/m/n/12 [on-
 \tf@lof=\write5
 \openout5 = `dokumentace.lof'.
 
- [21] [22
-
-]
-<image/pc.png, id=354, 642.4pt x 424.58624pt>
-File: image/pc.png Graphic file (type png)
-<use image/pc.png>
-Package pdftex.def Info: image/pc.png  used on input line 587.
-(pdftex.def)             Requested size: 286.806pt x 189.56548pt.
-<image/checkers.png, id=355, 642.4pt x 424.58624pt>
-File: image/checkers.png Graphic file (type png)
-<use image/checkers.png>
-Package pdftex.def Info: image/checkers.png  used on input line 592.
-(pdftex.def)             Requested size: 286.806pt x 189.56548pt.
-<image/house.png, id=356, 642.4pt x 424.58624pt>
-File: image/house.png Graphic file (type png)
-<use image/house.png>
-Package pdftex.def Info: image/house.png  used on input line 600.
-(pdftex.def)             Requested size: 286.806pt x 189.56548pt.
-<image/modul.png, id=357, 642.4pt x 424.58624pt>
-File: image/modul.png Graphic file (type png)
-<use image/modul.png>
-Package pdftex.def Info: image/modul.png  used on input line 605.
-(pdftex.def)             Requested size: 286.806pt x 189.56548pt.
-<image/skrtic.png, id=358, 642.4pt x 424.58624pt>
-File: image/skrtic.png Graphic file (type png)
-<use image/skrtic.png>
-Package pdftex.def Info: image/skrtic.png  used on input line 610.
-(pdftex.def)             Requested size: 227.62206pt x 150.44087pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<image/pist.png, id=359, 642.4pt x 424.58624pt>
-File: image/pist.png Graphic file (type png)
-<use image/pist.png>
-Package pdftex.def Info: image/pist.png  used on input line 620.
-(pdftex.def)             Requested size: 286.806pt x 189.56548pt.
-<image/kladka.png, id=360, 682.55pt x 424.58624pt>
-File: image/kladka.png Graphic file (type png)
-<use image/kladka.png>
-Package pdftex.def Info: image/kladka.png  used on input line 625.
-(pdftex.def)             Requested size: 286.806pt x 178.40923pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[23 <./image/pc.png> <./image/checkers.png>] [24 <./image/house.png> <./image/m
-odul.png> <./image/skrtic.png>] [25 <./image/pist.png> <./image/kladka.png>]
-(dokumentace.aux)
+ [21] (dokumentace.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `dokumentace.out' has not changed.
-(rerunfilecheck)             Checksum: 06DB61753040D31C2FFB8815DED1847C;2918.
+(rerunfilecheck)             Checksum: 354B03FCC88A18437D696A8E50C93263;3221.
  ) 
 Here is how much of TeX's memory you used:
- 18378 strings out of 475247
- 296221 string characters out of 5757791
- 1949785 words of memory out of 5000000
- 39409 multiletter control sequences out of 15000+600000
+ 18447 strings out of 475247
+ 298019 string characters out of 5757791
+ 1948785 words of memory out of 5000000
+ 39479 multiletter control sequences out of 15000+600000
  623925 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,11n,97p,589b,1362s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,11n,97p,532b,2151s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Mi≈°a\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
 1200.pk><C:/Users/Mi≈°a/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/
 uhvb8a.pfb><C:/Users/Mi≈°a/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
 utmb8a.pfb><C:/Users/Mi≈°a/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
 utmr8a.pfb><C:/Users/Mi≈°a/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on dokumentace.pdf (30 pages, 1210603 bytes).
+Output written on dokumentace.pdf (26 pages, 1439008 bytes).
 PDF statistics:
- 507 PDF objects out of 1000 (max. 8388607)
- 128 named destinations out of 1000 (max. 500000)
- 243 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 488 PDF objects out of 1000 (max. 8388607)
+ 123 named destinations out of 1000 (max. 500000)
+ 266 words of extra memory for PDF output out of 10000 (max. 10000000)
 

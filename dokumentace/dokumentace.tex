@@ -37,7 +37,7 @@ openright
 \usepackage{graphicx} %% balík pro vkládání obrázků
 
 \usepackage{subcaption} %% balíček pro vkládání podobrázků
-
+\usepackage{float}
 \usepackage{hyperref} %% balíček, který v PDF vytváří odkazy
 
 \linespread{1.25} %% řádkování
@@ -251,7 +251,7 @@ Práce se zabývá tvorbou mobilní aplikace s rozšířenou realitou na základ
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 	\noindent{\Large{\bfseries{Abstract}}}
 	
-This paper deals with creation of an AR mobile application based on images. Part of the paper was modelling 3D objects and creating a mobile application.  The result of this paper is a functional mobile application made in Unity in which the user can interact with specific 3D objects that are displayed according to images. 
+This project deals with creation of an AR mobile application based on images. Part of the project was modelling 3D objects and creating a mobile application.  The result of this project is a functional mobile application made in Unity in which the user can interact with specific 3D objects that are displayed according to images. 
 	
 	\vspace{18pt}
 	
@@ -301,10 +301,10 @@ Rozšířená realita (zkratka AR = augmented reality). Princip fungování roz�
 
 \begin{itemize}
 	\item Interaktivní vzdělávání,
-	\item AR pro obchod,
-	\item Návrh a vizualizace produktu,
-	\item Vzdálená podpora v terénu,
-	\item Hry a zábava.
+	\item rozšířená realita pro obchod,
+	\item návrh a vizualizace produktu,
+	\item vzdálená podpora v terénu,
+	\item hry a zábava.
 \end{itemize}
 
 
@@ -312,7 +312,7 @@ Rozšířená realita (zkratka AR = augmented reality). Princip fungování roz�
 \label{sec:typy_AR}
 
 
-\subsection{na základě značek}
+\subsection{Na základě značek}
 Tento typ rozšířené reality využívá značky nebo také markery. Když se určitý marker naskenuje,
 objeví se u nej digitální objekt. Markery mohou být jak QR kódy nebo obrázky. Je důležité, aby
 marker byl unikátní a dobře rozpoznatelný pro naskenování. 
@@ -320,71 +320,52 @@ marker byl unikátní a dobře rozpoznatelný pro naskenování.
 \paragraph{Výhody}
 \begin{itemize}
 	\item Jednoduché pro začínající uživatele rozšířené reality,
-	\item Snímání obrázků je stabilní,
-	\item Minimální výrobní náklady.
+	\item snímání obrázků je stabilní,
+	\item minimální výrobní náklady.
 \end{itemize}
 
 \paragraph{Nevýhody}
 \begin{itemize}
-	\item Funguje pouze v dostatečné blízkosti od kamery.
-	\item Odraz světla na markeru, může způsobit problémy se snímáním.
-	\item Aplikace potřebuje předem vytvořenou knihovnu referenčních markeru, pro spuštění.
+	\item Funguje pouze v dostatečné blízkosti od kamery,
+	\item odraz světla na markeru, může způsobit problémy se snímáním,
+	\item aplikace potřebuje předem vytvořenou knihovnu referenčních markeru, pro spuštění.
 \end{itemize}
 
-\subsection{bez značek}
+\subsection{Bez značek}
 Nevyužívá značky k zobrazení obsahu rozšířené reality.
 
-\subsubsection{na základě projekce}
+\subsubsection{Na základě projekce}
 Jedná se o jednoduchou formu rozšířené reality. Interakce probíhá fyzickým dotykem s projekčním povrchem. Mezi nejčastěji projekční povrchy se řadí zdi nebo podlahy.
 
-\subsubsection{na základě lokace}
+\subsubsection{Na základě lokace}
 Díky dostupnosti chytrých telefonů využívat GPS jsou informace a virtuální objekty zobrazovány, když zařízení uživatele odpovídá konkrétnímu místu. 
 
 	
 
-\chapter{Využité technologie}
-	
-\section{Unity}
-\label{sec:unity}
-Multiplatformní herní engine, který nabízí spoustu balíčků, templatů a nástrojů pro vytváření nejrůznějších aplikací. Celá má aplikace byla za pomoci Unity vytvořena. Scripty byly napsány v C\#.
-
-\subsection{AR Foundation}
-Unity nabízí možnost využití templatu. Template pro rozšířenou realitu obsahuje AR Foundation, což je framework určený pro vytváření rozšířené reality. Obsahuje několik funkcí, které ulehčují práci s AR. 
-
-
-\subsection{Balíčky}
-V Unity je možnost stažení nejrůznějších balíčku, které mohou obsahovat scripty nebo objekty. Některé tyto balíčky se mohou stáhnout hned při vytvoření projektu, při použití templatu, nebo stáhnout později v Package Managaru.
-
-\subsubsection{Quick Outline}
-Tento balíček se využívá k vytváření obrysů pro jakékoliv objekty. Původně byl vyvinut pouze pro virtuální realitu, ale funguje i mimo ni. 
-
-
-\subsubsection{XR Interaction Toolkit}
-Balíček umožňuje lepší interakci s objekty. Součástí je Interactive Manager, ve kterém se dají nastavit různé možnosti interakce. 
-
-
-
-\section{Modelovací programy}
-\label{sec:modelovaci_programy}
-Všechny modely byly vytvářeny v Blenderu nebo 3Ds Maxu, jelikož jsem již s programy měla zkušenosti. 
 
 
 
 
-\chapter{Způsoby řešení a použité postupy}	
+
+\chapter{Mobilní aplikace v Unity}	
+	\section{Struktura projektu}
+\label
+
+	Projekt obsahuje několik podsložek. 
+	3D objektů je uloženy ve složce Prefabs. Složka Scripts obsahuje veškeré mnou napsané scripty v c\#. Ve Složce Animations jsou uložené animace a složka ReferenceImages obsahuje obrázky, pro zobrazení 3D objektů. 
 	
 	
-\section {Tvorba 3D objektů}
-\label{sec:tvorba_3d_projektu}
-Nedílnou součástí celého mého projektu byla tvorba 3D objektů. Všechny objekty jsem vytvářela pomocí referenčních fotek, které mi umožnili tyto objekty vytvořit co nejvěrohodněji. Mým cílem bylo vytvořit modely bez zbytečně komplikovaných textur pro snazší přechod z modelovacích programů do Unity, protože díky jednobarevným a jednoduchým texturám jednotlivých částí objektů si objekty udržely svou texturu, takže je stačilo do Unity pouze importovat. Všechny objekty byly importovány ve formátu .FBX.  	
 	
 \section{Nastavení projektu}
 \label{sec:nastaveni_projektu}
-Template pro rozšířenou realitu vlastnoručně přichystá základní nastavení celého projektu. K prvnímu spuštění celé aplikace je potřeba nastavit na jakou platformu chceme celý projekt směřovat. Jelikož jsem celou aplikaci testovala na Androidu, zvolila jsem si proto platformu Android. 
+S využitím templatu pro rozšířenou realitu, který obsahuje AR Foundation, což je framework určený pro vytváření rozšířené reality. AR Foundation obsahuje několik funkcí, které ulehčují práci s AR. Tento template také vlastnoručně přichystá základní nastavení celého projektu. 
+
+K prvnímu spuštění celé aplikace je potřeba nastavit na jakou platformu chceme celý projekt směřovat. Jelikož jsem celou aplikaci testovala na Androidu, zvolila jsem si proto platformu Android.
+
 
 Hlavním aktérem celé aplikace je AR Session Origin, který obsahuje kameru a jsou na něj navázány nejrůznější scripty, které reagují na snímané prostředí. Scripty jsem použila jak implementované, tak i vlastní.
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\subfloat{\includegraphics[width=7cm]{image/build.jpg}}
 	\qquad
@@ -406,7 +387,6 @@ Naštěstí tento manager také sleduje stavy jednotlivých obrázků. Správně
 
 
 \begin{lstlisting}[style=csh, caption={Ukázka kódu sledování obrázků}]
-	
 	void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
 		//added image
 		foreach (var trackedImage in eventArgs.added) {
@@ -418,8 +398,7 @@ Naštěstí tento manager také sleduje stavy jednotlivých obrázků. Správně
 			if(trackedImage.trackingState != TrackingState.Tracking) {
 				//hides menu if object is out of view
 				if(state) {
-					HideInteractible(trackedImage.referenceImage.name);
-					
+					HideInteractible(trackedImage.referenceImage.name);	
 				}
 				else {
 					//image is visible
@@ -464,6 +443,111 @@ void Update() {
 Pro zobrazení grafických prvků se využívá canvas, který obsahuje grafické prvky. Jelikož je Unity graficky založený engine, dá se většina jednoduchých operací naklikat bez použití vlastních scriptů. Pro účely mé aplikace jsem v canvas vytvořila vlastní menu pro dodatečnou interakci s objekty. Zobrazení menu se řídí podle viditelnosti objektu. Canvas jsem také použila na vytvoření úvodního herního menu při prvním spuštění aplikace. 
 
 
+\chapter {Modelování 3D objektů}
+
+
+
+\section {Výběr modelovacích programů}
+\label{vyber_modelovacich_programu}
+Nedílnou součástí celého mého projektu byla tvorba 3D objektů, všechny modely jsem vytvářela buď v Blenderu nebo 3Ds Maxu. Programy jsem si vybrala, jelikož jsem si nimi měla už zkušenost. Blender je navíc ke stažení zadarmo. 
+\section {Postup modelování}
+Celý postup modelování budu popisovat v prostředí 3Ds Maxe a budu modelovat pístu.
+
+Pro usnadnění modelování jsem využila referenční fotky, které mi umožnili lépe vidět, jak určitý objekt vypadá. Nejlepší je si najít fotky obsahující předmět z více pohledů, aby bylo modelování ve 3D co nejsnazší.  
+
+Prvním krokem modelování je vybrat si, co nejpřesnější tvar daného objektu, který budeme tvořit, pro píst jsem si tedy vybrala cylinder. 
+
+	\begin{figure}[h!]
+	\centering 
+	\includegraphics[width=0.8\textwidth]{image/modelovani.jpg} 
+	\caption{Vytvoření cylinderu v 3Ds Maxu.} 
+	\label{fig:modelovani_cast1} 
+\end{figure}
+
+
+
+Tento postup budeme opakovat i pro tvorbu ostatních částí, na které zase použijeme cylinder jen s jiným počtem stran, které se dají nastavit v parametrech. 
+
+	\begin{figure}[h!]
+	\centering 
+	\includegraphics[width=0.5\textwidth]{image/modelovani2.jpg} 
+	\caption{Tvorba dalších částí pístu.} 
+	\label{fig:modelovani_cast2} 
+\end{figure}
+
+
+Pro obsáhlejší úpravu objektů přichází na řadu Editable Poly, ve kterém se dá manipulovat s jednotlivými polygony, vertexy a hranami, abychom je mohli vidět můžeme si zapnout Edged Faces. 
+
+\begin{figure}[h!]
+	\centering
+	\subfloat{\includegraphics[width=7cm]{image/modelovani3.jpg}}
+	\qquad
+	\subfloat{\includegraphics[width=7cm]{image/modelovani5.jpg}}
+	\caption{Editable Poly a nastavení viditelnosti hran.}
+	\label{fig:modelovani_cast3}
+\end{figure}
+
+\clearpage
+
+
+Po vybrání všech hran objektu využijeme Connect, který nám spojí veškeré vybrané hrany. Na tyto hrany pak využijeme Extrude, který tyto hrany vytáhne podle našich požadavků.  
+
+\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[width=7cm]{image/modelovani6.jpg}}
+	\qquad
+	\subfloat{\includegraphics[width=7cm]{image/modelovani7.jpg}}
+	\caption{Spojení a vytahnutí hran.}
+	\label{fig:modelovani_cast4}
+\end{figure}
+
+Další část pístu také upravíme, pomocí Connect, a poté pomocí Scale upravíme do potřebného tvaru. 
+
+\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[width=7cm]{image/modelovani8.jpg}}
+	\qquad
+	\subfloat{\includegraphics[width=7cm]{image/modelovani9.jpg}}
+	\caption{Spojení hrany a úprava tvaru objektu pomocí Scale.}
+	\label{fig:modelovani_cast5}
+\end{figure}
+
+
+Ze všech těchto objektů poté vytvoříme jeden jediný pomocí Attach. 
+
+	\begin{figure}[h!]
+	\centering 
+	\includegraphics[width=0.8\textwidth]{image/modelovani10.jpg} 
+	\caption{Spojení všech objektů do jednoho.} 
+	\label{fig:modelovani_cast6} 
+\end{figure}
+
+
+\clearpage
+\section {Nastavení materiálu objektů}
+\label{material_objektu}
+Po vymodelování objektu, je nutné mu přiřadit materiál. Všechny materiály jsem přiřazovala v 3Ds Maxu, protože jsem v něm už s materiály pracovala.  Materiály se nastavují v Material Editor, kde je možné využití obrázku jako materiálu celého objektu nebo jen jeho části, nebo pouze použití barvy. Mimo vytvoření materiálu se v tomhle editoru dají také nastavit vlastnosti materiálu jako je například průhlednost objektu nebo vyzařování světla z objektu. 
+
+
+\begin{figure}[h!]
+	\centering
+	\subfloat{\includegraphics[width=7cm]{image/material.jpg}}
+	\qquad
+	\subfloat{\includegraphics[width=7cm]{image/material1.jpg}}
+	\caption{Ukázka  vytvoření nového materiálu a materiálů již vytvořených.}
+	\label{fig:editor_materialu}
+\end{figure}
+
+
+
+
+\section {Importování do Unity}
+\label{import_do_unity}
+Všechny 3D objekty se dají do Unity importovat ve formátu .FBX, tyto oba formáty 3Ds Max i Blender podporuje. Takže žádný problém při importování nenastává.  
+
+
+
+
 \chapter{Výsledky řešení}
 
 \section{Funkce aplikace}
@@ -474,12 +558,7 @@ Každý nalezený obrázek zobrazuje jiný 3D objekt, dokonce některé objekty 
 
 	
 	
-	\begin{figure}[h!]
-		\centering 
-		\includegraphics[width=0.8\textwidth]{image/menu.jpg} 
-		\caption{Úvodní menu.} 
-		\label{fig:menu} 
-	\end{figure}
+
 	
 	
 	
@@ -576,58 +655,6 @@ How to Create AR Draw/Doodling in Unity3D} [online]. [cit. 2023-12-17]. Dostupn�
 %% obrázky 
 \listoffigures
 
-\appendix %% začínají přílohy
 
-\titleformat{\chapter}[block]{\scshape\bfseries\LARGE}{Příloha \thechapter}{10pt}{\vspace{0pt}}[\vspace{-22pt}] %% nastavení nadpisu u příloh
-
-
-\chapter*{příloha}
-\begin{figure}[h!] \centering
-	\begin{subfigure}[h]{0.63\textwidth}
-		\includegraphics[width=\textwidth]{image/pc.png} 
-	\end{subfigure}
-	\caption[3D objekt počítače]{3D objekt počítače s komponenty zahrnující: RAM, základní desku, procesor, grafickou kartu a napájecí zdroj počítače.}
-	\label{fig:pocitac}
-	\begin{subfigure}[h]{0.63\textwidth}
-		\includegraphics[width=\textwidth]{image/checkers.png}
-	\end{subfigure}
-	\caption[3D objekt dámy]{3D objekt dámy.}
-	\label{fig:dama}
-\end{figure}
-
-\begin{figure}[h!] \centering
-	\begin{subfigure}[h]{0.63\textwidth}
-		\includegraphics[width=\textwidth]{image/house.png} 
-	\end{subfigure}
-	\caption[3D objekt domu]{3D objekt domu z animovaného seriálu.}
-	\label{fig:dum}
-	\begin{subfigure}[h]{0.63\textwidth}
-		\includegraphics[width=\textwidth]{image/modul.png}
-	\end{subfigure}
-	\caption[3D objekt modulu s vypínači]{3D objekt modulu s vypínači.}
-	\label{fig:modul}
-	\begin{subfigure}[h]{0.5\textwidth}
-		\includegraphics[width=\textwidth]{image/skrtic.png} 
-	\end{subfigure}
-	\caption[3D objekt pneumatického škrtiče]{3D objekt pneumatického škrtiče.}
-	\label{fig:skrtic}
-\end{figure}
-
-
-
-\begin{figure}[h!] \centering
-	\begin{subfigure}[h]{0.63\textwidth}
-		\includegraphics[width=\textwidth]{image/pist.png}
-	\end{subfigure}
-	\caption[3D objekt pístu]{3D objekt pístu.}
-	\label{fig:pist}
-	\begin{subfigure}[h]{0.63\textwidth}
-		\includegraphics[width=\textwidth]{image/kladka.png} 
-	\end{subfigure}
-	\caption[3D objekt kladky]{3D objekt kladky.}
-	\label{fig:kladka}
-
-	
-\end{figure}
 
 \end{document}
