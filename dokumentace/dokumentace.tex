@@ -235,8 +235,7 @@ openright
 %% Abstrakt v češtině
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\noindent{\Large{\bfseries{Abstrakt}\\}}
-Práce se zabývá tvorbou mobilní aplikace s rozšířenou realitou na základě obrázků. Součástí práce byla tvorba 3D objektů a vytvoření mobilní aplikace. Výsledkem práce je funkční mobilní aplikace, která byla vytvořená za pomoci Unity, ve které je možné interagovat s určitými 3D objekty, které se zobrazují podle obrázků.
-
+Práce se zabývá tvorbou mobilní aplikace s rozšířenou realitou na základě obrázků. Součástí práce byla tvorba 3D objektů a vytvoření mobilní aplikace. Výsledkem práce je funkční mobilní aplikace, která byla vytvořená za pomoci Unity, ve které je možné interagovat s určitými 3D objekty, které se zobrazují podle obrázků. Aplikace má celkem pět obrázků, kde každý z~nich má alespoň jeden 3D objekt. Mezi tyto objekty patří interaktivní dáma, kreslení, počítač s~interaktivními komponenty, které při kliknutí zobrazí menu, ukázka čtyř součástek učebny mechatroniky, kde dvě z nich zahrnují i animaci pohybu součástky, a model domu z animovaného seriálu.  
 
 	
 	\vspace{18pt}
@@ -252,6 +251,7 @@ Práce se zabývá tvorbou mobilní aplikace s rozšířenou realitou na základ
 	\noindent{\Large{\bfseries{Abstract}}}
 	
 This project deals with creation of an AR mobile application based on images. Part of the project was modelling 3D objects and creating a mobile application.  The result of this project is a functional mobile application made in Unity in which the user can interact with specific 3D objects that are displayed according to images. 
+The application has a total of five images, each of which contains at least one 3D object. Among these objects are an interactive checkers game, drawing, a computer with interactive components that display a menu when clicked, a~demonstration of four components in a mechatronics classroom, where two of them include animation of the component's movement, and a model of a house from an animated series.
 	
 	\vspace{18pt}
 	
@@ -277,7 +277,7 @@ Cílem mé práce bylo vytvořit mobilní aplikaci s rozšířenou realitou.  P�
  
 Hlavní motivací bylo pochopit základy rozšířené reality a Unity. Také jsem si přála pracovat na projektu, pro který bych si mohla vytvořit své vlastní 3D modely, jelikož mě modelování minulý rok zaujalo.  
 
-Tato práce nejprve popisuje problematiku rozšířené reality, využité technologie a blíže vysvětluje fungování celé aplikace. 
+Tato práce nejprve popisuje problematiku rozšířené reality. Poté se zaměřuje na tvorbu 3D objektů s ukázkou jak se vytvářel model pístu, následný popis struktury projektu, bližším vysvětlením fungování sledování obrázků a seznámení s jednotlivými interaktivními 3D objekty. 
 
 
 
@@ -292,7 +292,7 @@ Tato práce nejprve popisuje problematiku rozšířené reality, využité techn
 
 \section{Co je to rozšířená realita}
 \label{sec:co_je_AR}
-Rozšířená realita (zkratka AR = augmented reality). Princip fungování rozšířené reality je v podstatě velmi jednoduchý – do obrazu reálného světa, který snímáme mobilním telefonem, tabletem či dalším zařízením, vkládáme navíc virtuální prvky – např. 3D model, video, textový či grafický popis, animace apod.
+Rozšířená realita (zkratka AR = augmented reality). Princip fungování rozšířené reality je v~podstatě velmi jednoduchý – do obrazu reálného světa, který snímáme mobilním telefonem, tabletem či dalším zařízením, vkládáme navíc virtuální prvky – např. 3D model, video, textový či grafický popis, animace apod.
 
 
 \section{Využití rozšířené reality}
@@ -342,26 +342,152 @@ Díky dostupnosti chytrých telefonů využívat GPS jsou informace a virtuáln�
 
 	
 
+\chapter {Modelování 3D objektů}
+
+
+
+\section {Výběr modelovacích programů}
+\label{vyber_modelovacich_programu}
+Nedílnou součástí celého mého projektu byla tvorba 3D objektů, všechny modely jsem vytvářela buď v Blenderu nebo 3Ds Maxu. Programy jsem si vybrala, jelikož už s nimi mám zkušenost. Blender je navíc ke stažení zdarma. 
+
+\section {Postup modelování}
+Celý postup modelování budu popisovat v prostředí programu 3Ds Max. V ukázce postupu uvidíte mnou vymodelovaný píst.
+
+Pro usnadnění modelování jsem využila referenční fotky, které mi umožnili lépe vidět, jak určitý objekt vypadá. Nejlepší je si najít fotky obsahující předmět z více pohledů, aby bylo modelování ve 3D co nejsnazší.  
+
+Prvním krokem modelování je vybrat si co nejpřesnější tvar daného objektu, který budeme tvořit. Pro píst jsem si tedy vybrala cylinder.  
+
+\begin{figure}[h!]
+	\centering 
+	\includegraphics[width=0.8\textwidth]{image/modelovani.jpg} 
+	\caption{Vytvoření cylinderu v 3Ds Maxu.} 
+	\label{fig:modelovani_cast1} 
+\end{figure}
+
+
+
+Tento postup budeme opakovat i pro tvorbu ostatních částí, na které zase použijeme cylinder, jen s jiným počtem stran. Strany se dají nastavit v parametrech. 
+
+\begin{figure}[h!]
+	\centering 
+	\includegraphics[width=0.5\textwidth]{image/modelovani2.jpg} 
+	\caption{Tvorba dalších částí pístu.} 
+	\label{fig:modelovani_cast2} 
+\end{figure}
+
+
+Pro obsáhlejší úpravu objektů můžeme použít Editable Poly, ve kterém se dá manipulovat s jednotlivými polygony, vertexy nebo hranami. Abychom je mohli vidět, musíme si zapnout Edged Faces.  
+
+\begin{figure}[h!]
+	\centering
+	\subfloat{\includegraphics[width=7cm]{image/modelovani3.jpg}}
+	\qquad
+	\subfloat{\includegraphics[width=7cm]{image/modelovani5.jpg}}
+	\caption{Editable Poly a nastavení viditelnosti hran.}
+	\label{fig:modelovani_cast3}
+\end{figure}
+
+\clearpage
+
+
+Po vybrání všech hran objektu využijeme Connect, který nám spojí veškeré vybrané hrany. Na tyto hrany pak využijeme Extrude, který tyto hrany vytáhne podle našich požadavků.   
+
+\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[width=7cm]{image/modelovani6.jpg}}
+	\qquad
+	\subfloat{\includegraphics[width=7cm]{image/modelovani7.jpg}}
+	\caption{Spojení a vytahnutí hran.}
+	\label{fig:modelovani_cast4}
+\end{figure}
+
+Další část pístu také upravíme pomocí Connect. Poté pomocí Scale upravíme do potřebného tvaru. 
+
+\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[width=7cm]{image/modelovani8.jpg}}
+	\qquad
+	\subfloat{\includegraphics[width=7cm]{image/modelovani9.jpg}}
+	\caption{Spojení hrany a úprava tvaru objektu pomocí Scale.}
+	\label{fig:modelovani_cast5}
+\end{figure}
+
+
+Ze všech těchto objektů poté vytvoříme jeden jediný pomocí Attach. 
+
+\begin{figure}[h!]
+	\centering 
+	\includegraphics[width=0.8\textwidth]{image/modelovani10.jpg} 
+	\caption{Spojení všech objektů do jednoho.} 
+	\label{fig:modelovani_cast6} 
+\end{figure}
+
+
+\clearpage
+\section {Nastavení materiálu objektů}
+\label{material_objektu}
+Po vymodelování objektu, je nutné mu přiřadit materiál. Všechny materiály jsem přiřazovala v 3Ds Maxu, jelikož jsem v něm už s materiály pracovala.  Materiály se nastavují v Material Editor, kde je možné využití obrázku jako materiálu celého objektu nebo jen jeho části. Lze také použit pouhá barva. Mimo vytvoření materiálu se v tomhle editoru dají také nastavit vlastnosti materiálu, jako je například průhlednost objektu nebo vyzařování světla z objektu.
+
+
+\begin{figure}[h!]
+	\centering
+	\subfloat{\includegraphics[width=7cm]{image/material.jpg}}
+	\qquad
+	\subfloat{\includegraphics[width=7cm]{image/material1.jpg}}
+	\caption{Ukázka  vytvoření nového materiálu a materiálů již vytvořených.}
+	\label{fig:editor_materialu}
+\end{figure}
+
+
+
+
+\section {Importování do Unity}
+\label{import_do_unity}
+Všechny 3D objekty se dají do Unity importovat ve formátu .FBX, tento formát 3Ds Max i~Blender podporuje. Takže žádný problém při importování souborů nenastává.
+
+Při importování jednoduchých materiálu z 3Ds Maxe také nevzniká ztráta materiálu, což znamená že jsem v Unity nemusela znovu nastavovat ani jeden materiál. 
+
 
 
 
 
 
 \chapter{Mobilní aplikace v Unity}	
+
+Svou celou aplikaci jsem vytvářela v Unity, což je multiplatformní herní engine, který nabízí spoustu balíčků, templatů a nástrojů pro vytváření nejrůznějších aplikací.  
+
 	\section{Struktura projektu}
-\label
+\label{sec:struktura_projektu}
+
+		\begin{figure}[h!]
+	\centering 
+	\includegraphics[width=0.4\textwidth]{image/hierarchy.jpg} 
+	\caption{Ukázka hierarchie aktivní scény projektu.} 
+	\label{fig:hierarchie} 
+\end{figure}
+
 
 	Projekt obsahuje několik podsložek. 
-	3D objektů je uloženy ve složce Prefabs. Složka Scripts obsahuje veškeré mnou napsané scripty v c\#. Ve Složce Animations jsou uložené animace a složka ReferenceImages obsahuje obrázky, pro zobrazení 3D objektů. 
+	3D objekty jsou uloženy ve složce Prefabs. Složka Scripts obsahuje veškeré mnou napsané scripty v c\#. Ve Složce Animations jsou uložené animace a složka ReferenceImages obsahuje obrázky pro zobrazení 3D objektů. Unity si navíc vytváří i vlastní podsložky potřebné pro fungování celého projektu, také zde můžeme vidět stáhnuté balíčky, které mohou obsahovat scripty nebo objekty. Některé tyto balíčky se mohou stáhnout hned při vytvoření projektu, při použití templatu, nebo stáhnout později v Package Manageru.
 	
 	
+	
+		\begin{figure}[h!]
+		\centering 
+		\includegraphics[width=0.8\textwidth]{image/assets.jpg} 
+		\caption{Ukázka podsložek v projektu.} 
+		\label{fig:podslozky} 
+	\end{figure}
+	
+	
+	
+	\newpage
 	
 \section{Nastavení projektu}
 \label{sec:nastaveni_projektu}
-S využitím templatu pro rozšířenou realitu, který obsahuje AR Foundation, což je framework určený pro vytváření rozšířené reality. AR Foundation obsahuje několik funkcí, které ulehčují práci s AR. Tento template také vlastnoručně přichystá základní nastavení celého projektu. 
+S pomocí templatu pro rozšířenou realitu, který obsahuje AR Foundation, což je framework určený pro vytváření rozšířené reality, je prvotní nastavení projektu jednoduché. AR Foundation obsahuje několik funkcí, které ulehčují práci s AR. Tento template také vlastnoručně přichystá základní nastavení celého projektu. 
 
-K prvnímu spuštění celé aplikace je potřeba nastavit na jakou platformu chceme celý projekt směřovat. Jelikož jsem celou aplikaci testovala na Androidu, zvolila jsem si proto platformu Android.
-
+K prvnímu spuštění celé aplikace je potřeba nastavit na jakou platformu chceme celý projekt směřovat. Jelikož jsem celou aplikaci testovala na Androidu, zvolila jsem si proto tuto platformu.
 
 Hlavním aktérem celé aplikace je AR Session Origin, který obsahuje kameru a jsou na něj navázány nejrůznější scripty, které reagují na snímané prostředí. Scripty jsem použila jak implementované, tak i vlastní.
 
@@ -375,18 +501,18 @@ Hlavním aktérem celé aplikace je AR Session Origin, který obsahuje kameru a 
 \end{figure}
 
 
-
+\newpage
 
 \section {Sledování obrázků}
 \label{sec:sledovani_obrazku}
  Sledování obrázku zajišťuje AR tracked image manager, který je součástí AR Foundation. Skládá se z managaru a referenční knihovny (reference library). Součástí referenční knihovny jsou všechny obrázky, které chceme sledovat.
  
-AR tracked image manager nás také za pomocí eventu trackedImagesChanged informuje o každém přidaném, aktualizovaném nebo odstraněném obrázku. Nebo by alespoň měl, bohužel ale nikdy neoznámí odstranění obrázku, což způsobuje značné problémy. 
+AR tracked image manager nás také za pomocí eventu trackedImagesChanged informuje o~každém přidaném, aktualizovaném nebo odstraněném obrázku. Nebo by alespoň měl, bohužel ale nikdy neoznámí odstranění obrázku, což způsobuje značné problémy. 
 
 Naštěstí tento manager také sleduje stavy jednotlivých obrázků. Správně by měl zobrazit jeden ze tří stavů (Tracking, Limited, None). I tady je tomu tak, že stav None nikdy nenastane a stav Limited nastane při jakémkoliv menším pohybu telefonu. 
 
 
-\begin{lstlisting}[style=csh, caption={Ukázka kódu sledování obrázků}]
+\begin{lstlisting}[style=csh, caption={Ukázka kódu sledování obrázků.}]
 	void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
 		//added image
 		foreach (var trackedImage in eventArgs.added) {
@@ -411,7 +537,7 @@ Naštěstí tento manager také sleduje stavy jednotlivých obrázků. Správně
 \end{lstlisting}
 
 
-
+\newpage
 
 \section {Zobrazování 3D objektů}
 \label{sec:zobrazovani_3d_objektu}
@@ -443,112 +569,6 @@ void Update() {
 Pro zobrazení grafických prvků se využívá canvas, který obsahuje grafické prvky. Jelikož je Unity graficky založený engine, dá se většina jednoduchých operací naklikat bez použití vlastních scriptů. Pro účely mé aplikace jsem v canvas vytvořila vlastní menu pro dodatečnou interakci s objekty. Zobrazení menu se řídí podle viditelnosti objektu. Canvas jsem také použila na vytvoření úvodního herního menu při prvním spuštění aplikace. 
 
 
-\chapter {Modelování 3D objektů}
-
-
-
-\section {Výběr modelovacích programů}
-\label{vyber_modelovacich_programu}
-Nedílnou součástí celého mého projektu byla tvorba 3D objektů, všechny modely jsem vytvářela buď v Blenderu nebo 3Ds Maxu. Programy jsem si vybrala, jelikož jsem si nimi měla už zkušenost. Blender je navíc ke stažení zadarmo. 
-\section {Postup modelování}
-Celý postup modelování budu popisovat v prostředí 3Ds Maxe a budu modelovat pístu.
-
-Pro usnadnění modelování jsem využila referenční fotky, které mi umožnili lépe vidět, jak určitý objekt vypadá. Nejlepší je si najít fotky obsahující předmět z více pohledů, aby bylo modelování ve 3D co nejsnazší.  
-
-Prvním krokem modelování je vybrat si, co nejpřesnější tvar daného objektu, který budeme tvořit, pro píst jsem si tedy vybrala cylinder. 
-
-	\begin{figure}[h!]
-	\centering 
-	\includegraphics[width=0.8\textwidth]{image/modelovani.jpg} 
-	\caption{Vytvoření cylinderu v 3Ds Maxu.} 
-	\label{fig:modelovani_cast1} 
-\end{figure}
-
-
-
-Tento postup budeme opakovat i pro tvorbu ostatních částí, na které zase použijeme cylinder jen s jiným počtem stran, které se dají nastavit v parametrech. 
-
-	\begin{figure}[h!]
-	\centering 
-	\includegraphics[width=0.5\textwidth]{image/modelovani2.jpg} 
-	\caption{Tvorba dalších částí pístu.} 
-	\label{fig:modelovani_cast2} 
-\end{figure}
-
-
-Pro obsáhlejší úpravu objektů přichází na řadu Editable Poly, ve kterém se dá manipulovat s jednotlivými polygony, vertexy a hranami, abychom je mohli vidět můžeme si zapnout Edged Faces. 
-
-\begin{figure}[h!]
-	\centering
-	\subfloat{\includegraphics[width=7cm]{image/modelovani3.jpg}}
-	\qquad
-	\subfloat{\includegraphics[width=7cm]{image/modelovani5.jpg}}
-	\caption{Editable Poly a nastavení viditelnosti hran.}
-	\label{fig:modelovani_cast3}
-\end{figure}
-
-\clearpage
-
-
-Po vybrání všech hran objektu využijeme Connect, který nám spojí veškeré vybrané hrany. Na tyto hrany pak využijeme Extrude, který tyto hrany vytáhne podle našich požadavků.  
-
-\begin{figure}[H]
-	\centering
-	\subfloat{\includegraphics[width=7cm]{image/modelovani6.jpg}}
-	\qquad
-	\subfloat{\includegraphics[width=7cm]{image/modelovani7.jpg}}
-	\caption{Spojení a vytahnutí hran.}
-	\label{fig:modelovani_cast4}
-\end{figure}
-
-Další část pístu také upravíme, pomocí Connect, a poté pomocí Scale upravíme do potřebného tvaru. 
-
-\begin{figure}[H]
-	\centering
-	\subfloat{\includegraphics[width=7cm]{image/modelovani8.jpg}}
-	\qquad
-	\subfloat{\includegraphics[width=7cm]{image/modelovani9.jpg}}
-	\caption{Spojení hrany a úprava tvaru objektu pomocí Scale.}
-	\label{fig:modelovani_cast5}
-\end{figure}
-
-
-Ze všech těchto objektů poté vytvoříme jeden jediný pomocí Attach. 
-
-	\begin{figure}[h!]
-	\centering 
-	\includegraphics[width=0.8\textwidth]{image/modelovani10.jpg} 
-	\caption{Spojení všech objektů do jednoho.} 
-	\label{fig:modelovani_cast6} 
-\end{figure}
-
-
-\clearpage
-\section {Nastavení materiálu objektů}
-\label{material_objektu}
-Po vymodelování objektu, je nutné mu přiřadit materiál. Všechny materiály jsem přiřazovala v 3Ds Maxu, protože jsem v něm už s materiály pracovala.  Materiály se nastavují v Material Editor, kde je možné využití obrázku jako materiálu celého objektu nebo jen jeho části, nebo pouze použití barvy. Mimo vytvoření materiálu se v tomhle editoru dají také nastavit vlastnosti materiálu jako je například průhlednost objektu nebo vyzařování světla z objektu. 
-
-
-\begin{figure}[h!]
-	\centering
-	\subfloat{\includegraphics[width=7cm]{image/material.jpg}}
-	\qquad
-	\subfloat{\includegraphics[width=7cm]{image/material1.jpg}}
-	\caption{Ukázka  vytvoření nového materiálu a materiálů již vytvořených.}
-	\label{fig:editor_materialu}
-\end{figure}
-
-
-
-
-\section {Importování do Unity}
-\label{import_do_unity}
-Všechny 3D objekty se dají do Unity importovat ve formátu .FBX, tyto oba formáty 3Ds Max i Blender podporuje. Takže žádný problém při importování nenastává.  
-
-
-
-
-\chapter{Výsledky řešení}
 
 \section{Funkce aplikace}
 \label{funkce_aplikace}
@@ -556,49 +576,145 @@ Při spuštění aplikace se zobrazí úvodní menu, ve kterém jsou dvě možno
 Při volbě „Play“ se zapne kamera v telefonu. V pravém horním rohu se objeví ikonka počítače, na kterou se dá kliknout a zobrazit si tak hledané obrázky. Vlevo nahoře se nachází počet nalezených obrázků. 
 Každý nalezený obrázek zobrazuje jiný 3D objekt, dokonce některé objekty nabízí i možnost interakce. 
 
-	
-	
-
-	
-	
-	
 \subsection{Dům}
- Na sledovaném obrázku se zobrazí 3D model domu.  
-	
+Na sledovaném obrázku se zobrazí 3D model domu.  
+
+
+\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[width=7cm]{image/houseImage.png}}
+	\qquad
+	\subfloat{\includegraphics[width=8cm]{image/house.png}}
+	\caption{Ukázka obrázku a modelu domu, který se na něm zobrazí.}
+	\label{fig:house}
+\end{figure}
+
+\newpage
+
 \subsection{Součástky mechatroniky}	
 Jedná se o čtyři součástky používané v učebně mechatroniky: píst, kladka, pneumatický škrtič a modul s vypínači.
 Jednotlivé součástky se dají procházet šipkami, které se objeví při zobrazení prvního objektu. Píst a kladka mají vlastní animaci, která ukazuje, jak se pohybují. 
 
-\subsection{Počítač}	
-Jeden z obrázků zobrazuje model počítače, kterému jde odstranit kryt. Když se kryt odstraní, je možné klikat na některé počítačové komponenty, které po kliknutí zobrazí menu se zvětšeným zvoleným komponentem, který se začne otáčet. Vedle něj je krátký popis o úloze komponentu v počítači.
 
-
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering 
-	\includegraphics[width=0.8\textwidth]{image/gpumenu.jpg} 
-	\caption{Menu pro grafickou kartu.} 
-	\label{fig:component_,menu}
+	\includegraphics[width=0.25\textwidth]{image/mechatronika.png} 
+	\caption{obrázek, na kterém se zobrazí modely součástky.} 
+	\label{fig:mechatronika_obrazek} 
 \end{figure}
 
 
+\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[width=7cm]{image/pist.png}}
+	\qquad
+	\subfloat{\includegraphics[width=7cm]{image/kladka.png}}
+	\caption{3D modely pístu a kladky.}
+	\label{fig:soucastky}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[width=7cm]{image/modul.png}}
+	\qquad
+	\subfloat{\includegraphics[width=7cm]{image/skrtic.png}}
+	\caption{3D modely modulu s vypínači a pneumatického škrtiče.}
+	\label{fig:soucastky2}
+\end{figure}
+
+\newpage
+
+\subsection{Počítač}	
+Jeden z obrázků zobrazuje model počítače, kterému jde odstranit kryt. Když se kryt odstraní, je možné klikat na některé počítačové komponenty, které po kliknutí zobrazí menu se zvětšeným zvoleným komponentem, který se začne otáčet. Vedle něj je krátký popis o úloze komponentu v počítači.
+
+K označení komponentů napomáhá balíček QuickOutline, který jsem si stáhla k mému projektu. Celý tento balíček vytváří obrysy pro objekty. Využití je velmi jednoduché. Připneme k~objektu, kterému chceme přidat obrys, popřípadě můžeme zobrazení obrysu detailněji nastavit v editoru. 
+
+Interakce s celým počítačem je zařízena pomocí XR Interaction Toolkit, který zprostředkovává lepší interakci s objekty. Součástí je Interactive Manager, ve kterém se dají nastavit různé možnosti interakce. Pro své potřeby jsem použila pouze funkci pro vybírání objektů. Při kliknutí na objekt se spustí script pro zobrazení menu komponentu.
+
+
+\begin{figure}[!h]
+	\centering 
+	\includegraphics[width=0.3\textwidth]{image/pcImage.png} 
+	\caption{Ukázka obrázku, na kterém se zobrazí model počítače.} 
+	\label{fig:pc_obrazek} 
+\end{figure}
+
+\begin{figure}[H]
+	\centering 
+	\includegraphics[width=0.6\textwidth]{image/pc.png} 
+	\caption{3D objekt počítače s označenými komponenty zahrnující: paměti RAM, základní desku, procesor, grafickou kartu, napájecí zdroj počítače a SSD disk.} 
+	\label{fig:pc} 
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[width=7cm]{image/cpu.png}}
+	\qquad
+	\subfloat{\includegraphics[width=7cm]{image/ssd.png}}
+	\caption{3D modely procesoru a SSD disku.}
+	\label{fig:components}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[width=7cm]{image/psu.png}}
+	\qquad
+	\subfloat{\includegraphics[width=7cm]{image/ram.png}}
+	\caption{3D modely napájecího zdroje počítače a paměti RAM.}
+	\label{fig:components2}
+\end{figure}
+
+\begin{figure}[H]
+	\centering 
+	\includegraphics[width=0.6\textwidth]{image/gpu.png} 
+	\caption{3D objekt grafické karty.} 
+	\label{fig:components3} 
+\end{figure}
+
+\newpage
+
 \subsection{Dáma}	
-Umožňuje hrát dámu při nalezení obrázku kreslené postavy, kromě hrací plochy dámy se také objevuje tlačítko „Restart“ umožňující restartovat rozehranou hru, „Pravidla“, které vysvětlují základní princip hry, a text, který oznamuje, jaký hráč je na řadě. Dáma je jen zjednodušená, což znamená že neřeší povinné skákání ani měnění kamene na dámu při doskákání na druhou stranu šachovnice. První tah vždy začíná červený kámen.  
+Umožňuje hrát dámu při nalezení obrázku figurky pěšce, kromě hrací plochy dámy se také objevuje tlačítko „Restart“ umožňující restartovat rozehranou hru, „Pravidla“, které vysvětlují základní princip hry, a text, který oznamuje, jaký hráč je na řadě. Dáma je jen zjednodušená, což znamená že neřeší povinné skákání ani měnění kamene na dámu při doskákání na druhou stranu šachovnice. První tah vždy začíná červený kámen.  
+
+Dáma také využívá Interactive Manager, který spouští scripty ovládající celou hru. Při kliknutí na kámen se uloží pozice, na které kámen leží. Podle ní se poté určují další možné tahy kamene. 
+
+
+\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[width=7cm]{image/checkersImage.png}}
+	\qquad
+	\subfloat{\includegraphics[width=7cm]{image/checkers.png}}
+	\caption{Ukázka obrázku a modelu dámy, který se na něm zobrazí.}
+	\label{fig:checkers}
+\end{figure}
+
+\newpage
 
 \subsection{Kreslení}
 Při zobrazení objektu se odemkne možnost kreslení, rovněž se zobrazí menu s tlačítkem „Vymazání“, které smaže celý nakreslený obsah, a výběrem kreslící barvy, který obsahuje zelenou, červenou, modrou a černou. Na tuto část projektu jsem využila tutoriál: How to Create AR Draw/Doodling in Unity3D \cite{ardrawing}.
-	
-	\begin{figure}[h!]
-		\centering 
-		\includegraphics[width=0.8\textwidth]{image/drawing.jpg} 
-		\caption{Výběr barvy a vymazání.} 
-		\label{fig:drawing}
-	\end{figure}
-	
-	
+
+\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[width=6cm]{image/drawingCanvas.png}}
+	\qquad
+	\subfloat{\includegraphics[width=6cm]{image/drawing.jpg}}
+	\caption{Ukázka obrázku pro spuštění kreslení a výběru barvy kreslení.}
+	\label{fig:drawing}
+\end{figure}
+
+
+
 	
 \chapter*{Závěr}
 \addcontentsline{toc}{chapter}{Závěr}
-Cílem projektu bylo vytvoření aplikace s rozšířenou realitou. Tento cíl se mi povedlo uskutečnit. Také jsem se více seznámila s problematikou rozšířené reality a pracování v Unity. Kdybych práci vypracovávala znovu, nejspíše bych použila jiný framework než AR foundation, a tak bych snad obešla již zmíněný problém se sledováním obrázků. Jedno z možných vylepšení do budoucna je tvorba více objektů s jinými možnostmi interakce.
+Cílem projektu bylo vytvoření aplikace s rozšířenou realitou. Tento cíl se mi povedlo uskutečnit. Výsledkem mé práce je aplikace, která obsahuje úvodní menu a 3D objekty, které se zobrazují při nalezení obrázků. Některé tyto 3D objekty nabízí možnost interakce jako například možnost hraní dámy, kreslení či interakce s vymodelovaným počítačem. 
+ 
+ Také jsem se více seznámila s~problematikou rozšířené reality a pracování v Unity. 
+ 
+ Kdybych práci vypracovávala znovu, nejspíše bych použila jiný framework než AR foundation, a tak bych snad obešla již zmíněný problém se sledováním obrázků. 
+ 
+ Jedno z možných vylepšení do budoucna je tvorba více objektů s jinými možnostmi interakce.
 
 
 

@@ -28,21 +28,11 @@ MonoBehaviour:
     m_Name: drawingCanvas
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
-      m_GuidLow: 5291083393732831898
-      m_GuidHigh: 6586352574094460861
-    m_SerializedTextureGuid:
-      m_GuidLow: 4833623416942438959
-      m_GuidHigh: 8916044814670223689
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: pc
-    m_Texture: {fileID: 0}
-  - m_SerializedGuid:
       m_GuidLow: 5676607887328679334
       m_GuidHigh: 7184326861284631703
     m_SerializedTextureGuid:
-      m_GuidLow: 17605831826799489428
-      m_GuidHigh: 13289115135606655576
+      m_GuidLow: 1568457914426827375
+      m_GuidHigh: 5864249528818069658
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
     m_Name: house
@@ -51,8 +41,8 @@ MonoBehaviour:
       m_GuidLow: 5105738573922525831
       m_GuidHigh: 14393400987618141324
     m_SerializedTextureGuid:
-      m_GuidLow: 6652981837652847429
-      m_GuidHigh: 430352493358147288
+      m_GuidLow: 7103382580685773835
+      m_GuidHigh: 16488611873941804377
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
     m_Name: checkers
@@ -61,9 +51,19 @@ MonoBehaviour:
       m_GuidLow: 5485179883796569938
       m_GuidHigh: 16984439511458457274
     m_SerializedTextureGuid:
-      m_GuidLow: 14863269262427796398
-      m_GuidHigh: 3130894705391909384
+      m_GuidLow: 9481396655218034798
+      m_GuidHigh: 15373770276095138408
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
     m_Name: mechatronika
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5746086888102093706
+      m_GuidHigh: 17430135843203300263
+    m_SerializedTextureGuid:
+      m_GuidLow: 14939709840524115121
+      m_GuidHigh: 6432553320525920760
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: pc
     m_Texture: {fileID: 0}

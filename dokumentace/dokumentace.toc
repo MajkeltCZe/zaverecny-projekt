@@ -10,23 +10,23 @@
 \contentsline {subsection}{\numberline {1.3.2}Bez značek}{6}{subsection.1.3.2}%
 \contentsline {subsubsection}{Na základě projekce}{6}{subsection.1.3.2}%
 \contentsline {subsubsection}{Na základě lokace}{6}{subsection.1.3.2}%
-\contentsline {chapter}{\numberline {2}Mobilní aplikace v Unity}{7}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Nastavení projektu}{7}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Sledování obrázků}{7}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Zobrazování 3D objektů}{8}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Odstraňování 3D objektů}{8}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Canvas}{9}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Modelování 3D objektů}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Výběr modelovacích programů}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Postup modelování}{11}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Nastavení materiálu objektů}{14}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Importování do Unity}{14}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Výsledky řešení}{15}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Funkce aplikace}{15}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Dům}{15}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Součástky mechatroniky}{15}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Počítač}{15}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Dáma}{15}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Kreslení}{16}{subsection.4.1.5}%
-\contentsline {chapter}{Závěr}{17}{chapter*.15}%
-\contentsline {chapter}{Seznam použitých informačních zdrojů}{19}{chapter*.16}%
+\contentsline {chapter}{\numberline {2}Modelování 3D objektů}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Výběr modelovacích programů}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Postup modelování}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Nastavení materiálu objektů}{10}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Importování do Unity}{10}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Mobilní aplikace v Unity}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Struktura projektu}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Nastavení projektu}{12}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Sledování obrázků}{13}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Zobrazování 3D objektů}{14}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Odstraňování 3D objektů}{14}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Canvas}{14}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Funkce aplikace}{15}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Dům}{15}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Součástky mechatroniky}{16}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Počítač}{17}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}Dáma}{19}{subsection.3.7.4}%
+\contentsline {subsection}{\numberline {3.7.5}Kreslení}{20}{subsection.3.7.5}%
+\contentsline {chapter}{Závěr}{21}{chapter*.26}%
+\contentsline {chapter}{Seznam použitých informačních zdrojů}{23}{chapter*.27}%
