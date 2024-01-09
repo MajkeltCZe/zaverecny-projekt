@@ -23,6 +23,7 @@ openright
 \newcommand\datumOdevzdani{1. 1. 2024} %% vyplň rok
 \newcommand\nazevPrace{Mobilní aplikace s rozšířenou realitou} %% vyplň název své práce
 
+
 \title{\nazevPrace} %% -- Název tvé práce
 \author{\jmenoAutora} %% -- tvé jméno
 \date{\datumOdevzdani} %% -- rok
@@ -84,6 +85,13 @@ openright
 \newcommand{\dif}{\mathrm{d}} %% makro pro sazbu diferenciálu, místo toho
 %% abych musel psát '\mathrm{d}' mi stačí napsat '\dif' což je mnohem 
 %% kratší a mohu si tak usnadnit práci
+
+\let\oldchapter\chapter
+\renewcommand{\chapter}{
+	\clearpage
+	\pagestyle{fancy}
+	\oldchapter
+}
 
 \usepackage{listings}
 \usepackage{xcolor}
