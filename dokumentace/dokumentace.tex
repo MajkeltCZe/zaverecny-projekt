@@ -59,7 +59,11 @@ openright
 \setcounter{tocdepth}{1}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\renewcommand{\headrulewidth}{0.025pt}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
+
+
 
 \usepackage{booktabs}
 
@@ -267,7 +271,7 @@ The application has a total of five images, each of which contains at least one 
 	
 	\noindent Augmented Reality, image tracking, Unity, 3D objects, mobile application
 	
-	\clearpage %% Zalomení stránky
+	\cleardoublepage %% Zalomení stránky
 
 %% Stránka s generovaným obsahem
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
@@ -322,7 +326,7 @@ Rozšířená realita (zkratka AR = augmented reality). Princip fungování roz�
 
 \subsection{Na základě značek}
 Tento typ rozšířené reality využívá značky nebo také markery. Když se určitý marker naskenuje,
-objeví se u nej digitální objekt. Markery mohou být jak QR kódy nebo obrázky. Je důležité, aby
+objeví se u něj digitální objekt. Markery mohou být jak QR kódy, tak obrázky. Je důležité, aby
 marker byl unikátní a dobře rozpoznatelný pro naskenování. 
 
 \paragraph{Výhody}
@@ -356,19 +360,19 @@ Díky dostupnosti chytrých telefonů využívat GPS jsou informace a virtuáln�
 
 \section {Výběr modelovacích programů}
 \label{vyber_modelovacich_programu}
-Nedílnou součástí celého mého projektu byla tvorba 3D objektů, všechny modely jsem vytvářela buď v Blenderu nebo 3Ds Maxu. Programy jsem si vybrala, jelikož už s nimi mám zkušenost. Blender je navíc ke stažení zdarma. 
+Nedílnou součástí celého mého projektu byla tvorba 3D objektů, všechny modely jsem vytvářela v programu Blender nebo 3ds Max. Programy jsem si vybrala, protože už s nimi mám zkušenost. Blender je navíc ke stažení zdarma. 
 
 \section {Postup modelování}
-Celý postup modelování budu popisovat v prostředí programu 3Ds Max. V ukázce postupu uvidíte mnou vymodelovaný píst.
+Celý postup modelování budu popisovat v prostředí programu 3ds Max. V ukázce postupu uvidíte mnou vymodelovaný píst.
 
-Pro usnadnění modelování jsem využila referenční fotky, které mi umožnili lépe vidět, jak určitý objekt vypadá. Nejlepší je si najít fotky obsahující předmět z více pohledů, aby bylo modelování ve 3D co nejsnazší.  
+Pro usnadnění modelování jsem využila referenční fotky, které mi umožnily lépe vidět, jak určitý objekt vypadá. Nejlepší je si najít fotky obsahující předmět z více pohledů, aby bylo modelování ve 3D co nejsnazší.  
 
 Prvním krokem modelování je vybrat si co nejpřesnější tvar daného objektu, který budeme tvořit. Pro píst jsem si tedy vybrala cylinder.  
 
 \begin{figure}[h!]
 	\centering 
 	\includegraphics[width=0.8\textwidth]{image/modelovani.jpg} 
-	\caption{Vytvoření cylinderu v 3Ds Maxu.} 
+	\caption{Vytvoření cylinderu v 3ds Max.} 
 	\label{fig:modelovani_cast1} 
 \end{figure}
 
@@ -434,7 +438,7 @@ Ze všech těchto objektů poté vytvoříme jeden jediný pomocí Attach.
 \clearpage
 \section {Nastavení materiálu objektů}
 \label{material_objektu}
-Po vymodelování objektu, je nutné mu přiřadit materiál. Všechny materiály jsem přiřazovala v 3Ds Maxu, jelikož jsem v něm už s materiály pracovala.  Materiály se nastavují v Material Editor, kde je možné využití obrázku jako materiálu celého objektu nebo jen jeho části. Lze také použit pouhá barva. Mimo vytvoření materiálu se v tomhle editoru dají také nastavit vlastnosti materiálu, jako je například průhlednost objektu nebo vyzařování světla z objektu.
+Po vymodelování objektu, je nutné mu přiřadit materiál. Všechny materiály jsem přiřazovala v 3ds Max, jelikož jsem v něm už s materiály pracovala.  Materiály se nastavují v Material Editor, kde je možné využití obrázku jako materiálu celého objektu nebo jen jeho části. Lze také použit pouhou barvu. Mimo vytvoření materiálu se v tomhle editoru dají také nastavit vlastnosti materiálu, jako je například průhlednost objektu nebo vyzařování světla z objektu.
 
 
 \begin{figure}[h!]
@@ -451,9 +455,9 @@ Po vymodelování objektu, je nutné mu přiřadit materiál. Všechny materiál
 
 \section {Importování do Unity}
 \label{import_do_unity}
-Všechny 3D objekty se dají do Unity importovat ve formátu .FBX, tento formát 3Ds Max i~Blender podporuje. Takže žádný problém při importování souborů nenastává.
+Všechny 3D objekty se dají do Unity importovat ve formátu .FBX, tento formát 3ds Max i~Blender podporuje. Takže žádný problém při importování souborů nenastává.
 
-Při importování jednoduchých materiálu z 3Ds Maxe také nevzniká ztráta materiálu, což znamená že jsem v Unity nemusela znovu nastavovat ani jeden materiál. 
+Při importování jednoduchých materiálu z 3ds Max také nevzniká ztráta materiálu, což znamená že jsem v Unity nemusela znovu nastavovat ani jeden materiál. 
 
 
 
@@ -462,7 +466,7 @@ Při importování jednoduchých materiálu z 3Ds Maxe také nevzniká ztráta m
 
 \chapter{Mobilní aplikace v Unity}	
 
-Svou celou aplikaci jsem vytvářela v Unity, což je multiplatformní herní engine, který nabízí spoustu balíčků, templatů a nástrojů pro vytváření nejrůznějších aplikací.  
+Svou celou aplikaci jsem vytvářela v Unity, což je multiplatformní herní engine, který nabízí spoustu balíčků, šablon a nástrojů pro vytváření nejrůznějších aplikací.  
 
 	\section{Struktura projektu}
 \label{sec:struktura_projektu}
@@ -476,7 +480,7 @@ Svou celou aplikaci jsem vytvářela v Unity, což je multiplatformní herní en
 
 
 	Projekt obsahuje několik podsložek. 
-	3D objekty jsou uloženy ve složce Prefabs. Složka Scripts obsahuje veškeré mnou napsané scripty v c\#. Ve Složce Animations jsou uložené animace a složka ReferenceImages obsahuje obrázky pro zobrazení 3D objektů. Unity si navíc vytváří i vlastní podsložky potřebné pro fungování celého projektu, také zde můžeme vidět stáhnuté balíčky, které mohou obsahovat scripty nebo objekty. Některé tyto balíčky se mohou stáhnout hned při vytvoření projektu, při použití templatu, nebo stáhnout později v Package Manageru.
+	3D objekty jsou uloženy ve složce Prefabs. Složka Scripts obsahuje veškeré mnou napsané skripty v C\#. Ve složce Animations jsou uložené animace a složka ReferenceImages obsahuje obrázky pro zobrazení 3D objektů. Unity si navíc vytváří i vlastní podsložky potřebné pro fungování celého projektu, také zde můžeme vidět stáhnuté balíčky, které mohou obsahovat skripty nebo objekty. Některé tyto balíčky se mohou stáhnout hned při vytvoření projektu, při použití šablony, nebo stáhnout později v Package Manager.
 	
 	
 	
@@ -493,18 +497,18 @@ Svou celou aplikaci jsem vytvářela v Unity, což je multiplatformní herní en
 	
 \section{Nastavení projektu}
 \label{sec:nastaveni_projektu}
-S pomocí templatu pro rozšířenou realitu, který obsahuje AR Foundation, což je framework určený pro vytváření rozšířené reality, je prvotní nastavení projektu jednoduché. AR Foundation obsahuje několik funkcí, které ulehčují práci s AR. Tento template také vlastnoručně přichystá základní nastavení celého projektu. 
+S pomocí šablony pro rozšířenou realitu, která obsahuje AR Foundation, což je framework určený pro vytváření rozšířené reality, je prvotní nastavení projektu jednoduché. AR Foundation obsahuje několik funkcí, které ulehčují práci s AR. Tato šablona také vlastnoručně přichystá základní nastavení celého projektu. 
 
-K prvnímu spuštění celé aplikace je potřeba nastavit na jakou platformu chceme celý projekt směřovat. Jelikož jsem celou aplikaci testovala na Androidu, zvolila jsem si proto tuto platformu.
+K prvnímu spuštění celé aplikace je potřeba nastavit na jakou platformu chceme celý projekt směřovat. Protože jsem celou aplikaci testovala na Androidu, zvolila jsem si proto tuto platformu.
 
-Hlavním aktérem celé aplikace je AR Session Origin, který obsahuje kameru a jsou na něj navázány nejrůznější scripty, které reagují na snímané prostředí. Scripty jsem použila jak implementované, tak i vlastní.
+Hlavním aktérem celé aplikace je AR Session Origin, který obsahuje kameru a jsou na něj navázány nejrůznější skripty, které reagují na snímané prostředí. Skripty jsem použila jak vestavěné, tak i vlastní.
 
 \begin{figure}[h!]
 	\centering
 	\subfloat{\includegraphics[width=7cm]{image/build.jpg}}
 	\qquad
 	\subfloat{\includegraphics[width=7cm]{image/arorigincomponents.jpg}}
-	\caption{Zvolení platformy a scripty připnuté k AR Session Originu.}
+	\caption{Zvolení platformy a skripty připnuté k AR Session Originu.}
 	\label{fig:nastaveni_unity}
 \end{figure}
 
@@ -513,11 +517,11 @@ Hlavním aktérem celé aplikace je AR Session Origin, který obsahuje kameru a 
 
 \section {Sledování obrázků}
 \label{sec:sledovani_obrazku}
- Sledování obrázku zajišťuje AR tracked image manager, který je součástí AR Foundation. Skládá se z managaru a referenční knihovny (reference library). Součástí referenční knihovny jsou všechny obrázky, které chceme sledovat.
+ Sledování obrázku zajišťuje AR tracked image manager, který je součástí AR Foundation. Skládá se z manažeru a referenční knihovny (reference library). Součástí referenční knihovny jsou všechny obrázky, které chceme sledovat.
  
-AR tracked image manager nás také za pomocí eventu trackedImagesChanged informuje o~každém přidaném, aktualizovaném nebo odstraněném obrázku. Nebo by alespoň měl, bohužel ale nikdy neoznámí odstranění obrázku, což způsobuje značné problémy. 
+AR tracked image manager nás také za pomocí eventu trackedImagesChanged informuje o~každém přidaném, aktualizovaném nebo odstraněném obrázku. Nebo by alespoň měl; bohužel ale nikdy neoznámí odstranění obrázku, což způsobuje značné problémy. 
 
-Naštěstí tento manager také sleduje stavy jednotlivých obrázků. Správně by měl zobrazit jeden ze tří stavů (Tracking, Limited, None). I tady je tomu tak, že stav None nikdy nenastane a stav Limited nastane při jakémkoliv menším pohybu telefonu. 
+Naštěstí tento manažer také sleduje stavy jednotlivých obrázků. Správně by měl zobrazit jeden ze tří stavů (Tracking, Limited, None). I tady je tomu tak, že stav None nikdy nenastane a stav Limited nastane při jakémkoliv menším pohybu telefonu. 
 
 
 \begin{lstlisting}[style=csh, caption={Ukázka kódu sledování obrázků.}]
@@ -549,7 +553,7 @@ Naštěstí tento manager také sleduje stavy jednotlivých obrázků. Správně
 
 \section {Zobrazování 3D objektů}
 \label{sec:zobrazovani_3d_objektu}
-Zobrazování 3D objektů se odvíjí od sledovaného obrázku. Pokaždé když se určitý obrázek přidá nebo aktualizuje, tak se podle něj objeví objekt se stejným jménem. 3D objekty dědí pozici obrázků. 
+Zobrazování 3D objektů se odvíjí od sledovaného obrázku. Pokaždé, když se určitý obrázek přidá nebo aktualizuje, se podle něj objeví objekt se stejným jménem. 3D objekty dědí pozici obrázků. 
 
 \section{Odstraňování 3D objektů}
 \label{sec:odstraneni_3d_objektu}
@@ -574,7 +578,7 @@ void Update() {
 
 \section{Canvas}
 \label{sec:canvas}
-Pro zobrazení grafických prvků se využívá canvas, který obsahuje grafické prvky. Jelikož je Unity graficky založený engine, dá se většina jednoduchých operací naklikat bez použití vlastních scriptů. Pro účely mé aplikace jsem v canvas vytvořila vlastní menu pro dodatečnou interakci s objekty. Zobrazení menu se řídí podle viditelnosti objektu. Canvas jsem také použila na vytvoření úvodního herního menu při prvním spuštění aplikace. 
+Pro zobrazení grafických prvků se využívá plátno (canvas). Protože je Unity graficky založený engine, dá se většina jednoduchých operací naklikat bez použití vlastních skriptů. Pro účely své aplikace jsem na plátně vytvořila vlastní menu pro dodatečnou interakci s objekty. Zobrazení menu se řídí podle viditelnosti objektu. Canvas jsem také použila na vytvoření úvodního herního menu při prvním spuštění aplikace. 
 
 
 
@@ -607,7 +611,7 @@ Jednotlivé součástky se dají procházet šipkami, které se objeví při zob
 \begin{figure}[H]
 	\centering 
 	\includegraphics[width=0.25\textwidth]{image/mechatronika.png} 
-	\caption{obrázek, na kterém se zobrazí modely součástky.} 
+	\caption{Obrázek, na kterém se zobrazí modely součástky.} 
 	\label{fig:mechatronika_obrazek} 
 \end{figure}
 
@@ -637,7 +641,7 @@ Jeden z obrázků zobrazuje model počítače, kterému jde odstranit kryt. Kdy�
 
 K označení komponentů napomáhá balíček QuickOutline, který jsem si stáhla k mému projektu. Celý tento balíček vytváří obrysy pro objekty. Využití je velmi jednoduché. Připneme k~objektu, kterému chceme přidat obrys, popřípadě můžeme zobrazení obrysu detailněji nastavit v editoru. 
 
-Interakce s celým počítačem je zařízena pomocí XR Interaction Toolkit, který zprostředkovává lepší interakci s objekty. Součástí je Interactive Manager, ve kterém se dají nastavit různé možnosti interakce. Pro své potřeby jsem použila pouze funkci pro vybírání objektů. Při kliknutí na objekt se spustí script pro zobrazení menu komponentu.
+Interakce s celým počítačem je zařízena pomocí XR Interaction Toolkit, který zprostředkovává lepší interakci s objekty. Součástí je Interactive Manager, ve kterém se dají nastavit různé možnosti interakce. Pro své potřeby jsem použila pouze funkci pro vybírání objektů. Při kliknutí na objekt se spustí skript pro zobrazení menu komponentu.
 
 
 \begin{figure}[!h]
@@ -683,9 +687,9 @@ Interakce s celým počítačem je zařízena pomocí XR Interaction Toolkit, kt
 \newpage
 
 \subsection{Dáma}	
-Umožňuje hrát dámu při nalezení obrázku figurky pěšce, kromě hrací plochy dámy se také objevuje tlačítko „Restart“ umožňující restartovat rozehranou hru, „Pravidla“, které vysvětlují základní princip hry, a text, který oznamuje, jaký hráč je na řadě. Dáma je jen zjednodušená, což znamená že neřeší povinné skákání ani měnění kamene na dámu při doskákání na druhou stranu šachovnice. První tah vždy začíná červený kámen.  
+Umožňuje hrát dámu při nalezení obrázku figurky pěšce, kromě hrací plochy dámy se také objevuje tlačítko „Restart“ umožňující restartovat rozehranou hru, „Pravidla“, které vysvětlují základní princip hry, a text, který oznamuje, který hráč je na řadě. Dáma je jen zjednodušená, což znamená, že neřeší povinné skákání ani změnění kamene na dámu při doskákání na druhou stranu šachovnice. První tah vždy začíná červený kámen.  
 
-Dáma také využívá Interactive Manager, který spouští scripty ovládající celou hru. Při kliknutí na kámen se uloží pozice, na které kámen leží. Podle ní se poté určují další možné tahy kamene. 
+Dáma také využívá Interactive Manager, který spouští skripty ovládající celou hru. Při kliknutí na kámen se uloží pozice, na které kámen leží. Podle ní se poté určují další možné tahy kamene. 
 
 
 \begin{figure}[H]
@@ -720,11 +724,11 @@ Cílem projektu bylo vytvoření aplikace s rozšířenou realitou. Tento cíl s
  
  Také jsem se více seznámila s~problematikou rozšířené reality a pracování v Unity. 
  
- Kdybych práci vypracovávala znovu, nejspíše bych použila jiný framework než AR foundation, a tak bych snad obešla již zmíněný problém se sledováním obrázků. 
+ Kdybych práci vypracovávala znovu, nejspíše bych použila jiný framework než AR Foundation, a tak bych snad obešla již zmíněný problém se sledováním obrázků. 
  
  Jedno z možných vylepšení do budoucna je tvorba více objektů s jinými možnostmi interakce.
 
-
+Odkaz na projekt: \url{https://github.com/MajkeltCZe/zaverecny-projekt}
 
 
 %% Seznam použitých informačních zdrojů

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  8 JAN 2024 22:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  10 JAN 2024 19:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -648,24 +648,24 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 (dokumentace.aux)
 \openout1 = `dokumentace.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -732,7 +732,7 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 153.
+Package hyperref Info: Link coloring OFF on input line 165.
  (dokumentace.out) (dokumentace.out)
 \@outlinefile=\write3
 \openout3 = `dokumentace.out'.
@@ -754,8 +754,8 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 \c@mv@tabular=\count326
 \c@mv@boldtabular=\count327
 \c@lstlisting=\count328
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 16
-3.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 17
+5.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
@@ -763,61 +763,61 @@ File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 <image/logo-skoly.png, id=84, 356.2911pt x 137.5539pt>
 File: image/logo-skoly.png Graphic file (type png)
 <use image/logo-skoly.png>
-Package pdftex.def Info: image/logo-skoly.png  used on input line 167.
+Package pdftex.def Info: image/logo-skoly.png  used on input line 179.
 (pdftex.def)             Requested size: 273.14923pt x 105.45715pt.
 <image/logo.png, id=86, 2055.68pt x 2055.68pt>
 File: image/logo.png Graphic file (type png)
 <use image/logo.png>
-Package pdftex.def Info: image/logo.png  used on input line 185.
+Package pdftex.def Info: image/logo.png  used on input line 197.
 (pdftex.def)             Requested size: 227.62206pt x 227.59975pt.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 190.
+ 202.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )<<ot1.cmap>>
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 190.
+ 202.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )<<oml.cmap>>
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 190.
+ 202.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )<<oms.cmap>>
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 190.
+ 202.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )<<omx.cmap>>
-LaTeX Font Info:    Trying to load font information for U+esint on input line 1
-90.
+LaTeX Font Info:    Trying to load font information for U+esint on input line 2
+02.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/esint\uesint.fd
 File: uesint.fd 
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 19
-0.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 20
+2.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-90.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
+02.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 190.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 202.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 190.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 202.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 190.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 202.
 
 [1
 
@@ -828,119 +828,123 @@ y.png> <./image/logo.png>] [2
 
 ] [3] [4
 
-] [5] (dokumentace.toc)
+] [5] [6
+
+] (dokumentace.toc)
 \tf@toc=\write4
 \openout4 = `dokumentace.toc'.
 
- [1
+ [1] [2
 
-] [2
 
-] [3]
-[4
+]
+[3] [4
+
 
 ]
 Kapitola 1.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
-03.
+15.
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 [5] [6]
 Kapitola 2.
-<image/modelovani.jpg, id=167, 597.23125pt x 369.38pt>
+<image/modelovani.jpg, id=171, 597.23125pt x 369.38pt>
 File: image/modelovani.jpg Graphic file (type jpg)
 <use image/modelovani.jpg>
-Package pdftex.def Info: image/modelovani.jpg  used on input line 362.
+Package pdftex.def Info: image/modelovani.jpg  used on input line 374.
 (pdftex.def)             Requested size: 364.19667pt x 225.25383pt.
 [7
 
+
  <./image/modelovani.jpg>]
-<image/modelovani2.jpg, id=173, 700.6175pt x 408.52625pt>
+<image/modelovani2.jpg, id=178, 700.6175pt x 408.52625pt>
 File: image/modelovani2.jpg Graphic file (type jpg)
 <use image/modelovani2.jpg>
-Package pdftex.def Info: image/modelovani2.jpg  used on input line 373.
+Package pdftex.def Info: image/modelovani2.jpg  used on input line 385.
 (pdftex.def)             Requested size: 227.62206pt x 132.72581pt.
-<image/modelovani3.jpg, id=174, 444.66125pt x 430.60875pt>
+<image/modelovani3.jpg, id=179, 444.66125pt x 430.60875pt>
 File: image/modelovani3.jpg Graphic file (type jpg)
 <use image/modelovani3.jpg>
-Package pdftex.def Info: image/modelovani3.jpg  used on input line 383.
+Package pdftex.def Info: image/modelovani3.jpg  used on input line 395.
 (pdftex.def)             Requested size: 199.16928pt x 192.87196pt.
-<image/modelovani5.jpg, id=175, 280.04625pt x 347.2975pt>
+<image/modelovani5.jpg, id=180, 280.04625pt x 347.2975pt>
 File: image/modelovani5.jpg Graphic file (type jpg)
 <use image/modelovani5.jpg>
-Package pdftex.def Info: image/modelovani5.jpg  used on input line 385.
+Package pdftex.def Info: image/modelovani5.jpg  used on input line 397.
 (pdftex.def)             Requested size: 199.16928pt x 247.00688pt.
  [8 <./image/modelovani2.jpg> <./image/modelovani3.jpg> <./image/modelovani5.jp
 g>]
-<image/modelovani6.jpg, id=183, 484.81125pt x 365.365pt>
+<image/modelovani6.jpg, id=187, 484.81125pt x 365.365pt>
 File: image/modelovani6.jpg Graphic file (type jpg)
 <use image/modelovani6.jpg>
-Package pdftex.def Info: image/modelovani6.jpg  used on input line 397.
+Package pdftex.def Info: image/modelovani6.jpg  used on input line 409.
 (pdftex.def)             Requested size: 199.16928pt x 150.10167pt.
-<image/modelovani7.jpg, id=184, 575.14874pt x 390.45876pt>
+<image/modelovani7.jpg, id=188, 575.14874pt x 390.45876pt>
 File: image/modelovani7.jpg Graphic file (type jpg)
 <use image/modelovani7.jpg>
-Package pdftex.def Info: image/modelovani7.jpg  used on input line 399.
+Package pdftex.def Info: image/modelovani7.jpg  used on input line 411.
 (pdftex.def)             Requested size: 199.16928pt x 135.20888pt.
-<image/modelovani8.jpg, id=185, 448.67625pt x 331.2375pt>
+<image/modelovani8.jpg, id=189, 448.67625pt x 331.2375pt>
 File: image/modelovani8.jpg Graphic file (type jpg)
 <use image/modelovani8.jpg>
-Package pdftex.def Info: image/modelovani8.jpg  used on input line 408.
+Package pdftex.def Info: image/modelovani8.jpg  used on input line 420.
 (pdftex.def)             Requested size: 199.16928pt x 147.03378pt.
-<image/modelovani9.jpg, id=186, 344.28625pt x 199.74625pt>
+<image/modelovani9.jpg, id=190, 344.28625pt x 199.74625pt>
 File: image/modelovani9.jpg Graphic file (type jpg)
 <use image/modelovani9.jpg>
-Package pdftex.def Info: image/modelovani9.jpg  used on input line 410.
+Package pdftex.def Info: image/modelovani9.jpg  used on input line 422.
 (pdftex.def)             Requested size: 199.16928pt x 115.5542pt.
-<image/modelovani10.jpg, id=187, 652.4375pt x 196.735pt>
+<image/modelovani10.jpg, id=191, 652.4375pt x 196.735pt>
 File: image/modelovani10.jpg Graphic file (type jpg)
 <use image/modelovani10.jpg>
-Package pdftex.def Info: image/modelovani10.jpg  used on input line 420.
+Package pdftex.def Info: image/modelovani10.jpg  used on input line 432.
 (pdftex.def)             Requested size: 364.19667pt x 109.8226pt.
  [9
 
  <./image/modelovani6.jpg> <./image/modelovani7.jpg> <./image/modelovani8.jpg> 
 <./image/modelovani9.jpg> <./image/modelovani10.jpg>]
-<image/material.jpg, id=195, 453.695pt x 148.555pt>
+<image/material.jpg, id=199, 453.695pt x 148.555pt>
 File: image/material.jpg Graphic file (type jpg)
 <use image/material.jpg>
-Package pdftex.def Info: image/material.jpg  used on input line 434.
+Package pdftex.def Info: image/material.jpg  used on input line 446.
 (pdftex.def)             Requested size: 199.16928pt x 65.21478pt.
-<image/material1.jpg, id=196, 443.6575pt x 317.185pt>
+<image/material1.jpg, id=200, 443.6575pt x 317.185pt>
 File: image/material1.jpg Graphic file (type jpg)
 <use image/material1.jpg>
-Package pdftex.def Info: image/material1.jpg  used on input line 436.
+Package pdftex.def Info: image/material1.jpg  used on input line 448.
 (pdftex.def)             Requested size: 199.16928pt x 142.38829pt.
  [10
 
  <./image/material.jpg> <./image/material1.jpg>]
 Kapitola 3.
-<image/hierarchy.jpg, id=202, 175.65625pt x 149.55875pt>
+<image/hierarchy.jpg, id=206, 175.65625pt x 149.55875pt>
 File: image/hierarchy.jpg Graphic file (type jpg)
 <use image/hierarchy.jpg>
-Package pdftex.def Info: image/hierarchy.jpg  used on input line 464.
+Package pdftex.def Info: image/hierarchy.jpg  used on input line 476.
 (pdftex.def)             Requested size: 182.09486pt x 155.05362pt.
-<image/assets.jpg, id=203, 656.4525pt x 233.87375pt>
+<image/assets.jpg, id=207, 656.4525pt x 233.87375pt>
 File: image/assets.jpg Graphic file (type jpg)
 <use image/assets.jpg>
-Package pdftex.def Info: image/assets.jpg  used on input line 477.
+Package pdftex.def Info: image/assets.jpg  used on input line 489.
 (pdftex.def)             Requested size: 364.19667pt x 129.75148pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [11
 
+
  <./image/hierarchy.jpg>]
-<image/build.jpg, id=209, 271.0125pt x 168.63pt>
+<image/build.jpg, id=213, 271.0125pt x 168.63pt>
 File: image/build.jpg Graphic file (type jpg)
 <use image/build.jpg>
-Package pdftex.def Info: image/build.jpg  used on input line 496.
+Package pdftex.def Info: image/build.jpg  used on input line 508.
 (pdftex.def)             Requested size: 199.16928pt x 123.93254pt.
-<image/arorigincomponents.jpg, id=210, 271.0125pt x 168.63pt>
+<image/arorigincomponents.jpg, id=214, 271.0125pt x 168.63pt>
 File: image/arorigincomponents.jpg Graphic file (type jpg)
 <use image/arorigincomponents.jpg>
-Package pdftex.def Info: image/arorigincomponents.jpg  used on input line 498.
+Package pdftex.def Info: image/arorigincomponents.jpg  used on input line 510.
 (pdftex.def)             Requested size: 199.16928pt x 123.93254pt.
  [12 <./image/assets.jpg> <./image/build.jpg> <./image/arorigincomponents.jpg>]
 
@@ -951,188 +955,190 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 515.
+nput line 527.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
-15.
+27.
 
 (C:\Users\Mi≈°a\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-Overfull \hbox (1.59433pt too wide) in paragraph at lines 516--517
+Overfull \hbox (1.59433pt too wide) in paragraph at lines 528--529
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [13] [14]
-<image/houseImage.png, id=263, 2055.68pt x 2055.68pt>
+<image/houseImage.png, id=267, 2055.68pt x 2055.68pt>
 File: image/houseImage.png Graphic file (type png)
 <use image/houseImage.png>
-Package pdftex.def Info: image/houseImage.png  used on input line 585.
+Package pdftex.def Info: image/houseImage.png  used on input line 597.
 (pdftex.def)             Requested size: 199.16928pt x 199.14978pt.
-<image/house.png, id=264, 642.4pt x 424.58624pt>
+<image/house.png, id=268, 642.4pt x 424.58624pt>
 File: image/house.png Graphic file (type png)
 <use image/house.png>
-Package pdftex.def Info: image/house.png  used on input line 587.
+Package pdftex.def Info: image/house.png  used on input line 599.
 (pdftex.def)             Requested size: 227.62204pt x 150.44087pt.
  [15 <./image/houseImage.png> <./image/house.png>]
-<image/mechatronika.png, id=273, 950.55125pt x 832.10875pt>
+<image/mechatronika.png, id=277, 950.55125pt x 832.10875pt>
 File: image/mechatronika.png Graphic file (type png)
 <use image/mechatronika.png>
-Package pdftex.def Info: image/mechatronika.png  used on input line 601.
+Package pdftex.def Info: image/mechatronika.png  used on input line 613.
 (pdftex.def)             Requested size: 113.81102pt x 99.6202pt.
-<image/pist.png, id=274, 642.4pt x 424.58624pt>
+<image/pist.png, id=278, 642.4pt x 424.58624pt>
 File: image/pist.png Graphic file (type png)
 <use image/pist.png>
-Package pdftex.def Info: image/pist.png  used on input line 609.
+Package pdftex.def Info: image/pist.png  used on input line 621.
 (pdftex.def)             Requested size: 199.16928pt x 131.6398pt.
-<image/kladka.png, id=275, 682.55pt x 424.58624pt>
+<image/kladka.png, id=279, 682.55pt x 424.58624pt>
 File: image/kladka.png Graphic file (type png)
 <use image/kladka.png>
-Package pdftex.def Info: image/kladka.png  used on input line 611.
+Package pdftex.def Info: image/kladka.png  used on input line 623.
 (pdftex.def)             Requested size: 199.16928pt x 123.89133pt.
-<image/modul.png, id=276, 642.4pt x 424.58624pt>
+<image/modul.png, id=280, 642.4pt x 424.58624pt>
 File: image/modul.png Graphic file (type png)
 <use image/modul.png>
-Package pdftex.def Info: image/modul.png  used on input line 618.
+Package pdftex.def Info: image/modul.png  used on input line 630.
 (pdftex.def)             Requested size: 199.16928pt x 131.6398pt.
-<image/skrtic.png, id=277, 642.4pt x 424.58624pt>
+<image/skrtic.png, id=281, 642.4pt x 424.58624pt>
 File: image/skrtic.png Graphic file (type png)
 <use image/skrtic.png>
-Package pdftex.def Info: image/skrtic.png  used on input line 620.
+Package pdftex.def Info: image/skrtic.png  used on input line 632.
 (pdftex.def)             Requested size: 199.16928pt x 131.6398pt.
  [16 <./image/mechatronika.png> <./image/pist.png> <./image/kladka.png> <./imag
 e/modul.png> <./image/skrtic.png>]
-<image/pcImage.png, id=291, 1626.075pt x 1193.45876pt>
+<image/pcImage.png, id=295, 1626.075pt x 1193.45876pt>
 File: image/pcImage.png Graphic file (type png)
 <use image/pcImage.png>
-Package pdftex.def Info: image/pcImage.png  used on input line 637.
+Package pdftex.def Info: image/pcImage.png  used on input line 649.
 (pdftex.def)             Requested size: 136.57462pt x 100.23163pt.
-<image/pc.png, id=292, 630.355pt x 543.02875pt>
+<image/pc.png, id=296, 630.355pt x 543.02875pt>
 File: image/pc.png Graphic file (type png)
 <use image/pc.png>
-Package pdftex.def Info: image/pc.png  used on input line 644.
+Package pdftex.def Info: image/pc.png  used on input line 656.
 (pdftex.def)             Requested size: 273.14923pt x 235.30414pt.
-<image/cpu.png, id=293, 524.96124pt x 238.8925pt>
+<image/cpu.png, id=297, 524.96124pt x 238.8925pt>
 File: image/cpu.png Graphic file (type png)
 <use image/cpu.png>
-Package pdftex.def Info: image/cpu.png  used on input line 652.
+Package pdftex.def Info: image/cpu.png  used on input line 664.
 (pdftex.def)             Requested size: 199.16928pt x 90.63428pt.
-<image/ssd.png, id=294, 607.26875pt x 281.05pt>
+<image/ssd.png, id=298, 607.26875pt x 281.05pt>
 File: image/ssd.png Graphic file (type png)
 <use image/ssd.png>
-Package pdftex.def Info: image/ssd.png  used on input line 654.
+Package pdftex.def Info: image/ssd.png  used on input line 666.
 (pdftex.def)             Requested size: 199.16928pt x 92.1764pt.
  [17 <./image/pcImage.png> <./image/pc.png>]
-<image/psu.png, id=304, 379.4175pt x 282.05376pt>
+<image/psu.png, id=308, 379.4175pt x 282.05376pt>
 File: image/psu.png Graphic file (type png)
 <use image/psu.png>
-Package pdftex.def Info: image/psu.png  used on input line 661.
+Package pdftex.def Info: image/psu.png  used on input line 673.
 (pdftex.def)             Requested size: 199.16928pt x 148.06322pt.
-<image/ram.png, id=305, 577.15625pt x 225.84375pt>
+<image/ram.png, id=309, 577.15625pt x 225.84375pt>
 File: image/ram.png Graphic file (type png)
 <use image/ram.png>
-Package pdftex.def Info: image/ram.png  used on input line 663.
+Package pdftex.def Info: image/ram.png  used on input line 675.
 (pdftex.def)             Requested size: 199.16928pt x 77.93684pt.
-<image/gpu.png, id=306, 593.21625pt x 300.12125pt>
+<image/gpu.png, id=310, 593.21625pt x 300.12125pt>
 File: image/gpu.png Graphic file (type png)
 <use image/gpu.png>
-Package pdftex.def Info: image/gpu.png  used on input line 670.
+Package pdftex.def Info: image/gpu.png  used on input line 682.
 (pdftex.def)             Requested size: 273.14923pt x 138.19482pt.
  [18 <./image/cpu.png> <./image/ssd.png> <./image/psu.png> <./image/ram.png> <.
 /image/gpu.png>]
-<image/checkersImage.png, id=319, 1626.075pt x 2168.1pt>
+<image/checkersImage.png, id=323, 1626.075pt x 2168.1pt>
 File: image/checkersImage.png Graphic file (type png)
 <use image/checkersImage.png>
-Package pdftex.def Info: image/checkersImage.png  used on input line 685.
+Package pdftex.def Info: image/checkersImage.png  used on input line 697.
 (pdftex.def)             Requested size: 199.16928pt x 265.55322pt.
-<image/checkers.png, id=320, 642.4pt x 424.58624pt>
+<image/checkers.png, id=324, 642.4pt x 424.58624pt>
 File: image/checkers.png Graphic file (type png)
 <use image/checkers.png>
-Package pdftex.def Info: image/checkers.png  used on input line 687.
+Package pdftex.def Info: image/checkers.png  used on input line 699.
 (pdftex.def)             Requested size: 199.16928pt x 131.6398pt.
 
 [19 <./image/checkersImage.png> <./image/checkers.png>]
-<image/drawingCanvas.png, id=330, 975.645pt x 1047.915pt>
+<image/drawingCanvas.png, id=335, 975.645pt x 1047.915pt>
 File: image/drawingCanvas.png Graphic file (type png)
 <use image/drawingCanvas.png>
-Package pdftex.def Info: image/drawingCanvas.png  used on input line 699.
+Package pdftex.def Info: image/drawingCanvas.png  used on input line 711.
 (pdftex.def)             Requested size: 170.71652pt x 183.35588pt.
-<image/drawing.jpg, id=331, 783.92876pt x 165.61874pt>
+<image/drawing.jpg, id=336, 783.92876pt x 165.61874pt>
 File: image/drawing.jpg Graphic file (type jpg)
 <use image/drawing.jpg>
-Package pdftex.def Info: image/drawing.jpg  used on input line 701.
+Package pdftex.def Info: image/drawing.jpg  used on input line 713.
 (pdftex.def)             Requested size: 170.71652pt x 36.06474pt.
  [20 <./image/drawingCanvas.png (PNG copy)> <./image/drawing.jpg>] [21
 
+
 ] [22
 
+
 ]
-Underfull \hbox (badness 2894) in paragraph at lines 727--728
+Underfull \hbox (badness 2894) in paragraph at lines 740--741
 []\T1/ptm/m/it/12 Create UI ANI-MATI-ONS wi-thout CO-DING! - Unity UI tu-to-ria
 l \T1/ptm/m/n/12 [on-line]. You-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 729--730
+Underfull \hbox (badness 10000) in paragraph at lines 742--743
 []\T1/ptm/m/it/12 Hospod·∞skÈ no-viny: P•t ob-lastÌ, kde m∑-∫ete nej-lÈpe vy-u-
 ∫Ìt roz-≤Ì-∞e-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 729--730
+Underfull \hbox (badness 10000) in paragraph at lines 742--743
 \T1/ptm/m/it/12 nou re-a-litu \T1/ptm/m/n/12 [on-line]. [cit. 2023-12-17]. Do-s
 tupnÈ z: []$\T1/cmtt/m/n/12 https : / / hn . cz /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 734--735
+Underfull \hbox (badness 10000) in paragraph at lines 747--748
 []\T1/ptm/m/it/12 Medium: How to Cre-ate AR Dra-w/-Do-od-ling in Unity3D \T1/pt
 m/m/n/12 [on-line].
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 734--735
+Underfull \hbox (badness 10000) in paragraph at lines 747--748
 \T1/ptm/m/n/12 [cit. 2023-12-17]. Do-stupnÈ z: []$\T1/cmtt/m/n/12 https : / / m
 edium . com / antaeus-[]ar /
  []
 
 
-Underfull \hbox (badness 6110) in paragraph at lines 736--737
+Underfull \hbox (badness 6110) in paragraph at lines 749--750
 []\T1/ptm/m/it/12 Onirix: What Are The Di-f-fe-rent Ty-pes of Aug-men-ted Re-a-
 lity? \T1/ptm/m/n/12 [on-line]. [cit.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 736--737
+Underfull \hbox (badness 10000) in paragraph at lines 749--750
 \T1/ptm/m/n/12 2023-12-17]. Do-stupnÈ z: []$\T1/cmtt/m/n/12 https : / / www . o
 nirix . com / learn-[]about-[]ar /
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 738--739
+Underfull \hbox (badness 2111) in paragraph at lines 751--752
 \T1/ptm/m/it/12 ve-lo-p-ment \T1/ptm/m/n/12 [on-line]. [cit. 2023-12-17]. Do-st
 upnÈ z: []$\T1/cmtt/m/n/12 https : / / hub . packtpub . com /
  []
 
 
-Underfull \hbox (badness 3148) in paragraph at lines 740--741
+Underfull \hbox (badness 3148) in paragraph at lines 753--754
 []\T1/ptm/m/it/12 Quickly pre-view your game on An-droid de-vice | Unity tu-to-
 rial \T1/ptm/m/n/12 [on-line]. You-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 742--743
+Underfull \hbox (badness 10000) in paragraph at lines 755--756
 []\T1/ptm/m/it/12 Quick Out-line: Par-ticle-s/E-f-fects \T1/ptm/m/n/12 [on-line
 ]. [cit. 2023-12-17]. Do-stupnÈ z:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 742--743
+Underfull \hbox (badness 10000) in paragraph at lines 755--756
 []$\T1/cmtt/m/n/12 https : / / assetstore . unity . com / packages / tools / pa
 rticles-[]effects /
  []
 
 [23]
-Underfull \hbox (badness 2818) in paragraph at lines 762--763
+Underfull \hbox (badness 2818) in paragraph at lines 775--776
 []\T1/ptm/m/it/12 ⁄vod do tÈ-matu: Roz-≤Ì-∞en· re-a-lita (AR) ve vzd•-l·-v·nÌ: 
 O2 Chytr· ≤kola \T1/ptm/m/n/12 [on-
  []
@@ -1150,10 +1156,10 @@ Package rerunfilecheck Info: File `dokumentace.out' has not changed.
 (rerunfilecheck)             Checksum: B8A03AAE1A77F0CE6685F02617882FD8;3235.
  ) 
 Here is how much of TeX's memory you used:
- 18600 strings out of 475247
- 301350 string characters out of 5757791
- 1947785 words of memory out of 5000000
- 39617 multiletter control sequences out of 15000+600000
+ 18602 strings out of 475247
+ 301367 string characters out of 5757791
+ 1948785 words of memory out of 5000000
+ 39618 multiletter control sequences out of 15000+600000
  623925 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,11n,97p,757b,1362s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1163,9 +1169,9 @@ uhvb8a.pfb><C:/Users/Mi≈°a/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
 utmb8a.pfb><C:/Users/Mi≈°a/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
 utmr8a.pfb><C:/Users/Mi≈°a/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on dokumentace.pdf (30 pages, 4321893 bytes).
+Output written on dokumentace.pdf (31 pages, 4323468 bytes).
 PDF statistics:
- 563 PDF objects out of 1000 (max. 8388607)
- 138 named destinations out of 1000 (max. 500000)
+ 570 PDF objects out of 1000 (max. 8388607)
+ 139 named destinations out of 1000 (max. 500000)
  356 words of extra memory for PDF output out of 10000 (max. 10000000)
 
