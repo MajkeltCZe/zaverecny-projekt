@@ -56,7 +56,7 @@ AnimatorState:
   m_PrefabAsset: {fileID: 0}
   m_Name: showedText
   m_Speed: 1
-  m_CycleOffset: 0
+  m_CycleOffset: 1
   m_Transitions:
   - {fileID: 6189921804425248137}
   m_StateMachineBehaviours: []
@@ -131,7 +131,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: hideText
-  m_Speed: 1.5
+  m_Speed: 5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7566417513844283771}
@@ -224,7 +224,7 @@ AnimatorState:
   m_PrefabAsset: {fileID: 0}
   m_Name: hiddenText
   m_Speed: 1
-  m_CycleOffset: 0
+  m_CycleOffset: 0.1
   m_Transitions:
   - {fileID: -7575373635607841677}
   m_StateMachineBehaviours: []

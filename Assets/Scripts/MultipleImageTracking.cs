@@ -24,6 +24,7 @@ private Dictionary<string, GameObject> prefabs = new Dictionary<string, GameObje
   void Awake()
     {
         m_TrackedImageManager = GetComponent<ARTrackedImageManager>();
+
         setPrefabs();
         HideMenu();
     
@@ -37,10 +38,11 @@ void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnTrackedImage
 void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
     //added image
     foreach (var trackedImage in eventArgs.added) {
-        text.text = "Byl přidán obrázek, vyčkej na zobrazení objektu";
-        UpdateARImage(trackedImage.referenceImage.name,trackedImage);
         score++;
         scoreText.text = score + "/" + 5;
+        text.text = "Byl přidán obrázek, vyčkej na zobrazení objektu";
+                UpdateARImage(trackedImage.referenceImage.name,trackedImage);
+
     }
     //updated image
     foreach (var trackedImage in eventArgs.updated) {
@@ -54,16 +56,16 @@ void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
                 text.text = "Našel si všechny obrázky!";
                 }
             }
-            else  text.text =  "Ztratil si dobrou viditelnost obrázku: ";
        }
        else {
         //image is visible
         text.text = "sleduješ:" + trackedImage.referenceImage.name;
         ShowInteractible(trackedImage.referenceImage.name);
-         if (trackedImage.referenceImage.name == "mechatronika")  {
+           if (trackedImage.referenceImage.name == "mechatronika")  {
                     value = OnClickPrefab.value;
                     UpdateARImage(value.ToString(), trackedImage);
-       }
+           }
+           
         else {
         UpdateARImage(trackedImage.referenceImage.name,trackedImage);
        }
@@ -107,6 +109,7 @@ foreach(GameObject go in menuObjects) {
 
     void AssignGameObject(string name, Vector3 newPosition)
     {
+
         if (prefabs != null)
         {
             GameObject prefab = prefabs[name];
@@ -122,6 +125,7 @@ foreach(GameObject go in menuObjects) {
 
 
 void setPrefabs() {
+    
       foreach (GameObject arObject in arObjects) {
         GameObject newARObject = Instantiate(arObject, Vector3.zero, Quaternion.identity);
             newARObject.name = arObject.name;

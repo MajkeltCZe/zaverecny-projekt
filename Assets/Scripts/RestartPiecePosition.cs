@@ -5,16 +5,18 @@ using UnityEngine;
 public class RestartPiecePosition : MonoBehaviour
 {
 
-    Vector3 startPos;
+ Vector3 startPos;
 
- void Start() {
- startPos = gameObject.transform.position;
 
+void OnBecamevisible() {
+        startPos =  gameObject.transform.position;
 }
+
 
 public void RestartPosition() {
-     gameObject.transform.position = startPos;
-    
+        gameObject.transform.position = startPos;
+  
 }
+
     
 }

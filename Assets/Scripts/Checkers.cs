@@ -120,10 +120,12 @@ return false;
 
 
 public void Restart() {
-        Lists();
+       Lists();
         turn = "red";
-        for(int i = 0; i < board.transform.childCount;i++) board.transform.GetChild(i).gameObject.SetActive(true);
+     for(int i = 0; i < board.transform.childCount;i++) board.transform.GetChild(i).gameObject.SetActive(false);
+ 
 }
+
 
 void setRules() {
 //redPieces

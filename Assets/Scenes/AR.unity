@@ -434,7 +434,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1044569752}
+  - {fileID: 1568894525}
   - {fileID: 2110350918}
   - {fileID: 1303668053}
   - {fileID: 195698800}
@@ -9057,7 +9057,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 720, y: 1280}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
@@ -9107,6 +9107,7 @@ RectTransform:
   - {fileID: 1961080194}
   - {fileID: 2035596347}
   - {fileID: 681257880}
+  - {fileID: 1044569752}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9286,6 +9287,7 @@ GameObject:
   - component: {fileID: 1044569755}
   - component: {fileID: 1044569754}
   - component: {fileID: 1044569753}
+  - component: {fileID: 1044569756}
   m_Layer: 5
   m_Name: restart
   m_TagString: Untagged
@@ -9306,11 +9308,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1555657417}
-  m_Father: {fileID: 39015641}
+  m_Father: {fileID: 1008574137}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -222}
+  m_AnchoredPosition: {x: -0.5, y: 88}
   m_SizeDelta: {x: 212, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1044569753
@@ -9369,198 +9371,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 658545474}
-        m_TargetAssemblyTypeName: RestartPiecePosition, Assembly-CSharp
-        m_MethodName: RestartPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 505499747}
-        m_TargetAssemblyTypeName: RestartPiecePosition, Assembly-CSharp
-        m_MethodName: RestartPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1470765902}
-        m_TargetAssemblyTypeName: RestartPiecePosition, Assembly-CSharp
-        m_MethodName: RestartPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7379119}
-        m_TargetAssemblyTypeName: RestartPiecePosition, Assembly-CSharp
-        m_MethodName: RestartPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 452459849}
-        m_TargetAssemblyTypeName: RestartPiecePosition, Assembly-CSharp
-        m_MethodName: RestartPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 607074876}
-        m_TargetAssemblyTypeName: RestartPiecePosition, Assembly-CSharp
-        m_MethodName: RestartPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 927778478}
-        m_TargetAssemblyTypeName: RestartPiecePosition, Assembly-CSharp
-        m_MethodName: RestartPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1883829052}
-        m_TargetAssemblyTypeName: RestartPiecePosition, Assembly-CSharp
-        m_MethodName: RestartPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 730564518}
-        m_TargetAssemblyTypeName: RestartPiecePosition, Assembly-CSharp
-        m_MethodName: RestartPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1074777401}
-        m_TargetAssemblyTypeName: RestartPiecePosition, Assembly-CSharp
-        m_MethodName: RestartPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 191042157}
-        m_TargetAssemblyTypeName: RestartPiecePosition, Assembly-CSharp
-        m_MethodName: RestartPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1623519487}
-        m_TargetAssemblyTypeName: RestartPiecePosition, Assembly-CSharp
-        m_MethodName: RestartPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1505573209}
-        m_TargetAssemblyTypeName: RestartPiecePosition, Assembly-CSharp
-        m_MethodName: RestartPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 585446163}
-        m_TargetAssemblyTypeName: RestartPiecePosition, Assembly-CSharp
-        m_MethodName: RestartPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 48242222}
-        m_TargetAssemblyTypeName: RestartPiecePosition, Assembly-CSharp
-        m_MethodName: RestartPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1793678828}
-        m_TargetAssemblyTypeName: RestartPiecePosition, Assembly-CSharp
-        m_MethodName: RestartPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1044569754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9599,6 +9409,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044569751}
   m_CullTransparentMesh: 1
+--- !u!114 &1044569756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044569751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2193956c171bfb45b8e811659c1e00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1044569751}
+  stateStart: 0
 --- !u!1001 &1047988817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11861,7 +11685,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: test
+  m_Text: 
 --- !u!222 &1288311156
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11920,7 +11744,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.40500003, y: 0.82945484}
   m_AnchorMax: {x: 0.59749997, y: 0.89345485}
-  m_AnchoredPosition: {x: 424, y: 154}
+  m_AnchoredPosition: {x: 423.99997, y: 154}
   m_SizeDelta: {x: 140.74994, y: 25.671165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1303668054
@@ -13614,7 +13438,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.9025625, y: 0.8693333}
   m_AnchorMax: {x: 0.9615625, y: 0.9414445}
-  m_AnchoredPosition: {x: 544.7207, y: 272.75055}
+  m_AnchoredPosition: {x: 544.7208, y: 272.74997}
   m_SizeDelta: {x: 69.502014, y: 44.63681}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1463277172
@@ -14473,6 +14297,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563627700}
   m_CullTransparentMesh: 1
+--- !u!1 &1568894524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1568894525}
+  - component: {fileID: 1568894527}
+  - component: {fileID: 1568894526}
+  m_Layer: 5
+  m_Name: bg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1568894525
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568894524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.6118362, y: 0.38839063, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 39015641}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 5, y: 218}
+  m_SizeDelta: {x: 100, y: 138}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1568894526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568894524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1568894527
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568894524}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1572952221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15202,8 +15098,8 @@ MonoBehaviour:
   text: {fileID: 1288311155}
   scoreText: {fileID: 1161283025}
   arObjects:
-  - {fileID: 6073235321485161827}
   - {fileID: 2973889899959853643}
+  - {fileID: 6073235321485161827}
   - {fileID: 6589704582122824636, guid: 8fba12892ba31ad4fb3f87b3750edbf6, type: 3}
   - {fileID: 3016351101511704693, guid: d9fcda56ef3470c4985a8eaf1920c342, type: 3}
   - {fileID: 752787614817453524, guid: fc677ee9912b99c48bd75955497e281e, type: 3}
@@ -18368,7 +18264,7 @@ PrefabInstance:
     - target: {fileID: 3094760823266939764, guid: c54bb3488180f3442bdd22ff3290a5de,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.0196
       objectReference: {fileID: 0}
     - target: {fileID: 3094760823266939764, guid: c54bb3488180f3442bdd22ff3290a5de,
         type: 3}

@@ -19,3 +19,5 @@ O projektu: Záměrem je vytvořit mobilní aplikace něco na způsob Treasure H
 - [Unity] - Game engine na tvorbu 3D i 2D aplikací
 
 Veškeré ostátní informace o mém projektu se nacházejí v mé dokumentaci. 
+
+Ve složce aplikace je možnost si tuto aplikaci vyzkoušet.  

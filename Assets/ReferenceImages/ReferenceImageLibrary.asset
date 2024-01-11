@@ -31,8 +31,8 @@ MonoBehaviour:
       m_GuidLow: 5676607887328679334
       m_GuidHigh: 7184326861284631703
     m_SerializedTextureGuid:
-      m_GuidLow: 1568457914426827375
-      m_GuidHigh: 5864249528818069658
+      m_GuidLow: 7193413205962216210
+      m_GuidHigh: 4764121910559456761
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
     m_Name: house
@@ -51,8 +51,8 @@ MonoBehaviour:
       m_GuidLow: 5485179883796569938
       m_GuidHigh: 16984439511458457274
     m_SerializedTextureGuid:
-      m_GuidLow: 9481396655218034798
-      m_GuidHigh: 15373770276095138408
+      m_GuidLow: 16416769567112648047
+      m_GuidHigh: 9827959986245286330
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
     m_Name: mechatronika
