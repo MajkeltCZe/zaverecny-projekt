@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  10 JAN 2024 19:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  14 JAN 2024 20:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1143,7 +1143,7 @@ Underfull \hbox (badness 2818) in paragraph at lines 775--776
 O2 Chytrá ²kola \T1/ptm/m/n/12 [on-
  []
 
-(dokumentace.lof [24])
+[24] (dokumentace.lof)
 \tf@lof=\write5
 \openout5 = `dokumentace.lof'.
 
@@ -1169,7 +1169,7 @@ uhvb8a.pfb><C:/Users/MiÅ¡a/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
 utmb8a.pfb><C:/Users/MiÅ¡a/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
 utmr8a.pfb><C:/Users/MiÅ¡a/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on dokumentace.pdf (31 pages, 4323468 bytes).
+Output written on dokumentace.pdf (31 pages, 4323436 bytes).
 PDF statistics:
  570 PDF objects out of 1000 (max. 8388607)
  139 named destinations out of 1000 (max. 500000)

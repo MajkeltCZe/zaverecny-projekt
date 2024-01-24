@@ -13,7 +13,7 @@ public class MultipleImagesTracking : MonoBehaviour
     public GameObject[] arObjects;
     public GameObject[] menuObjects;
     public static bool state;
-    int score = 0;
+    int score = 5;
         private static int value = 0;
         
 
@@ -52,9 +52,9 @@ void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
             if(state) {
                 HideInteractible(trackedImage.referenceImage.name);
                 text.text = "";
-            if(score == 5) {
-                text.text = "Našel si všechny obrázky!";
-                }
+           // if(score == 5) {
+             //   text.text = "Našel si všechny obrázky!";
+               // }
             }
        }
        else {
